@@ -1,6 +1,23 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
-
-# mstest test results
-TestResults
+[Oo]bj/
+[Bb]in/
+tmp/
+*.user
+*.suo
+*.[Cc]ache
+*.bak
+*.ncb
+*.log 
+*.svn
+*.DS_Store
+[Tt]humbs.db 
+Ankh.NoLoad
+[Pp]ackages/
+capybara*.html
+_ReSha*
+tmp/
+TestR*.xml
+*.swp
+TestResult.xml
+GlobalAss*
+data*.log
+*.dat
