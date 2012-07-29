@@ -1,9 +1,6 @@
 body {
-  background: lightgray; }
+  padding-bottom: 40px;
+  padding-top: 60px; }
   body nav {
     margin: 5px; }
-  body section #content {
-    background-color: white; }
-  body side {
-    background-color: white; }
 
