@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web.Http;
-using EventbriteNET.Entities;
 
 namespace DotNetUserGroup.Website.Controllers
 {
@@ -18,7 +15,6 @@ namespace DotNetUserGroup.Website.Controllers
         // GET api/events
         public IEnumerable<EventInfo> Get()
         {
-            const string apiKey = "132216720823914661396";
             const string appKey = "D2ZDCBPDNEWMO7I3OC";
             const int organizerId = 1687350;
 
@@ -34,15 +30,19 @@ namespace DotNetUserGroup.Website.Controllers
                                  new EventInfo
                                      {
                                          Title = "Advanced IoC with Castle Windsor with Amir Barylko",
-                                         Date = "2011-11-29 17:30:00"
+                                         Date = "Nov 29th 2011"
                                      },
                                  new EventInfo
-                                     {Title = "ASP.NET MVC vs Ruby on Rails SMACKDOWN!", Date = "2012-01-25 17:30:00"},
-                                 new EventInfo {Title = "Azure and the Web", Date = "2012-03-31 09:00:00"},
+                                     {Title = "ASP.NET MVC vs Ruby on Rails SMACKDOWN!", 
+                                         Date = "Jan 25th 2012"},
+                                 new EventInfo {Title = "Azure and the Web", 
+                                     Date = "Mar 31st 2012"},
                                  new EventInfo
-                                     {Title = "Open Source Software Libraries and tools", Date = "2012-05-24 17:30:00"},
+                                     {Title = "Open Source Software Libraries and tools", 
+                                         Date = "May 24th 2012"},
                                  new EventInfo
-                                     {Title = "Nuget package and dependencies manager", Date = "2012-06-26 17:30:00"}
+                                     {Title = "Nuget package and dependencies manager", 
+                                         Date = "Jun 26th 2012"}
                              };
 
 
