@@ -15,7 +15,7 @@
   })();
 
   $(function() {
-    return ko.applyBindings(new EventsViewModel());
+    return ko.applyBindings(new EventsViewModel(), document.getElementById('events'));
   });
 
 }).call(this);

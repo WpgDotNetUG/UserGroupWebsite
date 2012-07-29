@@ -129,8 +129,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\FutureTopicInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,6 +173,9 @@
     <Content Include="Scripts\vm\EventsViewModel.js">
       <DependentUpon>EventsViewModel.coffee</DependentUpon>
     </Content>
+    <Content Include="Scripts\vm\TopicsViewModel.js">
+      <DependentUpon>TopicsViewModel.coffee</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,6 +210,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\vm\EventsViewModel.coffee">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <Bare>False</Bare>
+      <Iced>False</Iced>
+    </None>
+    <None Include="Scripts\vm\TopicsViewModel.coffee">
       <Compile>True</Compile>
       <Minify>True</Minify>
       <Bare>False</Bare>

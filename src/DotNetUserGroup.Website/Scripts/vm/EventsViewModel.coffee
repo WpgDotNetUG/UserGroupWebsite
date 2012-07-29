@@ -6,4 +6,4 @@ class EventsViewModel
 
 
 $ ->
-	ko.applyBindings(new EventsViewModel())
+	ko.applyBindings(new EventsViewModel(), document.getElementById('events'))

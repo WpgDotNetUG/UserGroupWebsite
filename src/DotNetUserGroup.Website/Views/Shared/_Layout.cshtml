@@ -8,7 +8,7 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <nav class="navbar">
+        <nav class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="#">
@@ -26,25 +26,47 @@
             </div>
         </nav>
 
-        <section class="container-fluid">
-            <section class="row-fluid">
-                <section id="content" class="span10">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <side class="span3">
+                    <section class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Sponsors</li>
+                            <li>
+                                <a href="#">Apptius</a>
+                            </li>
+                            <li>
+                                <a href="#">Protegra</a>
+                            </li>
+                            <li>
+                                <a href="#">Telerik</a>
+                            </li>
+                            <li class="nav-header">Blog Roll</li>
+                            <li>
+                                <a href="http://orthocoders.com">Blog1</a>
+                            </li>
+                            <li>
+                                <a href="http://orthocoders.com">Blog2</a>
+                            </li>
+                            <li>
+                                <a href="http://orthocoders.com">Blog3</a>
+                            </li>
+                            <li class="nav-header">Twitter Feed</li>
+                            <li>
+                                Someone said something about....
+                            </li>
+                        </ul>
+                    </section>
+                </side>
+                <section id="content" class="span9">
                     @RenderBody()
                 </section>
-                <side class="span2">
-                    <article id="sponsors">
-                        <header>Sponsors</header>
-                        <ul>
-                            <li>Apptius</li>
-                            <li>Protegra</li>
-                            <li>Telerik</li>
-                            <li>Discount</li>
-                            <li>Pluralsight</li>
-                        </ul>
-                    </article>
-                </side>
-            </section>
-        </section>
+            </div>
+        </div>
+        <hr/>
+        <footer>
+            &copy; Winnipeg Dot Net User Group 2012
+        </footer>
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")

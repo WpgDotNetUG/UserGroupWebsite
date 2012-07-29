@@ -1,12 +1,28 @@
 ﻿
-Events:
-
-<ul id="list-events" data-bind="foreach: events">
-    <li>
-        <div>
-            <div class="item">Event</div> <span data-bind="text: $data.Title"></span>
-            <div class="item">Date</div> <span data-bind="text: $data.Date"></span>
-        </div>
-    </li>
-</ul>
+<div class="hero-unit">
+    <h1>Have a happy summer!</h1>
+    <p>Next presentation in September... stay tuned</p>
+</div>
+<section class="row-fluid">
+    <section id="events" class="span6">
+        <h2>Past Events</h2>
+        <ul id="list-events" data-bind="foreach: events">
+            <li>
+                <span data-bind="text: $data.Date"></span>: 
+                <span data-bind="text: $data.Title"></span>
+            </li>
+        </ul>
+        <p>
+            <a class="btn" href="#">View details &raquo;</a>
+        </p>
+    </section>
+    <section id="topics" class="span6">
+        <h2>Future Topics</h2>
+        <ul id="list-topics" data-bind="foreach: topics">
+            <li>
+                <span data-bind="text: $data.Topic"></span>: <span data-bind="text: $data.Votes"></span>
+            </li>
+        </ul>
+    </section>
+</section>
 
