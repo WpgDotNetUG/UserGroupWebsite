@@ -23,7 +23,7 @@ namespace DotNetUserGroup.Website.App_Start
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include("~/Scripts/knockout-2.1.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewmodels")
-                            .Include("~/Scripts/vm/EventsViewModel.js"));
+                            .Include("~/Scripts/vm/*.js"));
 
             bundles.Add(new StyleBundle("~/Content/css")
                             .Include("~/Content/bootstrap.css",
