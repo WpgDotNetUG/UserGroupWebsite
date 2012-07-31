@@ -129,9 +129,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\FutureTopicInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\NewsInfo.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -148,8 +150,12 @@
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\home.css">
+      <DependentUpon>home.scss</DependentUpon>
+    </Content>
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\logo.gif" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -170,10 +176,13 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Scripts\vm\EventsViewModel.js">
+    <Content Include="Scripts\vm\Home\NewsViewModel.js">
+      <DependentUpon>NewsViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Home\EventsViewModel.js">
       <DependentUpon>EventsViewModel.coffee</DependentUpon>
     </Content>
-    <Content Include="Scripts\vm\TopicsViewModel.js">
+    <Content Include="Scripts\vm\Home\TopicsViewModel.js">
       <DependentUpon>TopicsViewModel.coffee</DependentUpon>
     </Content>
     <Content Include="Web.config" />
@@ -183,6 +192,12 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Content\home.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </None>
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -209,13 +224,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Scripts\vm\EventsViewModel.coffee">
+    <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
+    <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>
       <Minify>True</Minify>
       <Bare>False</Bare>
       <Iced>False</Iced>
     </None>
-    <None Include="Scripts\vm\TopicsViewModel.coffee">
+    <None Include="Scripts\vm\Home\TopicsViewModel.coffee">
       <Compile>True</Compile>
       <Minify>True</Minify>
       <Bare>False</Bare>

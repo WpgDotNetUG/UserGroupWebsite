@@ -1,0 +1,12 @@
+.widget h2 i {
+  margin-right: 10px; }
+.widget ul {
+  list-style: none;
+  margin-left: 0px; }
+  .widget ul li {
+    margin-bottom: 15px; }
+    .widget ul li span.label {
+      padding: 5px;
+      font-family: monospace;
+      margin-right: 5px; }
+
