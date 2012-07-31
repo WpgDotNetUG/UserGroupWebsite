@@ -16,10 +16,10 @@ namespace DotNetUserGroup.Website.Controllers
                                  new FutureTopicInfo {Topic = "Sass & Less & CSS Frameworks", Votes = 10},
                                  new FutureTopicInfo {Topic = "Using CI server", Votes = 7},
                                  new FutureTopicInfo {Topic = "Web API", Votes = 7},
-                                 new FutureTopicInfo {Topic = "CruiseConrol vs TeamCity", Votes = 6},
-                                 new FutureTopicInfo {Topic = "Cloud Computing", Votes = 5},
-                                 new FutureTopicInfo {Topic = "Using nHibernate", Votes = 5},
-                                 new FutureTopicInfo {Topic = "Coffeescript", Votes = 5},
+                                 //new FutureTopicInfo {Topic = "CruiseConrol vs TeamCity", Votes = 6},
+                                 //new FutureTopicInfo {Topic = "Cloud Computing", Votes = 5},
+                                 //new FutureTopicInfo {Topic = "Using nHibernate", Votes = 5},
+                                 //new FutureTopicInfo {Topic = "Coffeescript", Votes = 5},
                              };
 
 

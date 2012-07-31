@@ -1,28 +1,66 @@
-﻿
+﻿@section styles {
+        @Styles.Render("~/Content/home.css")
+}
+
+@section scripts {
+        @Scripts.Render("~/bundles/vm-home")
+}
+
 <div class="hero-unit">
     <h1>Have a happy summer!</h1>
     <p>Next presentation in September... stay tuned</p>
 </div>
 <section class="row-fluid">
-    <section id="events" class="span6">
-        <h2>Past Events</h2>
+    <section id="events" class="span6 widget alert alert-info">
+        <h2>
+            <i class="icon-calendar icon-large"></i>
+            Past Events
+            <a class="pull-right btn btn-info" href="#">View all &raquo;</a>
+        </h2>
         <ul id="list-events" data-bind="foreach: events">
             <li>
-                <span data-bind="text: $data.Date"></span>: 
+                <span data-bind="text: $data.Date" class="label label-info"></span>
                 <span data-bind="text: $data.Title"></span>
             </li>
         </ul>
-        <p>
-            <a class="btn" href="#">View details &raquo;</a>
-        </p>
     </section>
-    <section id="topics" class="span6">
-        <h2>Future Topics</h2>
+    <section id="topics" class="span6 widget alert alert-info">
+        <h2>
+            <i class="icon-group icon-large"></i>
+            Future Topics
+            <a class="pull-right btn btn-info" href="#">Vote &raquo;</a>
+        </h2>
         <ul id="list-topics" data-bind="foreach: topics">
             <li>
-                <span data-bind="text: $data.Topic"></span>: <span data-bind="text: $data.Votes"></span>
+                <span data-bind="text: $data.Votes + ' Votes'" class="label label-info"></span>
+                <span data-bind="text: $data.Topic"></span>
             </li>
         </ul>
+    </section>
+</section>
+<section class="row-fluid">
+    <section id="news" class="span6 widget alert alert-info">
+        <h2>
+            <i class="icon-eye-open icon-large"></i>
+            News
+            <a class="btn btn-info pull-right" href="#">Read all &raquo;</a>
+        </h2>
+        <ul id="list-news" data-bind="foreach: news">
+            <li>
+                <span data-bind="text: $data.Date" class="label label-info"></span>
+                <span data-bind="text: $data.Title"></span> 
+            </li>
+        </ul>
+    </section>
+    <section id="register" class="span6 alert alert-success widget">
+        <h2>
+            <i class="icon-envelope icon-large"></i>
+            Get Notified
+            <a class="btn btn-success pull-right" href="http://eepurl.com/clTOr">Signup &raquo;</a>
+        </h2>
+        <p>
+            Want to make sure you don't miss a meeting? Then take a minute and sign up for the Winnipeg .Net User Group mailing list. You can be on top of our event schedule, and all you need to do is check you email. Sign up now and don't miss another meeting.
+        </p>
     </section>
 </section>
 
