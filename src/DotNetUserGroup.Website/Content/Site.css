@@ -4,8 +4,10 @@ body {
   max-width: 1400px; }
   body nav {
     margin: 5px; }
-  body h1 {
-    font-size: 1.75em; }
+  body .hero-unit .label {
+    padding: 3px;
+    margin-right: 5px;
+    margin-left: 40px; }
 
 @media screen and (max-width:1024px) {
   h1 {

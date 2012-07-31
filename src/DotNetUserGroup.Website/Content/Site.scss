@@ -8,8 +8,12 @@
 		margin: 5px;
 	}
 
-	h1 {
-		font-size: 1.75em;
+	.hero-unit {
+		.label {
+			padding: 3px;
+			margin-right:5px;
+			margin-left:40px;
+		}
 	}
 }
 
