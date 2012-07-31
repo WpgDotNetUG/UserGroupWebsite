@@ -6,8 +6,11 @@
     EventsViewModel.name = 'EventsViewModel';
 
     function EventsViewModel() {
+      var _this = this;
       this.events = ko.observableArray();
-      $.getJSON('../api/events', this.events);
+      $.getJSON('../api/events', function(data) {
+        return _this.events(data.slice(0, 3));
+      });
     }
 
     return EventsViewModel;
