@@ -29,7 +29,10 @@
 
         <div class="container-fluid">
             <div class="row-fluid">
-                <side class="span3">
+                <section id="content" class="span10">
+                    @RenderBody()
+                </section>
+                <aside class="sidebar span2">
                     <section class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Local Sponsors</li>
@@ -57,10 +60,7 @@
                             <li><a href="#">Tweet D</a></li>
                         </ul>
                     </section>
-                </side>
-                <section id="content" class="span9">
-                    @RenderBody()
-                </section>
+                </aside>
             </div>
         </div>
         <hr/>
