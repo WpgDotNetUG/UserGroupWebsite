@@ -2,7 +2,7 @@ class TopicsViewModel
 
 	constructor: ->
 		@topics = ko.observableArray()
-		$.getJSON('../api/topics', @topics)
+		$.getJSON '../api/topics', (data) => @topics(data[0..2])
 
 
 $ ->

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width" />
         <title>@ViewBag.Title</title>
         @Styles.Render("~/Content/css")
+        @RenderSection("styles", required: false)
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
@@ -12,7 +13,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="#">
-                        <img src="/images/logo.png" width="111" height="30" alt="Dot Net User Group logo" />
+                        <img src="~/Content/images/logo.gif" width="111" height="30" alt="Dot Net User Group logo" />
                     </a>
                     <div class="nav-collapse">
                         <ul class="nav">
@@ -31,30 +32,29 @@
                 <side class="span3">
                     <section class="well sidebar-nav">
                         <ul class="nav nav-list">
-                            <li class="nav-header">Sponsors</li>
-                            <li>
-                                <a href="#">Apptius</a>
-                            </li>
-                            <li>
-                                <a href="#">Protegra</a>
-                            </li>
-                            <li>
-                                <a href="#">Telerik</a>
-                            </li>
+                            <li class="nav-header">Local Sponsors</li>
+                            <li><a href="#">Apptius</a></li>
+                            <li><a href="#">DMT</a></li>
+                            <li><a href="#">Imaginet</a></li>
+                            <li><a href="#">Online Business Systems</a></li>
+
+                            <li class="nav-header">Non-Local Sponsors</li>
+                            <li><a href="#">INETA</a></li>
+                            <li><a href="#">Manning</a></li>
+                            <li><a href="#">MSDN</a></li>
+                            <li><a href="#">Pluralsight</a></li>
+                            <li><a href="#">O'Reilly</a></li>
+
                             <li class="nav-header">Blog Roll</li>
-                            <li>
-                                <a href="http://orthocoders.com">Blog1</a>
-                            </li>
-                            <li>
-                                <a href="http://orthocoders.com">Blog2</a>
-                            </li>
-                            <li>
-                                <a href="http://orthocoders.com">Blog3</a>
-                            </li>
+                            <li><a href="http://orthocoders.com">Blog1</a></li>
+                            <li><a href="http://orthocoders.com">Blog2</a></li>
+                            <li><a href="http://orthocoders.com">Blog3</a></li>
+                            
                             <li class="nav-header">Twitter Feed</li>
-                            <li>
-                                Someone said something about....
-                            </li>
+                            <li><a href="#">Tweet A</a></li>
+                            <li><a href="#">Tweet B</a></li>
+                            <li><a href="#">Tweet C</a></li>
+                            <li><a href="#">Tweet D</a></li>
                         </ul>
                     </section>
                 </side>
@@ -71,7 +71,6 @@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/knockout")
-        @Scripts.Render("~/bundles/viewmodels")
         @RenderSection("scripts", required: false)
     </body>
 </html>
