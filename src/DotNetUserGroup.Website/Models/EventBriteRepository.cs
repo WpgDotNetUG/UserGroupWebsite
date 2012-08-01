@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Web.Configuration;
 using EasyHttp.Http;
 
@@ -45,23 +44,21 @@ namespace DotNetUserGroup.Website.Models
 
         private static object LoadConfiguration()
         {
+            return new
+                       {
+                           app_key = GetConfig("EB_APP_KEY"),
+                           user_key = GetConfig("EB_USER_KEY")
+                       };
+
+        }
+
+        private static string GetConfig(string key)
+        {
             var section = WebConfigurationManager.AppSettings;
 
-            var query = new
-                            {
-                                app_key = section["EB_APP_KEY"],
-                                user_key = section["EB_USER_KEY"]
-                            };
+            var envDebug = section["Environment"] == "Debug";
 
-#if DEBUG
-            query = new
-            {
-                app_key = Environment.GetEnvironmentVariable("EB_APP_KEY"),
-                user_key = Environment.GetEnvironmentVariable("EB_USER_KEY")
-            };
-#endif
-
-            return query;
+            return envDebug ? Environment.GetEnvironmentVariable(key) : section[key];
         }
     }
 }
