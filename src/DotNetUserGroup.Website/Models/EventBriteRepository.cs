@@ -24,10 +24,14 @@ namespace DotNetUserGroup.Website.Models
 
             foreach (var e in eventList)
             {
+                dynamic @event = e.@event;
+
                 result.Add(new UserGroupEvent
                                {
-                                   Title = e.@event.title,
-                                   Date = DateTime.Parse(e.@event.start_date)
+                                   Title = @event.title,
+                                   Date = DateTime.Parse(@event.start_date),
+                                   Id = @event.id,
+                                   Address = @event.venue.address
                                });
             }
 

@@ -19,7 +19,9 @@
             e = _ref[_i];
             _results.push({
               Title: e.Title,
-              Date: this.parseDate(e.Date)
+              Date: this.parseDate(e.Date),
+              Url: "http://www.eventbrite.ca/event/" + e.Id,
+              Address: e.Address
             });
           }
           return _results;

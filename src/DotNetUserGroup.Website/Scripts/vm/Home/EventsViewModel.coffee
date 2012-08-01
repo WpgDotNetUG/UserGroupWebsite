@@ -5,7 +5,12 @@ class EventsViewModel
 		@nextEvent = ko.observable()
 
 		$.getJSON '../api/events', (data) =>
-			es = ({Title: e.Title, Date: @parseDate(e.Date)} for e in data[0..2])
+			es = ({
+				Title: e.Title, 
+				Date: @parseDate(e.Date)
+				Url: "http://www.eventbrite.ca/event/#{e.Id}"
+				Address: e.Address
+				} for e in data[0..2])
 			@events(es)
 
 	parseDate: (d) ->

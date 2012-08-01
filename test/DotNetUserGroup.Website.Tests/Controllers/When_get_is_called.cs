@@ -31,8 +31,9 @@ namespace DotNetUserGroup.Website.Tests.Controllers
         public void Should_return_all_the_events()
         {
             this._actual
+                .Select(e => e.Id)
                 .Should().Have
-                .SameSequenceAs(this._expectedEvents.Reverse());
+                .SameSequenceAs(this._expectedEvents.OrderByDescending(e => e.Date).Select(e => e.Id));
         }
 
         private static IEnumerable<UserGroupEvent> Given_I_have_some_past_events()
@@ -43,7 +44,8 @@ namespace DotNetUserGroup.Website.Tests.Controllers
                                  {
                                      Title = "The event is " + i,
                                      Date = DateTime.Now.AddDays(i),
-                                     Presenter = "Crazy Presenter " + i,
+                                     Address = "Crazy Presenter " + i,
+                                     Id = i
                                  });
         }
     }

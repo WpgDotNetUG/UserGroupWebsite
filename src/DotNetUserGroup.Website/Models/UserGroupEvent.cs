@@ -6,6 +6,7 @@ namespace DotNetUserGroup.Website.Models
     {
         public string Title { get; set; }
         public DateTime Date { get; set; }
-        public string Presenter { get; set; }
+        public string Address { get; set; }
+        public long Id { get; set; }
     }
 }
