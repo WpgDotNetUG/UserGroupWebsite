@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Web.Configuration;
 using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
@@ -12,11 +13,13 @@ namespace DotNetUserGroup.Website.Models
             http.Request.Accept = HttpContentTypes.ApplicationJson;
             const string url = "https://www.eventbrite.com/json/user_list_events";
 
-            var response = http.Get(url, new
-                                             {
-                                                 app_key = "RMG5TWH6AW5DXBKIZQ",
-                                                 user_key = "132216720823914661396"
-                                             });
+            var query = new
+                            {
+                                app_key = WebConfigurationManager.AppSettings["EB_APP_KEY"], 
+                                user_key = WebConfigurationManager.AppSettings["EB_USER_KEY"]
+                            };
+
+            var response = http.Get(url, query);
 
             var eventList = response.DynamicBody.events;
 
@@ -24,7 +27,7 @@ namespace DotNetUserGroup.Website.Models
 
             foreach (var e in eventList)
             {
-                dynamic @event = e.@event;
+                var @event = e.@event;
 
                 result.Add(new UserGroupEvent
                                {
