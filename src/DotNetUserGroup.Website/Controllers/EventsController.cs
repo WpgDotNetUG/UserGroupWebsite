@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using DotNetUserGroup.Website.Models;
 
@@ -16,7 +17,10 @@ namespace DotNetUserGroup.Website.Controllers
         // GET api/events
         public IEnumerable<UserGroupEvent> Get()
         {
-            return this._repository.All();
+            return this
+                ._repository
+                .All()
+                .OrderByDescending(e => e.Date);
         }
     }
 }

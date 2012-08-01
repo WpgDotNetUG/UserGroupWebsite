@@ -17,7 +17,7 @@ namespace DotNetUserGroup.Website.Tests.Controllers
         {
             base.GivenThat();
 
-            this._expectedEvents = Given_I_have_some_events_loaded();
+            this._expectedEvents = Given_I_have_some_past_events();
 
             Dep<IEventRepository>().Stub(r => r.All()).Return(this._expectedEvents);
         }
@@ -30,10 +30,12 @@ namespace DotNetUserGroup.Website.Tests.Controllers
         [It]
         public void Should_return_all_the_events()
         {
-            this._actual.Should().Have.SameSequenceAs(this._expectedEvents.Reverse());
+            this._actual
+                .Should().Have
+                .SameSequenceAs(this._expectedEvents.Reverse());
         }
 
-        private static IEnumerable<UserGroupEvent> Given_I_have_some_events_loaded()
+        private static IEnumerable<UserGroupEvent> Given_I_have_some_past_events()
         {
             return Enumerable
                 .Range(1, 10)
