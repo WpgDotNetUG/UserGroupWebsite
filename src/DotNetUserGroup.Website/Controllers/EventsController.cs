@@ -14,7 +14,7 @@ namespace DotNetUserGroup.Website.Controllers
         }
 
         // GET api/events
-        public IEnumerable<EventInfo> Get()
+        public IEnumerable<UserGroupEvent> Get()
         {
             return this._repository.All();
         }

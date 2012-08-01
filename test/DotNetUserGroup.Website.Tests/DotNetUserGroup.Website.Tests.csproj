@@ -110,8 +110,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\EventsControllerSpecs.cs" />
+    <Compile Include="Controllers\When_get_is_called.cs" />
     <Compile Include="Controllers\EventsControllerSpecification.cs" />
+    <Compile Include="Models\EventBriteRepositorySpecification.cs" />
+    <Compile Include="Models\When_getting_events_from_eventbrite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

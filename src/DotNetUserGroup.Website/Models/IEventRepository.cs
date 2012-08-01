@@ -4,6 +4,6 @@ namespace DotNetUserGroup.Website.Models
 {
     public interface IEventRepository
     {
-        IEnumerable<EventInfo> All();
+        IEnumerable<UserGroupEvent> All();
     }
 }

@@ -152,7 +152,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
-    <Compile Include="Models\EventInfo.cs" />
+    <Compile Include="Models\UserGroupEvent.cs" />
     <Compile Include="Models\IEventRepository.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\FutureTopicInfo.cs" />
