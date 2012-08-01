@@ -1,4 +1,4 @@
-namespace DotNetUserGroup.Website.Controllers
+namespace DotNetUserGroup.Website.Models
 {
     public struct NewsInfo
     {

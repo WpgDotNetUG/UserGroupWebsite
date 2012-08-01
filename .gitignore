@@ -21,3 +21,4 @@ TestResult.xml
 GlobalAss*
 data*.log
 *.dat
+settings.local.config
