@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Configuration
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -37,20 +38,22 @@
                     <section class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Local Sponsors</li>
-                            <li><a href="#">Apptius</a></li>
-                            <li><a href="#">DMT</a></li>
-                            <li><a href="#">Imaginet</a></li>
-                            <li><a href="#">Online Business Systems</a></li>
+                            <li>
+                                <a href="http://apptius.com"><img src="~/Images/apptius-logo.png" alt="apptious"/></a>
+                            </li>
+                            <li><a href="http://www.dmt.ca">DMT</a></li>
+                            <li><a href="http://imaginet.com">Imaginet</a></li>
+                            <li><a href="http://www.obsglobal.com">Online Business Systems</a></li>
 
                             <li class="nav-header">Non-Local Sponsors</li>
-                            <li><a href="#">INETA</a></li>
-                            <li><a href="#">Manning</a></li>
-                            <li><a href="#">MSDN</a></li>
-                            <li><a href="#">Pluralsight</a></li>
-                            <li><a href="#">O'Reilly</a></li>
+                            <li><a href="http://www.ineta.org"><img src="~/Images/Ineta-Logo.png" alt="INETA" /></a></li>
+                            <li><a href="http://manning.com">Manning</a></li>
+                            <li><a href="http://msdn.microsoft.com"><img src="~/Images/Msdn-Logo.png" alt="MSDN" /></a></li>
+                            <li><a href="http://www.pluralsight-training.net/microsoft/"><img src="~/Images/pluralsight-logo-for-sponsorships-small.png" alt="Pluralsight" /></a></li>
+                            <li><a href="http://oreilly.com/">O'Reilly</a></li>
 
                             <li class="nav-header">Blog Roll</li>
-                            <li><a href="http://orthocoders.com">Blog1</a></li>
+                            <li><a href="http://orthocoders.com">OrthoCoders</a></li>
                             <li><a href="http://orthocoders.com">Blog2</a></li>
                             <li><a href="http://orthocoders.com">Blog3</a></li>
                             
@@ -65,8 +68,11 @@
             </div>
         </div>
         <hr/>
-        <footer>
-            &copy; Winnipeg Dot Net User Group 2012
+        <footer class="pull-right">
+            &copy; Winnipeg Dot Net User Group 2012 - @WebConfigurationManager.AppSettings["appharbor.commit_id"]
+            <p>
+                @WebConfigurationManager.AppSettings["Environment"]
+            </p>
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
