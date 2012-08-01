@@ -248,7 +248,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Copy of packages.config" />
+    <Content Include="packages.config" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
     <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>
