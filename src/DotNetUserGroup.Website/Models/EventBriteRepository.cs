@@ -56,9 +56,9 @@ namespace DotNetUserGroup.Website.Models
         {
             var section = WebConfigurationManager.AppSettings;
 
-            var envDebug = section["Environment"] == "Debug";
-
-            return envDebug ? Environment.GetEnvironmentVariable(key) : section[key];
+            return section["Environment"] == "Debug" 
+                ? Environment.GetEnvironmentVariable(key) 
+                : section[key];
         }
     }
 }
