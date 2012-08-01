@@ -7,16 +7,18 @@
 }
 
 <div class="hero-unit">
-    <h1>Next session: Using Git</h1>
+    <h1>Winnipeg .NET User Group</h1>
+    <hr />
+    <h2>Next presentation: Using Git</h2>
     <p>
         In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase. In this section you’ll learn what rebasing is, how to do it, why it’s a pretty amazing tool, and in what cases you won’t want to use it.
     </p>
     <hr/>
     <p>
-        <span class="label label-important">Who?</span>Marc Jeanson
-        <span class="label label-important">When?</span>Sep 20th
-        <span class="label label-important">Where?</span>Smartpark
-        <a href="#" class="pull-right btn btn-large btn-primary">Read more and register</a>
+    <span class="label label-important">Who?</span>Marc Jeanson
+    <span class="label label-important">When?</span>Sep 20th
+    <span class="label label-important">Where?</span>Smartpark
+    <a href="#" class="pull-right btn btn-large btn-primary">Read more and register</a>
     </>
 </div>
 <section class="row-fluid">
@@ -24,12 +26,15 @@
         <h2>
             <i class="icon-calendar icon-large"></i>
             Past Events
-            <a class="pull-right btn btn-info" href="#">View all &raquo;</a>
+            <a class="pull-right btn btn-info" 
+               data-bind="attr: { href: organizerUrl }" target="_blank">
+                View all &raquo;
+            </a>
         </h2>
         <ul id="list-events" data-bind="foreach: events">
             <li>
                 <span data-bind="text: $data.Date" class="label label-info"></span>
-                <span data-bind="text: $data.Title"></span>
+                <a data-bind="attr: { href: Url }" target="_blank"><span data-bind="text: $data.Title"></span></a>
             </li>
         </ul>
     </section>
