@@ -26,7 +26,10 @@
         <h2>
             <i class="icon-calendar icon-large"></i>
             Past Events
-            <a class="pull-right btn btn-info" href="#">View all &raquo;</a>
+            <a class="pull-right btn btn-info" 
+               data-bind="attr: { href: organizerUrl }" target="_blank">
+                View all &raquo;
+            </a>
         </h2>
         <ul id="list-events" data-bind="foreach: events">
             <li>

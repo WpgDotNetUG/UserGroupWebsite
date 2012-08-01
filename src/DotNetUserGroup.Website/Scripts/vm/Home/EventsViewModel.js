@@ -9,6 +9,7 @@
       var _this = this;
       this.events = ko.observableArray();
       this.nextEvent = ko.observable();
+      this.organizerUrl = ko.observable('http://www.eventbrite.com/org/1699161450');
       $.getJSON('../api/events', function(data) {
         var e, es;
         es = (function() {

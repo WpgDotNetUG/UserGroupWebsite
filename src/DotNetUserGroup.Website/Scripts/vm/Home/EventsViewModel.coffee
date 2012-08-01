@@ -3,6 +3,7 @@ class EventsViewModel
 	constructor: ->
 		@events = ko.observableArray()
 		@nextEvent = ko.observable()
+		@organizerUrl = ko.observable('http://www.eventbrite.com/org/1699161450')
 
 		$.getJSON '../api/events', (data) =>
 			es = ({
