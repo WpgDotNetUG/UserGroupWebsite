@@ -2,6 +2,8 @@
 
 .hero-unit {
 	
+	@include gradient-striped($btnInfoBackground);
+
 	.main-event {
 		@extend .alert;
 		@extend .alert-info;

@@ -1,23 +1,20 @@
 body {
   padding-bottom: 40px;
-  padding-top: 70px;
-  max-width: 1400px; }
+  padding-top: 70px; }
   body nav {
     margin: 5px; }
   body .hero-unit .label {
     padding: 3px;
     margin-right: 5px;
     margin-left: 40px; }
+  body footer {
+    margin-right: 20px; }
 
-@media screen and (max-width:1024px) {
-  h1 {
-    background-color: green; } }
 @media screen and (max-width:758px) {
   body {
     padding-top: 50px; }
     body .hero-unit h1 {
-      font-size: 50px;
-      background-color: Yellow; }
+      font-size: 50px; }
     body h2 {
       font-size: 22px; } }
 @media screen and (max-width:320px) {
@@ -26,8 +23,7 @@ body {
   body .btn {
     font-size: 0.5em; }
   body .hero-unit h1 {
-    font-size: 40px;
-    background-color: Red; }
+    font-size: 40px; }
   body .widget h2 i {
     display: none; }
   body .widget ul li span {
