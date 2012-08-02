@@ -4,6 +4,14 @@
 	
 	@include gradient-striped($btnInfoBackground);
 
+	background-image: url('/images/wpg_bridge.jpg');
+	background-position: 0px -150px;
+	background-repeat: repeat-x; 
+
+	h1 {
+		color:white;
+	}
+
 	.main-event {
 		@extend .alert;
 		@extend .alert-info;
