@@ -14,7 +14,7 @@
     <RootNamespace>DotNetUserGroup.Website</RootNamespace>
     <AssemblyName>DotNetUserGroup.Website</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
+    <MvcBuildViews>true</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -187,6 +187,7 @@
     <Content Include="Images\DiscountAspNet-Logo.png" />
     <Content Include="Images\Ineta-Logo.png" />
     <Content Include="Images\Msdn-Logo.png" />
+    <Content Include="Images\obs-logo.png" />
     <Content Include="Images\pluralsight-logo-for-sponsorships-small.png" />
     <Content Include="Images\Protegra-Logo.png" />
     <Content Include="Images\Telerik-logo.jpg" />
@@ -245,7 +246,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
-    <Content Include="App_Code\Sidebar.cshtml" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
     <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>

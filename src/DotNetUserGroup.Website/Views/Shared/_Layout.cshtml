@@ -37,8 +37,8 @@
                 <aside class="sidebar span2">
                     <section class="well sidebar-nav">
                         <ul class="nav nav-list">
-                            @Sidebar.LocalSponsors()
-                            @Sidebar.NonLocalSponsors()
+                            @LocalSponsors()
+                            @NonLocalSponsors()
                         </ul>
                     </section>
                 </aside>
@@ -64,3 +64,30 @@
         @RenderSection("scripts", required: false)
     </body>
 </html>
+
+@helper LocalSponsors()
+{
+    <li class="nav-header">Local Sponsors</li>
+    @Sponsor("http://apptius.com", "apptius-logo.png", "Apptius")
+    @Sponsor("http://www.dmt.ca", "", "DMT")
+    @Sponsor("http://imaginet.com", "", "Imaginet")
+    @Sponsor("http://www.obsglobal.com", "obs-logo.png", "Online Business Systems")
+}
+
+@helper NonLocalSponsors()
+{
+    <li class="nav-header">Non-Local Sponsors</li>
+    <li><a href="http://www.ineta.org"><img src="~/Images/Ineta-Logo.png" alt="INETA" /></a></li>
+    <li><a href="http://manning.com">Manning</a></li>
+    <li><a href="http://msdn.microsoft.com"><img src="~/Images/Msdn-Logo.png" alt="MSDN" /></a></li>
+    <li><a href="http://www.pluralsight-training.net/microsoft/"><img src="~/Images/pluralsight-logo-for-sponsorships-small.png" alt="Pluralsight" /></a></li>
+    <li><a href="http://oreilly.com/">O'Reilly</a></li>
+
+}
+
+@helper Sponsor(string url, string img, string alt) 
+{
+    <li>
+        <a href="@url"><img src="~/Images/@img" alt="@alt" /></a>
+    </li>
+}
