@@ -35,7 +35,7 @@ namespace DotNetUserGroup.Website.Models
             catch (Exception e)
             {
                 new LogEvent("Exception with EB " + e.Message).Raise();
-                new LogEvent("Response is  " + response.error).Raise();
+                new LogEvent("Response is  " + response.error.error_type + " -> " + response.error.error_message).Raise();
                 
                 result.Add(new UserGroupEvent
                                {
