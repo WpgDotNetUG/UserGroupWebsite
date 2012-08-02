@@ -46,7 +46,9 @@
         </div>
         <hr/>
         <footer class="pull-right">
-            &copy; Winnipeg Dot Net User Group 2012 - @WebConfigurationManager.AppSettings["appharbor.commit_id"]
+            &copy; Winnipeg Dot Net User Group 2012 
+            - 
+            @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 5)
             <p>
                 @WebConfigurationManager.AppSettings["Environment"]
             </p>

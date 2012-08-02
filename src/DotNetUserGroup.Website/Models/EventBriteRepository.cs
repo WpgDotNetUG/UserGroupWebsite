@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Configuration;
+using System.Web.Management;
 using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
@@ -11,20 +12,34 @@ namespace DotNetUserGroup.Website.Models
 
         public IEnumerable<UserGroupEvent> All()
         {
-            var eventList = Request("/user_list_events", LoadConfiguration()).DynamicBody.events;
-
             var result = new List<UserGroupEvent>();
 
-            foreach (var e in eventList)
+            try
             {
-                var @event = e.@event;
+                var eventList = Request("user_list_events", LoadConfiguration()).DynamicBody.events;
 
+                foreach (var e in eventList)
+                {
+                    var @event = e.@event;
+
+                    result.Add(new UserGroupEvent
+                    {
+                        Title = @event.title,
+                        Date = DateTime.Parse(@event.start_date),
+                        Id = @event.id,
+                        Address = @event.venue.address
+                    });
+                }
+
+            }
+            catch (Exception e)
+            {
+                new LogEvent("Exception with EB " + e.Message).Raise();
+                
                 result.Add(new UserGroupEvent
                                {
-                                   Title = @event.title,
-                                   Date = DateTime.Parse(@event.start_date),
-                                   Id = @event.id,
-                                   Address = @event.venue.address
+                                   Date = DateTime.Now,
+                                   Title = "Error reading from EB"
                                });
             }
 
@@ -56,9 +71,21 @@ namespace DotNetUserGroup.Website.Models
         {
             var section = WebConfigurationManager.AppSettings;
 
-            return section["Environment"] == "Debug" 
-                ? Environment.GetEnvironmentVariable(key) 
-                : section[key];
+            var debugEnv = section["Environment"] != "Release";
+
+            var value = debugEnv ? Environment.GetEnvironmentVariable(key) : section[key];
+
+            new LogEvent("Reading Enivornment " + key + " and obtaind " + value).Raise();
+
+            return value;
+        }
+    }
+
+    public class LogEvent : WebRequestErrorEvent
+    {
+        public LogEvent(string message)
+            : base(null, null, 100001, new Exception(message))
+        {
         }
     }
 }
