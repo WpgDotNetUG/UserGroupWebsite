@@ -14,11 +14,11 @@ namespace DotNetUserGroup.Website.Models
         {
             var result = new List<UserGroupEvent>();
 
+            var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
+
             try
             {
-                var eventList = Request("user_list_events", LoadConfiguration()).DynamicBody.events;
-
-                foreach (var e in eventList)
+                foreach (var e in response.events)
                 {
                     var @event = e.@event;
 
@@ -35,6 +35,7 @@ namespace DotNetUserGroup.Website.Models
             catch (Exception e)
             {
                 new LogEvent("Exception with EB " + e.Message).Raise();
+                new LogEvent("Response is  " + response.error).Raise();
                 
                 result.Add(new UserGroupEvent
                                {
@@ -59,11 +60,15 @@ namespace DotNetUserGroup.Website.Models
 
         private static object LoadConfiguration()
         {
-            return new
-                       {
-                           app_key = GetConfig("EB_APP_KEY"),
-                           user_key = GetConfig("EB_USER_KEY")
-                       };
+            var config = new
+            {
+                app_key = GetConfig("EB_APP_KEY"),
+                user_key = GetConfig("EB_USER_KEY")
+            };
+
+            new LogEvent("Load Config #-" + config.app_key + "-# and #-" + config.user_key + "-# ").Raise();
+
+            return config;
 
         }
 
@@ -74,8 +79,6 @@ namespace DotNetUserGroup.Website.Models
             var debugEnv = section["Environment"] != "Release";
 
             var value = debugEnv ? Environment.GetEnvironmentVariable(key) : section[key];
-
-            new LogEvent("Reading Enivornment " + key + " and obtaind " + value).Raise();
 
             return value;
         }
