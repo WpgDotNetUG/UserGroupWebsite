@@ -37,31 +37,8 @@
                 <aside class="sidebar span2">
                     <section class="well sidebar-nav">
                         <ul class="nav nav-list">
-                            <li class="nav-header">Local Sponsors</li>
-                            <li>
-                                <a href="http://apptius.com"><img src="~/Images/apptius-logo.png" alt="apptious"/></a>
-                            </li>
-                            <li><a href="http://www.dmt.ca">DMT</a></li>
-                            <li><a href="http://imaginet.com">Imaginet</a></li>
-                            <li><a href="http://www.obsglobal.com">Online Business Systems</a></li>
-
-                            <li class="nav-header">Non-Local Sponsors</li>
-                            <li><a href="http://www.ineta.org"><img src="~/Images/Ineta-Logo.png" alt="INETA" /></a></li>
-                            <li><a href="http://manning.com">Manning</a></li>
-                            <li><a href="http://msdn.microsoft.com"><img src="~/Images/Msdn-Logo.png" alt="MSDN" /></a></li>
-                            <li><a href="http://www.pluralsight-training.net/microsoft/"><img src="~/Images/pluralsight-logo-for-sponsorships-small.png" alt="Pluralsight" /></a></li>
-                            <li><a href="http://oreilly.com/">O'Reilly</a></li>
-
-                            <li class="nav-header">Blog Roll</li>
-                            <li><a href="http://orthocoders.com">OrthoCoders</a></li>
-                            <li><a href="http://orthocoders.com">Blog2</a></li>
-                            <li><a href="http://orthocoders.com">Blog3</a></li>
-                            
-                            <li class="nav-header">Twitter Feed</li>
-                            <li><a href="#">Tweet A</a></li>
-                            <li><a href="#">Tweet B</a></li>
-                            <li><a href="#">Tweet C</a></li>
-                            <li><a href="#">Tweet D</a></li>
+                            @Sidebar.LocalSponsors()
+                            @Sidebar.NonLocalSponsors()
                         </ul>
                     </section>
                 </aside>
@@ -72,6 +49,12 @@
             &copy; Winnipeg Dot Net User Group 2012 - @WebConfigurationManager.AppSettings["appharbor.commit_id"]
             <p>
                 @WebConfigurationManager.AppSettings["Environment"]
+            </p>
+            <p>
+                @WebConfigurationManager.AppSettings["EB_APP_KEY"]
+            </p>
+            <p>
+                @WebConfigurationManager.AppSettings["EB_USER_KEY"]
             </p>
         </footer>
 

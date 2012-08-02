@@ -245,6 +245,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
+    <Content Include="App_Code\Sidebar.cshtml" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
     <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>
@@ -261,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="settings.config" />
