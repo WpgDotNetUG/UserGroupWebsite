@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Configuration;
-using System.Web.Management;
 using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
@@ -34,14 +33,10 @@ namespace DotNetUserGroup.Website.Models
             }
             catch (Exception e)
             {
-                new LogEvent("Exception with EB " + e.Message).Raise();
-                new LogEvent("Response is  " + response.error.error_type + " -> " + response.error.error_message).Raise();
+                new LogEvent("Exception connecting with EB " + e.Message).Raise();
+                new LogEvent("Error from EB is  " + response.error.error_type + " -> " + response.error.error_message).Raise();
                 
-                result.Add(new UserGroupEvent
-                               {
-                                   Date = DateTime.Now,
-                                   Title = "Error reading from EB"
-                               });
+                throw new Exception("Error connecting to EventBrite");
             }
 
             return result;
@@ -66,10 +61,7 @@ namespace DotNetUserGroup.Website.Models
                 user_key = GetConfig("EB_USER_KEY")
             };
 
-            new LogEvent("Load Config #-" + config.app_key + "-# and #-" + config.user_key + "-# ").Raise();
-
             return config;
-
         }
 
         private static string GetConfig(string key)
@@ -78,17 +70,7 @@ namespace DotNetUserGroup.Website.Models
 
             var debugEnv = section["Environment"] != "Release";
 
-            var value = debugEnv ? Environment.GetEnvironmentVariable(key) : section[key];
-
-            return value;
-        }
-    }
-
-    public class LogEvent : WebRequestErrorEvent
-    {
-        public LogEvent(string message)
-            : base(null, null, 100001, new Exception(message))
-        {
+            return debugEnv ? Environment.GetEnvironmentVariable(key) : section[key];
         }
     }
 }
