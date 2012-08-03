@@ -4,5 +4,6 @@
     {
         public string Topic { get; set; }
         public int Votes { get; set; }
+        public int Id { get; set; }
     }
 }

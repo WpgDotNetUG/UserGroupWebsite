@@ -65,6 +65,10 @@ namespace DotNetUserGroup.Website.App_Start
                 .To<EventBriteRepository>()
                 .InTransientScope();
 
+            kernel.Bind<IFutureTopicsRepository>()
+                .To<IdeaScaleRepository>()
+                .InTransientScope();
+            
             kernel.Bind(x => x
                                  .FromThisAssembly()
                                  .SelectAllClasses()

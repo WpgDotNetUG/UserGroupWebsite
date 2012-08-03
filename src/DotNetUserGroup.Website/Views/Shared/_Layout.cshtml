@@ -19,16 +19,13 @@
         <nav class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="#">
-                        <img src="~/Content/images/logo.gif" width="111" height="30" alt="Dot Net User Group logo" />
-                    </a>
+                    <span class="brand">Winnipeg Dot Net User Group</span>
                     <div class="nav-collapse">
                         <ul class="nav">
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="http://www.eventbrite.com/org/1699161450" target="_blank">Events</a></li>
-                            <li><a href="/topics">Topics</a></li>
+                            <li><a href="http://wpgdotnet.ideascale.com/" target="_blank">Topics</a></li>
                             <li><a href="/news">News</a></li>
-                            <li><a href="/about">About</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +50,8 @@
         <footer class="pull-right">
             &copy; Winnipeg Dot Net User Group 2012 
             - 
-            @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 5)
+            v2.0
+            - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
@@ -80,12 +78,11 @@
     @Sponsor("http://msdn.microsoft.com", "Msdn-Logo.png", "MSDN")
     @Sponsor("http://www.pluralsight-training.net/microsoft/", "pluralsight-logo-for-sponsorships-small.png", "Pluralsight")
     @Sponsor("http://oreilly.com/", "oreilly.gif", "O'Reilly")
-    <li><a href=""></a></li>
 
 }
 
 @helper Sponsor(string url, string img, string alt)
-    {
+{
     <li class="sponsor">
         <a href="@url" target="_blank"><img src="~/Images/@img" alt="@alt" /></a>
     </li>

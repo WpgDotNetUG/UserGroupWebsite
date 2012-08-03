@@ -6,7 +6,7 @@ using MavenThought.Commons.Testing;
 using Rhino.Mocks;
 using SharpTestsEx;
 
-namespace DotNetUserGroup.Website.Tests.Controllers
+namespace DotNetUserGroup.Website.Tests.Controllers.Events
 {
     public class When_get_is_called : EventsControllerSpecification
     {
