@@ -18,7 +18,7 @@ namespace DotNetUserGroup.Website.Tests.Controllers.Topics
 
             this._expected = Given_I_have_some_topics();
 
-            Dep<IFutureTopicsRepository>().Stub(r => r.All()).Return(this._expected);
+            Dep<IRepository<FutureTopicInfo>>().Stub(r => r.All()).Return(this._expected);
         }
 
         protected override void WhenIRun()
