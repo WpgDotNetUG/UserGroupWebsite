@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DotNetUserGroup.Website.Models;
+using DotNetUserGroup.Website.Tests.Models.EventBriteRepo;
 using MavenThought.Commons.Testing;
 using SharpTestsEx;
 

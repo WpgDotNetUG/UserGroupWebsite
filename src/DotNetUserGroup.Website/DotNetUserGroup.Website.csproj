@@ -52,6 +52,9 @@
     <Reference Include="JsonFx">
       <HintPath>..\..\packages\JsonFx.2.0.1106.2610\lib\net40\JsonFx.dll</HintPath>
     </Reference>
+    <Reference Include="MarkdownSharp">
+      <HintPath>..\..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -145,7 +148,8 @@
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
-    <Compile Include="Models\IFutureTopicsRepository.cs" />
+    <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\NewsArticleRepository.cs" />
     <Compile Include="Models\EventBriteRepository.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -153,12 +157,11 @@
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Models\LogEvent.cs" />
     <Compile Include="Models\UserGroupEvent.cs" />
-    <Compile Include="Models\IEventRepository.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\FutureTopicInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
-    <Compile Include="Models\NewsInfo.cs" />
+    <Compile Include="Models\NewsArticle.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -282,6 +285,7 @@
     <None Include="Content\lib\_utilities.scss" />
     <None Include="Content\lib\_variables.scss" />
     <None Include="Content\lib\_wells.scss" />
+    <None Include="Content\News\2012-08-01-New webiste.markdown" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />

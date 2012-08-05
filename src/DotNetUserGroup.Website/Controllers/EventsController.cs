@@ -7,9 +7,9 @@ namespace DotNetUserGroup.Website.Controllers
 {
     public class EventsController : ApiController
     {
-        private readonly IEventRepository _repository;
+        private readonly IRepository<UserGroupEvent> _repository;
 
-        public EventsController(IEventRepository repository)
+        public EventsController(IRepository<UserGroupEvent> repository)
         {
             _repository = repository;
         }

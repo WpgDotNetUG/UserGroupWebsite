@@ -61,12 +61,16 @@ namespace DotNetUserGroup.Website.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IBindingRoot kernel)
         {
-            kernel.Bind<IEventRepository>()
+            kernel.Bind<IRepository<UserGroupEvent>>()
                 .To<EventBriteRepository>()
                 .InTransientScope();
 
-            kernel.Bind<IFutureTopicsRepository>()
+            kernel.Bind<IRepository<FutureTopicInfo>>()
                 .To<IdeaScaleRepository>()
+                .InTransientScope();
+
+            kernel.Bind<IRepository<NewsArticle>>()
+                .To<NewsArticleRepository>()
                 .InTransientScope();
             
             kernel.Bind(x => x

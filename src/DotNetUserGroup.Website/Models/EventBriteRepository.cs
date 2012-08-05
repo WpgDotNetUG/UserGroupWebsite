@@ -5,7 +5,7 @@ using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
 {
-    public class EventBriteRepository : IEventRepository
+    public class EventBriteRepository : IRepository<UserGroupEvent>
     {
         private const string url = "https://www.eventbrite.com/json/";
 

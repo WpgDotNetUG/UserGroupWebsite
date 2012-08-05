@@ -7,9 +7,9 @@ namespace DotNetUserGroup.Website.Controllers
 {
     public class TopicsController : ApiController
     {
-        private readonly IFutureTopicsRepository _repository;
+        private readonly IRepository<FutureTopicInfo> _repository;
         
-        public TopicsController(IFutureTopicsRepository repository)
+        public TopicsController(IRepository<FutureTopicInfo> repository)
         {
             _repository = repository;
         }

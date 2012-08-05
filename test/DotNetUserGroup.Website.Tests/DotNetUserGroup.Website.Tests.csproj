@@ -118,6 +118,8 @@
     <Compile Include="Models\EventBriteRepo\When_getting_events_from_eventbrite.cs" />
     <Compile Include="Models\IdeaScaleRepo\IdeaScaleRepositorySpecification.cs" />
     <Compile Include="Models\IdeaScaleRepo\When_getting_all_topics.cs" />
+    <Compile Include="Models\News\NewsArticleRepositorySpecification.cs" />
+    <Compile Include="Models\News\When_getting_all_topics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
