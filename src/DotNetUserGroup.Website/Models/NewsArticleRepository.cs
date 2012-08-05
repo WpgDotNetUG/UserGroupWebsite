@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using MarkdownSharp;
 
 namespace DotNetUserGroup.Website.Models
 {
@@ -7,7 +10,7 @@ namespace DotNetUserGroup.Website.Models
     {
         private readonly string newsFolderPath;
 
-        public NewsArticleRepository(string dirPath = "Content/News")
+        public NewsArticleRepository(string dirPath)
         {
             newsFolderPath = dirPath;
         }
@@ -21,17 +24,22 @@ namespace DotNetUserGroup.Website.Models
 
         private IEnumerable<string> GetFileNames()
         {
-            return System.IO.Directory.GetFiles(newsFolderPath, "*.markdown");
+            return Directory.GetFiles(newsFolderPath, "*.markdown");
         }
 
         private static NewsArticle ReadNewsArticle(string fileName)
         {
+            var fileData = File.ReadAllText(fileName);
 
-            var fileData = System.IO.File.ReadAllText(fileName);
+            var tokens = Path.GetFileNameWithoutExtension(fileName).Split('-');
+
+            var date = DateTime.Parse(String.Join("-", tokens.Take(3).ToArray())).ToString("MMM dd");
 
             return new NewsArticle
                        {
-
+                           Title = tokens[3].Trim(),
+                           Date = date,
+                           Body = new Markdown().Transform(fileData)
                        };
         }
     }

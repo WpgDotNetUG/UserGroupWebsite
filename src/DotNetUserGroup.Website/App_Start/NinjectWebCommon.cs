@@ -1,3 +1,4 @@
+using System.Web.Hosting;
 using System.Web.Http;
 using DotNetUserGroup.Website.Controllers;
 using DotNetUserGroup.Website.Models;
@@ -71,7 +72,8 @@ namespace DotNetUserGroup.Website.App_Start
 
             kernel.Bind<IRepository<NewsArticle>>()
                 .To<NewsArticleRepository>()
-                .InTransientScope();
+                .InTransientScope()
+                .WithConstructorArgument("dirPath", HostingEnvironment.MapPath("~/Content/News"));
             
             kernel.Bind(x => x
                                  .FromThisAssembly()

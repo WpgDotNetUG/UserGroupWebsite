@@ -285,7 +285,7 @@
     <None Include="Content\lib\_utilities.scss" />
     <None Include="Content\lib\_variables.scss" />
     <None Include="Content\lib\_wells.scss" />
-    <None Include="Content\News\2012-08-01-New webiste.markdown" />
+    <Content Include="Content\News\2011-05-09-Azure Fest.markdown" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />

@@ -53,26 +53,23 @@ namespace DotNetUserGroup.Website.Tests.Models.News
                                 return new NewsArticle
                                            {
                                                Title = data.Title,
-                                               Date = data.Date.ToString("yyyy-MM-d"),
+                                               Date = data.Date.ToString("yyyy-MM-dd"),
                                                Body = new Markdown().Transform(data.Markdown)
                                            };
-                            });
+                            })
+                .ToList();
         }
 
         private void SaveFileWithMarkdown(string title, DateTime date, string markdown)
         {
             var fileName = string.Format("{0}-{1}.markdown",
-                                         date.ToString("yyyy-MM-d"),
+                                         date.ToString("yyyy-MM-dd"),
                                          title);
             var path = Path.Combine(this.NewsFolder, fileName);
             var stream = File.Create(path);
 
             var writer = new StreamWriter(stream);
 
-            writer.WriteLine("---");
-            writer.WriteLine("title: {0}", title);
-            writer.WriteLine("date: {0}", date.ToShortDateString());
-            writer.WriteLine("---");
             writer.WriteLine(markdown);
 
             writer.Close();
