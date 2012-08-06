@@ -1,7 +1,6 @@
 (function() {
-  var EventsViewModel;
 
-  EventsViewModel = (function() {
+  window.EventsViewModel = (function() {
 
     EventsViewModel.name = 'EventsViewModel';
 
@@ -40,9 +39,5 @@
     return EventsViewModel;
 
   })();
-
-  $(function() {
-    return ko.applyBindings(new EventsViewModel(), document.getElementById('events'));
-  });
 
 }).call(this);

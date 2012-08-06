@@ -1,8 +1,6 @@
-class NewsViewModel
+class window.NewsViewModel
 
-	constructor: ->
+	constructor: (limit = -1) ->
 		@news = ko.observableArray()
-		$.getJSON '../api/news', (data) => @news(data[0..2])
+		$.getJSON '../api/news', (data) => @news(data[0..(if limit == -1 then -1 else limit - 1)])
 
-$ ->
-	ko.applyBindings(new NewsViewModel(), document.getElementById('news'))

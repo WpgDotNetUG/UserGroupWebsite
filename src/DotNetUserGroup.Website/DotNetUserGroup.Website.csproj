@@ -176,6 +176,9 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\news.css">
+      <DependentUpon>news.scss</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
@@ -222,6 +225,12 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\vm\Home\Home.js">
+      <DependentUpon>Home.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\News\News.js">
+      <DependentUpon>News.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\vm\Home\NewsViewModel.js">
       <DependentUpon>NewsViewModel.coffee</DependentUpon>
     </Content>
@@ -240,6 +249,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Content\news.scss" />
     <None Include="Content\home.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>
@@ -289,6 +299,7 @@
     <Content Include="Content\News\2011-05-09-Winnipeg Hosts Azure Fest.markdown" />
     <Content Include="Content\News\2011-04-08-Imaginet Interactive Launch Party.markdown" />
     <Content Include="Content\News\2012-08-01-RoR 101 Workshop.markdown" />
+    <Content Include="Content\News\2011-03-15-Free Windows Phone 7 - IE9 Developer Bootcamp.markdown" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -305,6 +316,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
+    <None Include="Scripts\vm\Home\Home.coffee" />
+    <None Include="Scripts\vm\News\News.coffee" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
     <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>
@@ -323,7 +336,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Scripts\vm\News\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="settings.config" />
