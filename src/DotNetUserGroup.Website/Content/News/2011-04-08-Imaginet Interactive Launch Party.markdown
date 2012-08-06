@@ -1,4 +1,4 @@
-﻿#May 12 - Imaginet Interactive Launch Party
+﻿#Imaginet Interactive Launch Party on May 12th
 
 On Thursday, May 12 prepare yourself for the future of digital marketing. Winnipeg's own Imaginet is taking the next steps in its development and launching a new division to focus specifically on digital marketing and technology together.
 
@@ -8,8 +8,6 @@ The evening will kick off with the keynote speaker Guy Mezger, former UFC champi
 
 This is your chance to take part in the next evolution of Imaginet and to meet some of the brightest minds from throughout the local community. Make sure you register today as seating is limited!
 
-Click here to register
+Click [here](http://imaginetinteractive.com/launch) to register
 
 David Wesst
-
-[Register](http://imaginetinteractive.com/launch)

@@ -16,9 +16,9 @@
 </header>
 <section id="news" data-bind="foreach: news">
     <article class="row-fluid">
-        <section class="span1">
-            <time data-bind="text: $data.Date"></time>
+        <section>
+            <time data-bind="text: 'Posted ' + $data.Date"></time>
         </section>
-        <div data-bind="html: $data.Body" class="span11"></div> 
+        <section data-bind="html: $data.Body" class="content"></section> 
     </article>
 </section>
