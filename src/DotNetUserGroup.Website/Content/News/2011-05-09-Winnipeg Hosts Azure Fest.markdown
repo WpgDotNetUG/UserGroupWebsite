@@ -12,4 +12,4 @@ For full details, check out the announcement on the Online Business Systems webs
 
 David Wesst
 
-[http://www.obsglobal.com/Pages/OnlineHostsAzureFest.aspx]() 
+[Azure Fest Link](http://www.obsglobal.com/Pages/OnlineHostsAzureFest.aspx)

@@ -12,4 +12,4 @@ Click here to register
 
 David Wesst
 
-[http://imaginetinteractive.com/launch]
+[Register](http://imaginetinteractive.com/launch)

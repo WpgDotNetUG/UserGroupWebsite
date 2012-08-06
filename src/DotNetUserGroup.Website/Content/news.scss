@@ -1,0 +1,50 @@
+﻿@import "lib/bootstrap";
+
+header {
+	@extend .hero-unit;
+
+	@include gradient-striped($btnInfoBackground);
+	color:white;
+
+	h1 i {
+		margin-right:20px;
+		padding-right:20px;
+		padding-top:20px;
+	}
+
+}
+
+#news {
+	article {
+		margin-bottom:10px;
+
+		time {
+			@extend .label;
+			@extend .label-info;
+			@include font-family-monospace;
+
+			font-size:1.5em;	
+		}
+
+		div {
+			@extend .alert;
+			@extend .alert-info;
+
+			h1 {
+				margin-bottom:10px;
+				padding-bottom:5px;
+				border-bottom: 2px solid $btnInfoBackgroundHighlight;
+			}
+			p {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	article:nth-child(even) div {
+	}
+
+	article:nth-child(odd) div {
+		background-color: #DDD;
+	}
+}

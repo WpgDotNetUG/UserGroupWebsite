@@ -1,5 +1,6 @@
 using System.Web.Hosting;
 using System.Web.Http;
+using System.Web.Mvc;
 using DotNetUserGroup.Website.Controllers;
 using DotNetUserGroup.Website.Models;
 using Ninject.Syntax;
@@ -74,11 +75,11 @@ namespace DotNetUserGroup.Website.App_Start
                 .To<NewsArticleRepository>()
                 .InTransientScope()
                 .WithConstructorArgument("dirPath", HostingEnvironment.MapPath("~/Content/News"));
-            
+
             kernel.Bind(x => x
                                  .FromThisAssembly()
-                                 .SelectAllClasses()
-                                 .InNamespaceOf<HomeController>()
+                                 .Select(t => typeof (ApiController).IsAssignableFrom(t) ||
+                                              typeof (Controller).IsAssignableFrom(t))
                                  .BindToSelf()
                                  .Configure(c => c.InTransientScope()));
         }        

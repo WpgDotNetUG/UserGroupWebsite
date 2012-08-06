@@ -147,6 +147,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
+    <Compile Include="Controllers\PageNewsController.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\NewsArticleRepository.cs" />
@@ -285,7 +286,9 @@
     <None Include="Content\lib\_utilities.scss" />
     <None Include="Content\lib\_variables.scss" />
     <None Include="Content\lib\_wells.scss" />
-    <Content Include="Content\News\2011-05-09-Azure Fest.markdown" />
+    <Content Include="Content\News\2011-05-09-Winnipeg Hosts Azure Fest.markdown" />
+    <Content Include="Content\News\2011-04-08-Imaginet Interactive Launch Party.markdown" />
+    <Content Include="Content\News\2012-08-01-RoR 101 Workshop.markdown" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -315,10 +318,12 @@
       <Bare>False</Bare>
       <Iced>False</Iced>
     </None>
+    <Content Include="Views\PageNews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Scripts\vm\News\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="settings.config" />

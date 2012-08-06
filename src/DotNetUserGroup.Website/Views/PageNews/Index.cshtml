@@ -1,0 +1,24 @@
+﻿@section styles
+{
+@Styles.Render("~/Content/news.css")
+}
+
+@section scripts
+{
+    @Scripts.Render("~/Scripts/vm/home/NewsViewModel.js")
+}
+
+<header>
+    <h1>
+        <i class="icon-eye-open"></i>
+        User Group News
+    </h1>
+</header>
+<section id="news" data-bind="foreach: news">
+    <article class="row-fluid">
+        <section class="span1">
+            <time data-bind="text: $data.Date"></time>
+        </section>
+        <div data-bind="html: $data.Body" class="span11"></div> 
+    </article>
+</section>
