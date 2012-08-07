@@ -16,12 +16,14 @@
     </h1>
 </header>
 <section id="news" data-bind="foreach: news">
-    <article class="row-fluid">
-        <section>
-            <time data-bind="text: 'Posted ' + $data.Date"></time>
-        </section>
-        <a class="collapse" data-toggle='collapse' 
-           data-bind="text: $data.Title, attr: { 'data-target': '#news_' + $index() }"></a>
-        <section data-bind="html: $data.Body, attr: { id: 'news_' + $index() }" class="content"></section> 
+    <article>
+        <header>
+            <h1>
+                <time data-bind="text: 'Posted ' + $data.Date"></time>
+                <a class="collapse" data-toggle='collapse' 
+                   data-bind="text: $data.Title, attr: { 'data-target': '#news_' + $index() }"></a>
+            </h1>
+        </header>
+        <div data-bind="html: $data.Body, attr: { id: 'news_' + $index() }" class="content collapse"></div> 
     </article>
 </section>

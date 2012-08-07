@@ -1838,7 +1838,7 @@ table .span24 {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
-  .dropdown-menu.pull-right, #news article time.dropdown-menu {
+  .dropdown-menu.pull-right {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -1870,7 +1870,7 @@ table .span24 {
   .open .dropdown-menu {
     display: block; }
 
-.pull-right .dropdown-menu, #news article time .dropdown-menu {
+.pull-right .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -2404,7 +2404,7 @@ input[type="submit"].btn {
   opacity: 0.75;
   filter: alpha(opacity=75); }
 
-.alert, #news article .content {
+.alert, #news article {
   padding: 8px 35px 8px 14px;
   margin-bottom: 18px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -2418,7 +2418,7 @@ input[type="submit"].btn {
 .alert-heading {
   color: inherit; }
 
-.alert .close, #news article .content .close {
+.alert .close, #news article .close {
   position: relative;
   top: -2px;
   right: -21px;
@@ -2435,7 +2435,7 @@ input[type="submit"].btn {
   border-color: #eed3d7;
   color: #b94a48; }
 
-.alert-info, #news article .content {
+.alert-info, #news article {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #3a87ad; }
@@ -2463,7 +2463,7 @@ input[type="submit"].btn {
   text-decoration: none;
   background-color: #eeeeee; }
 
-.nav > .pull-right, .nav > #news article time, #news article .nav > time {
+.nav > .pull-right {
   float: right; }
 
 .nav .nav-header {
@@ -2906,7 +2906,7 @@ input[type="submit"].btn {
   float: left;
   margin: 0 10px 0 0; }
 
-.navbar .nav.pull-right, .navbar #news article time.nav, #news article .navbar time.nav {
+.navbar .nav.pull-right {
   float: right; }
 
 .navbar .nav > li {
@@ -2950,7 +2950,7 @@ input[type="submit"].btn {
   background-color: #222222;
   border-right: 1px solid #333333; }
 
-.navbar .nav.pull-right, .navbar #news article time.nav, #news article .navbar time.nav {
+.navbar .nav.pull-right {
   margin-left: 10px;
   margin-right: 0; }
 
@@ -3047,22 +3047,16 @@ input[type="submit"].btn {
 .navbar .nav li.dropdown.active > .dropdown-toggle:hover {
   color: white; }
 
-.navbar .pull-right .dropdown-menu, .navbar #news article time .dropdown-menu, #news article .navbar time .dropdown-menu,
-.navbar .dropdown-menu.pull-right,
-.navbar #news article time.dropdown-menu,
-#news article .navbar time.dropdown-menu {
+.navbar .pull-right .dropdown-menu,
+.navbar .dropdown-menu.pull-right {
   left: auto;
   right: 0; }
-  .navbar .pull-right .dropdown-menu:before, .navbar #news article time .dropdown-menu:before, #news article .navbar time .dropdown-menu:before,
-  .navbar .dropdown-menu.pull-right:before,
-  .navbar #news article time.dropdown-menu:before,
-  #news article .navbar time.dropdown-menu:before {
+  .navbar .pull-right .dropdown-menu:before,
+  .navbar .dropdown-menu.pull-right:before {
     left: auto;
     right: 12px; }
-  .navbar .pull-right .dropdown-menu:after, .navbar #news article time .dropdown-menu:after, #news article .navbar time .dropdown-menu:after,
-  .navbar .dropdown-menu.pull-right:after,
-  .navbar #news article time.dropdown-menu:after,
-  #news article .navbar time.dropdown-menu:after {
+  .navbar .pull-right .dropdown-menu:after,
+  .navbar .dropdown-menu.pull-right:after {
     left: auto;
     right: 13px; }
 
@@ -3835,26 +3829,26 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   color: white; }
 
-.hero-unit, header {
+.hero-unit, #content > header {
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px; }
-  .hero-unit h1, header h1 {
+  .hero-unit h1, #content > header h1 {
     margin-bottom: 0;
     font-size: 60px;
     line-height: 1;
     color: inherit;
     letter-spacing: -1px; }
-  .hero-unit p, header p {
+  .hero-unit p, #content > header p {
     font-size: 18px;
     font-weight: 200;
     line-height: 27px;
     color: inherit; }
 
-.pull-right, #news article time {
+.pull-right {
   float: right; }
 
 .pull-left {
@@ -3869,7 +3863,7 @@ a.label:hover, a.badge:hover {
 .invisible {
   visibility: hidden; }
 
-header {
+#content > header {
   background-color: #5bc0de;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -3878,19 +3872,19 @@ header {
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   color: white; }
-  header h1 i {
+  #content > header h1 i {
     margin-right: 20px;
     padding-right: 20px;
     padding-top: 20px; }
 
 #news article {
   margin-bottom: 10px; }
+  #news article header {
+    margin-bottom: 10px; }
   #news article time {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 1.5em;
-    padding: 10px;
-    margin-top: 10px;
-    margin-right: 35px; }
+    font-size: 0.5em;
+    padding: 5px; }
   #news article .content {
     margin-top: 0px; }
     #news article .content h1 {
@@ -3899,12 +3893,12 @@ header {
       border-bottom: 2px solid #f89406; }
     #news article .content p {
       font-size: 1.2em; }
-#news article:nth-child(even) .content h1 {
-  border-bottom-color: #3a87ad; }
-#news article:nth-child(odd) .content {
+#news article:nth-child(odd) {
   color: white;
   background-color: #333333; }
-#news article:nth-child(odd) time {
-  background-color: #eeeeee;
-  color: #3a87ad; }
+  #news article:nth-child(odd) header a {
+    color: white; }
+  #news article:nth-child(odd) time {
+    background-color: #eeeeee;
+    color: #3a87ad; }
 

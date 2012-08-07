@@ -1,6 +1,6 @@
 ﻿@import "lib/bootstrap";
 
-header {
+#content > header {
 	@extend .hero-unit;
 
 	@include gradient-striped($btnInfoBackground);
@@ -11,28 +11,28 @@ header {
 		padding-right:20px;
 		padding-top:20px;
 	}
-
 }
 
 #news {
 	article {
+		@extend .alert;
+		@extend .alert-info;
 		margin-bottom:10px;
 		
+		header {
+			margin-bottom:10px;
+		}
+
 		time {
 			@extend .label;
 			@extend .label-info;
 			@include font-family-monospace;
-			@extend .pull-right;
-			font-size:1.5em;	
-			padding:10px;
-			margin-top:10px;
-			margin-right:35px;
+			font-size:0.5em;	
+			padding:5px;
 		}
 
 		.content {
 			margin-top:0px;
-			@extend .alert;
-			@extend .alert-info;
 			h1 {
 				margin-bottom:10px;
 				padding-bottom:10px;
@@ -45,17 +45,16 @@ header {
 	}
 
 	article:nth-child(even) {
-		.content {
-			h1 {
-				border-bottom-color:$infoText;
-			}
-		}
 	}
 
 	article:nth-child(odd) {
-		.content {
-			color: $white;
-			background-color: $grayDark;
+		color: $white;
+		background-color: $grayDark;
+
+		header {
+			a {
+				color: $white;
+			}
 		}
 
 		time {
