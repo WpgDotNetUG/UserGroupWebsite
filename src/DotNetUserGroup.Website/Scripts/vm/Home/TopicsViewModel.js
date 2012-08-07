@@ -1,7 +1,6 @@
 (function() {
-  var TopicsViewModel;
 
-  TopicsViewModel = (function() {
+  window.TopicsViewModel = (function() {
 
     TopicsViewModel.name = 'TopicsViewModel';
 
@@ -16,9 +15,5 @@
     return TopicsViewModel;
 
   })();
-
-  $(function() {
-    return ko.applyBindings(new TopicsViewModel(), document.getElementById('topics'));
-  });
 
 }).call(this);

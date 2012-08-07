@@ -1,0 +1,34 @@
+﻿@section styles
+{
+@Styles.Render("~/Content/news.css")
+}
+
+@section scripts
+{
+    @Scripts.Render("~/Scripts/vm/home/NewsViewModel.js")
+    @Scripts.Render("~/Scripts/vm/news/news.js")
+}
+
+@{
+    ViewBag.Menu = "News";
+}
+
+
+<header>
+    <h1>
+        <i class="icon-eye-open"></i>
+        User Group News
+    </h1>
+</header>
+<section id="news" data-bind="foreach: news">
+    <article>
+        <header>
+            <h1>
+                <time data-bind="text: 'Posted ' + $data.Date"></time>
+                <a class="collapse" data-toggle='collapse' 
+                   data-bind="text: $data.Title, attr: { 'data-target': '#news_' + $index() }"></a>
+            </h1>
+        </header>
+        <div data-bind="html: $data.Body, attr: { id: 'news_' + $index() }" class="content collapse"></div> 
+    </article>
+</section>

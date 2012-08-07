@@ -6,7 +6,7 @@ using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
 {
-    public class IdeaScaleRepository : IFutureTopicsRepository
+    public class IdeaScaleRepository : IRepository<FutureTopicInfo>
     {
         private const string URL = "https://wpgdotnet.ideascale.com/a/rest/v1/";
 

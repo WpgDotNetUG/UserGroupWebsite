@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace DotNetUserGroup.Website.Models
 {
-    public interface IFutureTopicsRepository
+    public interface IRepository<out T>
     {
-        IEnumerable<FutureTopicInfo> All();
+        IEnumerable<T> All();
     }
 }

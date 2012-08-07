@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MarkdownSharp">
+      <HintPath>..\..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MavenThought.Commons">
+      <HintPath>..\..\packages\maventhought.commons.0.9.7\lib\MavenThought.Commons.dll</HintPath>
+    </Reference>
     <Reference Include="MavenThought.Commons.Testing.NUnit">
       <HintPath>..\..\packages\maventhought.testing.nunit.0.3.8\lib\NET35\MavenThought.Commons.Testing.NUnit.dll</HintPath>
     </Reference>
@@ -118,6 +124,8 @@
     <Compile Include="Models\EventBriteRepo\When_getting_events_from_eventbrite.cs" />
     <Compile Include="Models\IdeaScaleRepo\IdeaScaleRepositorySpecification.cs" />
     <Compile Include="Models\IdeaScaleRepo\When_getting_all_topics.cs" />
+    <Compile Include="Models\News\NewsArticleRepositorySpecification.cs" />
+    <Compile Include="Models\News\When_getting_all_news.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

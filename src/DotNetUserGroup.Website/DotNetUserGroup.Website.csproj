@@ -52,6 +52,9 @@
     <Reference Include="JsonFx">
       <HintPath>..\..\packages\JsonFx.2.0.1106.2610\lib\net40\JsonFx.dll</HintPath>
     </Reference>
+    <Reference Include="MarkdownSharp">
+      <HintPath>..\..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -144,8 +147,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
+    <Compile Include="Controllers\PageNewsController.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
-    <Compile Include="Models\IFutureTopicsRepository.cs" />
+    <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\NewsArticleRepository.cs" />
     <Compile Include="Models\EventBriteRepository.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -153,12 +158,11 @@
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Models\LogEvent.cs" />
     <Compile Include="Models\UserGroupEvent.cs" />
-    <Compile Include="Models\IEventRepository.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\FutureTopicInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
-    <Compile Include="Models\NewsInfo.cs" />
+    <Compile Include="Models\NewsArticle.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -172,6 +176,9 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\news.css">
+      <DependentUpon>news.scss</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
@@ -218,6 +225,12 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\vm\Home\Home.js">
+      <DependentUpon>Home.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\News\News.js">
+      <DependentUpon>News.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\vm\Home\NewsViewModel.js">
       <DependentUpon>NewsViewModel.coffee</DependentUpon>
     </Content>
@@ -236,6 +249,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Content\news.scss" />
     <None Include="Content\home.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>
@@ -282,6 +296,10 @@
     <None Include="Content\lib\_utilities.scss" />
     <None Include="Content\lib\_variables.scss" />
     <None Include="Content\lib\_wells.scss" />
+    <Content Include="Content\News\2011-05-09-azure_fest.markdown" />
+    <Content Include="Content\News\2011-04-08-Imaginet_Party.markdown" />
+    <Content Include="Content\News\2012-08-01-ror_workshop.markdown" />
+    <Content Include="Content\News\2011-03-15-wp7.markdown" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -298,6 +316,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
+    <None Include="Scripts\vm\Home\Home.coffee" />
+    <None Include="Scripts\vm\News\News.coffee" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
     <None Include="Scripts\vm\Home\EventsViewModel.coffee">
       <Compile>True</Compile>
@@ -311,6 +331,7 @@
       <Bare>False</Bare>
       <Iced>False</Iced>
     </None>
+    <Content Include="Views\PageNews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

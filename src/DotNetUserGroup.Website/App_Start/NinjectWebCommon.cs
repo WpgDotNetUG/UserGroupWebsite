@@ -1,4 +1,6 @@
+using System.Web.Hosting;
 using System.Web.Http;
+using System.Web.Mvc;
 using DotNetUserGroup.Website.Controllers;
 using DotNetUserGroup.Website.Models;
 using Ninject.Syntax;
@@ -61,18 +63,23 @@ namespace DotNetUserGroup.Website.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IBindingRoot kernel)
         {
-            kernel.Bind<IEventRepository>()
+            kernel.Bind<IRepository<UserGroupEvent>>()
                 .To<EventBriteRepository>()
                 .InTransientScope();
 
-            kernel.Bind<IFutureTopicsRepository>()
+            kernel.Bind<IRepository<FutureTopicInfo>>()
                 .To<IdeaScaleRepository>()
                 .InTransientScope();
-            
+
+            kernel.Bind<IRepository<NewsArticle>>()
+                .To<NewsArticleRepository>()
+                .InTransientScope()
+                .WithConstructorArgument("dirPath", HostingEnvironment.MapPath("~/Content/News"));
+
             kernel.Bind(x => x
                                  .FromThisAssembly()
-                                 .SelectAllClasses()
-                                 .InNamespaceOf<HomeController>()
+                                 .Select(t => typeof (ApiController).IsAssignableFrom(t) ||
+                                              typeof (Controller).IsAssignableFrom(t))
                                  .BindToSelf()
                                  .Configure(c => c.InTransientScope()));
         }        

@@ -19,7 +19,7 @@ namespace DotNetUserGroup.Website.Tests.Controllers.Events
 
             this._expectedEvents = Given_I_have_some_past_events();
 
-            Dep<IEventRepository>().Stub(r => r.All()).Return(this._expectedEvents);
+            Dep<IRepository<UserGroupEvent>>().Stub(r => r.All()).Return(this._expectedEvents);
         }
 
         protected override void WhenIRun()
