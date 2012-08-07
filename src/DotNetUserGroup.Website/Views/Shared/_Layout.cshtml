@@ -15,17 +15,21 @@
                  src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" 
                  alt="Fork me on GitHub">
         </a>
-
+        
+        @{
+            var newsSelected = ViewBag.Menu == "News" ? "active" : null;
+            var homeSelected = ViewBag.Menu == "News" ? null : "active";
+        }
         <nav class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <span class="brand">Winnipeg Dot Net User Group</span>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="/">Home</a></li>
+                            <li class="@homeSelected"><a href="/">Home</a></li>
                             <li><a href="http://www.eventbrite.com/org/1699161450" target="_blank">Events</a></li>
                             <li><a href="http://wpgdotnet.ideascale.com/" target="_blank">Topics</a></li>
-                            <li><a href="/pagenews">News</a></li>
+                            <li class="@newsSelected"><a href="/pagenews">News</a></li>
                         </ul>
                     </div>
                 </div>
