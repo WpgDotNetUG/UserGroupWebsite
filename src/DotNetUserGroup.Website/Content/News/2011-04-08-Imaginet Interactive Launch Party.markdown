@@ -1,6 +1,6 @@
-﻿#Imaginet Interactive Launch Party on May 12th
-
-On Thursday, May 12 prepare yourself for the future of digital marketing. Winnipeg's own Imaginet is taking the next steps in its development and launching a new division to focus specifically on digital marketing and technology together.
+﻿---
+title: Imaginet Interactive Launch Party on May 12th
+---
 
 On Thursday, May 12 prepare yourself for the future of digital marketing. Winnipeg's own Imaginet is taking the next steps in its development and launching a new division to focus specifically on digital marketing and technology together.
 

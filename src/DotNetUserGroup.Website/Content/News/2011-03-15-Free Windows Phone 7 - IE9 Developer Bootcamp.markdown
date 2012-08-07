@@ -1,6 +1,8 @@
-﻿#Free Windows Phone 7/IE9 Developer Bootcamp on Apr 5th
+﻿---
+title: Free Windows Phone 7/IE9 Developer Bootcamp on Apr 5th
+---
 
- Online Business Systems and Microsoft are teaming to deliver a free WP7/IE9 Developer bootcamp right here in Winnipeg on April 5.
+Online Business Systems and Microsoft are teaming to deliver a free WP7/IE9 Developer bootcamp right here in Winnipeg on April 5.
 
 Interested in Windows Phone 7? Want to know more about why Internet Explorer 9 is pushing the envelope for the web community? Now is your chance to find out.
 
@@ -8,8 +10,7 @@ Online Business Systems and Microsoft are teaming to deliver a free WP7/IE9 Deve
 
 Breakfast and lunch will be provided at the event and they are going to be giving away some very cool swag. All you have to do is be there and you qualify.
 
-Oh, did we mention that it's free? So, what are you waiting for? Register now! 
+Oh, did we mention that it's free? So, what are you waiting for? [Register](https://msevents.microsoft.com/CUI/EventDetail.aspx?EventID=1032480372&Culture=en-CA) now! 
 
 David Wesst
 
-https://msevents.microsoft.com/CUI/EventDetail.aspx?EventID=1032480372&Culture=en-CA 

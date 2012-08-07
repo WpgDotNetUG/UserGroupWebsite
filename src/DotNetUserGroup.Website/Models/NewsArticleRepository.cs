@@ -29,18 +29,63 @@ namespace DotNetUserGroup.Website.Models
 
         private static NewsArticle ReadNewsArticle(string fileName)
         {
-            var fileData = File.ReadAllText(fileName);
-
             var tokens = Path.GetFileNameWithoutExtension(fileName).Split('-');
 
-            var date = DateTime.Parse(String.Join("-", tokens.Take(3).ToArray())).ToString("MMM dd");
+            var date = DateTime.Parse(String.Join("-", tokens.Take(3).ToArray()));
+
+            var parsedData = ParseNewsArticle(new StreamReader(fileName));
 
             return new NewsArticle
                        {
-                           Title = tokens[3].Trim(),
+                           Title = parsedData.Item1["title"],
                            Date = date,
-                           Body = new Markdown().Transform(fileData)
+                           Body = new Markdown().Transform(parsedData.Item2)
                        };
         }
+
+
+        private static Tuple<IDictionary<string, string>, string> ParseNewsArticle(TextReader reader)
+        {
+            var metadata = ReadMetaData(reader, "---");
+
+            var markdown = reader.ReadToEnd();
+
+            return Tuple.Create(metadata, markdown);
+        }
+
+        private static IDictionary<string, string> ReadMetaData(TextReader reader, string separator)
+        {
+            reader.ReadLinesUntil(separator);
+
+            return ParseMetadata(reader.ReadLinesUntil(separator));
+        }
+
+        private static IDictionary<string, string> ParseMetadata(IEnumerable<string> lines)
+        {
+            return lines.Aggregate(new Dictionary<string, string>(),
+                                   (map, line) =>
+                                       {
+                                           var tokens = line.Split(':');
+                                           map[tokens[0].Trim()] = tokens[1].Trim();
+                                           return map;
+                                       });
+        }
+    }
+
+    static class Helper
+    {
+        public static IEnumerable<string> ReadLinesUntil(this TextReader reader, string separator)
+        {
+            var result = new List<string>();
+
+            string line;
+
+            while ((line = reader.ReadLine()) != separator)
+            {
+                result.Add(line);
+            }
+
+            return result;
+        } 
     }
 }

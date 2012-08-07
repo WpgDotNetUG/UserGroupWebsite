@@ -53,7 +53,7 @@ namespace DotNetUserGroup.Website.Tests.Models.News
                                 return new NewsArticle
                                            {
                                                Title = data.Title,
-                                               Date = data.Date.ToString("yyyy-MM-dd"),
+                                               Date = DateTime.Parse(data.Date.ToString("yyyy-MM-dd")),
                                                Body = new Markdown().Transform(data.Markdown)
                                            };
                             })
@@ -65,11 +65,18 @@ namespace DotNetUserGroup.Website.Tests.Models.News
             var fileName = string.Format("{0}-{1}.markdown",
                                          date.ToString("yyyy-MM-dd"),
                                          title);
+
             var path = Path.Combine(this.NewsFolder, fileName);
             var stream = File.Create(path);
 
             var writer = new StreamWriter(stream);
 
+            // write metadata
+            writer.WriteLine("---");
+            writer.WriteLine("title: " + title);
+            writer.WriteLine("---");
+
+            // write body
             writer.WriteLine(markdown);
 
             writer.Close();
@@ -87,7 +94,7 @@ MVC includes many features that enable:
 
 [Learn More About MVC](http://www.asp.net/mvc 'Learn more about MVC today!')";
 
-            return "#The news number " + i + article;
+            return "##The news number " + i + article;
         }
     }
 }

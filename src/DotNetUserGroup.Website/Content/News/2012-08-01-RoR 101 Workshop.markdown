@@ -1,4 +1,6 @@
-﻿#Ruby on Rails 101 Workshop
+﻿---
+title: Ruby on Rails 101 Workshop
+---
 
 For all of you that want to learn about Ruby on Rails this is the opportunity!
 

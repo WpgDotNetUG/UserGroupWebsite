@@ -20,6 +20,8 @@
         <section>
             <time data-bind="text: 'Posted ' + $data.Date"></time>
         </section>
-        <section data-bind="html: $data.Body" class="content"></section> 
+        <a class="collapse" data-toggle='collapse' 
+           data-bind="text: $data.Title, attr: { 'data-target': '#news_' + $index() }"></a>
+        <section data-bind="html: $data.Body, attr: { id: 'news_' + $index() }" class="content"></section> 
     </article>
 </section>

@@ -1,4 +1,6 @@
-﻿#Winnipeg hosts Azurefest on May 19th
+﻿---
+title: Winnipeg hosts Azurefest on May 19th
+---
 
 Online Business Systems and Microsoft are teaming up to bring the cloud to Winnipeg with [Azurefest](www.azure.com)! 
 

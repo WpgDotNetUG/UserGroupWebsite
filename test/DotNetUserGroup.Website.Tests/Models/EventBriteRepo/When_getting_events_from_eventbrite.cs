@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DotNetUserGroup.Website.Models;
-using DotNetUserGroup.Website.Tests.Models.EventBriteRepo;
 using MavenThought.Commons.Testing;
 using SharpTestsEx;
 
-namespace DotNetUserGroup.Website.Tests.Models
+namespace DotNetUserGroup.Website.Tests.Models.EventBriteRepo
 {
     [Specification]
     public class When_getting_events_from_eventbrite : EventBriteRepositorySpecification

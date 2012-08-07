@@ -1,7 +1,8 @@
 (function() {
 
   $(function() {
-    return ko.applyBindings(new NewsViewModel(), document.getElementById('news'));
+    ko.applyBindings(new NewsViewModel(), document.getElementById('news'));
+    return $('.collapse').collapse();
   });
 
 }).call(this);
