@@ -26,7 +26,8 @@ namespace DotNetUserGroup.Website.Models
                         Title = @event.title,
                         Date = DateTime.Parse(@event.start_date),
                         Id = @event.id,
-                        Address = @event.venue.address
+                        Address = @event.venue.address,
+                        Description = @event.description
                     });
                 }
 

@@ -58,6 +58,7 @@
             - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
         </footer>
 
+        @Scripts.Render("~/scripts/date.js")
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/knockout")
@@ -66,7 +67,7 @@
 </html>
 
 @helper LocalSponsors()
-{
+    {
     <li class="nav-header">Local Sponsors</li>
     @Sponsor("http://apptius.com", "apptius-logo.png", "Apptius")
     @Sponsor("http://www.dmt.ca", "dmt.jpg", "DMT")
@@ -75,7 +76,7 @@
 }
 
 @helper NonLocalSponsors()
-{
+    {
     <li class="nav-header">Non-Local Sponsors</li>
     @Sponsor("http://www.ineta.org", "Ineta-Logo.png", "INETA")
     @Sponsor("http://manning.com", "manning.jpg", "Manning")
@@ -86,7 +87,7 @@
 }
 
 @helper Sponsor(string url, string img, string alt)
-{
+    {
     <li class="sponsor">
         <a href="@url" target="_blank"><img src="~/Images/@img" alt="@alt" /></a>
     </li>
