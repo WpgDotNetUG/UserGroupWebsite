@@ -212,6 +212,7 @@
     <Content Include="Images\wpg_bridge.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\date.js" />
     <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
