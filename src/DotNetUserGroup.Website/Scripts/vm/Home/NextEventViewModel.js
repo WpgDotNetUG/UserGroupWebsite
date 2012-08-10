@@ -10,9 +10,12 @@
       this.date = ko.observable();
       this.url = ko.observable();
       this.description = ko.observable();
+      this.eventPending = ko.observable(true);
+      this.loading = ko.observable(true);
       $.getJSON('../api/events', function(data) {
-        var e, event;
-        event = ((function() {
+        var e, event, events;
+        _this.loading(false);
+        events = (function() {
           var _i, _len, _results;
           _results = [];
           for (_i = 0, _len = data.length; _i < _len; _i++) {
@@ -22,11 +25,15 @@
             }
           }
           return _results;
-        }).call(_this))[0];
-        _this.date(_this.formatDate(event));
-        _this.url("http://www.eventbrite.ca/event/" + event.Id);
-        _this.description(event.Description);
-        return _this.title(event.Title);
+        }).call(_this);
+        if (events.length) {
+          event = events[0];
+          _this.eventPending(false);
+          _this.date(_this.formatDate(event));
+          _this.url("http://www.eventbrite.ca/event/" + event.Id);
+          _this.description(event.Description);
+          return _this.title(event.Title);
+        }
       });
     }
 

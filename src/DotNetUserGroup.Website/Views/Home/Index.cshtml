@@ -12,14 +12,22 @@
     <div class="main-event">
         <h2>
             <i class="icon-thumbs-up icon-large"></i>
+            <span data-bind="if: loading">
+                Finding about next event.... please wait...
+            </span>
+            <span data-bind="if: !loading() && eventPending">
+                Next event in progress, please stay tuned!
+            </span>
+            <!-- ko ifnot: eventPending -->
             Join us on 
             <span data-bind="text: date"></span> 
             to talk about 
             <strong data-bind="text: title"></strong>
+            <!-- /ko -->
         </h2>
         <p data-bind="html: description"></p>
     </div>
-    <a data-bind="attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
+    <a data-bind="ifnot: eventPending, attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
 </section>
 <section class="row-fluid">
     <section id="events" class="widget-info span6">
