@@ -7,34 +7,28 @@
     function EventsViewModel() {
       var _this = this;
       this.events = ko.observableArray();
-      this.nextEvent = ko.observable();
       this.organizerUrl = ko.observable('http://www.eventbrite.com/org/1699161450');
       $.getJSON('../api/events', function(data) {
         var e, es;
         es = (function() {
-          var _i, _len, _ref, _results;
-          _ref = data.slice(0, 3);
+          var _i, _len, _results;
           _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            e = _ref[_i];
-            _results.push({
-              Title: e.Title,
-              Date: this.parseDate(e.Date),
-              Url: "http://www.eventbrite.ca/event/" + e.Id,
-              Address: e.Address
-            });
+          for (_i = 0, _len = data.length; _i < _len; _i++) {
+            e = data[_i];
+            if (Date.parse(e.Date).compareTo(Date.today()) < 0) {
+              _results.push({
+                Title: e.Title,
+                Date: Date.parse(e.Date).toString('MMM dd'),
+                Url: "http://www.eventbrite.ca/event/" + e.Id,
+                Address: e.Address
+              });
+            }
           }
           return _results;
-        }).call(_this);
-        return _this.events(es);
+        })();
+        return _this.events(es.slice(0, 3));
       });
     }
-
-    EventsViewModel.prototype.parseDate = function(d) {
-      var str;
-      str = new Date(Date.parse(d)).toString();
-      return str.split(' ').slice(1, 3).join(' ');
-    };
 
     return EventsViewModel;
 

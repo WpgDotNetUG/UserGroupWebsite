@@ -225,6 +225,9 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\vm\Home\NextEventViewModel.js">
+      <DependentUpon>NextEventViewModel.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\vm\Home\Home.js">
       <DependentUpon>Home.coffee</DependentUpon>
     </Content>
@@ -316,6 +319,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
+    <None Include="Scripts\vm\Home\NextEventViewModel.coffee" />
     <None Include="Scripts\vm\Home\Home.coffee" />
     <None Include="Scripts\vm\News\News.coffee" />
     <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
