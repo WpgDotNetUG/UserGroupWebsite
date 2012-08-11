@@ -1,15 +1,23 @@
 ﻿@import "lib/bootstrap";
 
 #content > header {
-	@extend .hero-unit;
+	@extend .alert;
+	@extend .alert-info;
 
 	@include gradient-striped($btnInfoBackground);
+	
 	color:white;
+	padding: 20px;
+
+	h1 {
+		font-size: 3em;
+	}
+
 
 	h1 i {
 		margin-right:20px;
 		padding-right:20px;
-		padding-top:20px;
+		padding-top:10px;
 	}
 }
 
@@ -18,9 +26,13 @@
 		@extend .alert;
 		@extend .alert-info;
 		margin-bottom:10px;
+		margin-right: 20px;
+		margin-left: 20px;
 		
 		header {
-			margin-bottom:10px;
+			h1 {
+				font-size: 1.8em;
+			}
 		}
 
 		time {
@@ -28,15 +40,12 @@
 			@extend .label-info;
 			@include font-family-monospace;
 			font-size:0.5em;	
-			padding:5px;
+			padding: 5px 8px;
 		}
 
 		.content {
 			margin-top:0px;
 			h1 {
-				margin-bottom:10px;
-				padding-bottom:10px;
-				border-bottom: 2px solid $orange;
 			}
 			p {
 				font-size: 1.2em;
@@ -45,21 +54,23 @@
 	}
 
 	article:nth-child(even) {
+		background-color: $white;
+		border-color: $infoText;
 	}
 
 	article:nth-child(odd) {
-		color: $white;
-		background-color: $grayDark;
-
+		color: $grayDark;
+		background-color: $white;
+		border-color: $grayDark;
 		header {
 			a {
-				color: $white;
+				color: $grayDark;
 			}
 		}
 
 		time {
 			background-color: $grayLighter;
-			color: $infoText;
+			color: $grayDark;
 		}
 	}
 }
