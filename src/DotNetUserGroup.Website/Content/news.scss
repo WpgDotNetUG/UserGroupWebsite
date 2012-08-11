@@ -38,13 +38,14 @@
 		time {
 			@extend .label;
 			@extend .label-info;
+			@extend .pull-right;
 			@include font-family-monospace;
-			font-size:0.5em;	
-			padding: 5px 8px;
+			font-size:0.6em;	
+			padding: 10px 8px;
 		}
 
 		.content {
-			margin-top:0px;
+			margin-top: 5px;
 			h1 {
 			}
 			p {
@@ -56,6 +57,10 @@
 	article:nth-child(even) {
 		background-color: $white;
 		border-color: $infoText;
+
+		time {
+			@include gradient-striped($infoText);
+		}
 	}
 
 	article:nth-child(odd) {
@@ -69,8 +74,9 @@
 		}
 
 		time {
-			background-color: $grayLighter;
-			color: $grayDark;
+			@include gradient-striped($grayDark);
+			background-color: $grayDark;
+			color: $white;
 		}
 	}
 }
