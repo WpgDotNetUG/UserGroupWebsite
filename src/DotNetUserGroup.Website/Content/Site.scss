@@ -1,11 +1,27 @@
-﻿body {
+﻿@import "lib/bootstrap";
+
+body {
 
 	padding-bottom: 40px;
 	padding-top: 70px;
 
 	nav {
 		margin: 5px;
+
+		.social-media {
+			@extend .btn-group;
+			@extend .pull-right;
+			margin-top: 5px;
+
+			a {
+				@extend .btn;
+				@extend .btn-info;
+				i {
+				}
+			}
+		}
 	}
+
 
 	.hero-unit {
 		.label {
