@@ -1,22 +1,65 @@
 ﻿@import "lib/bootstrap";
+@import "lib/responsive";
 
 body {
 
-	padding-bottom: 40px;
-	padding-top: 70px;
+
+	@media (min-width: 979px) {
+		padding-bottom: 40px;
+		padding-top: 70px;
+	}
+
+	#fork-github{
+		@extend .visible-desktop;
+	}
+
+	aside {
+		@extend .sidebar;
+
+		section {
+			@extend .well;
+			@extend .sidebar-nav;
+
+			ul {
+				@extend .nav;
+				@extend .nav-list;
+			}
+		}
+	}
 
 	nav {
-		margin: 5px;
+		@extend .navbar;
+		@extend .navbar-fixed-top;
 
-		.social-media {
-			@extend .btn-group;
-			@extend .pull-right;
-			margin-top: 5px;
+		#inner {
+			@extend .navbar-inner;
 
-			a {
-				@extend .btn;
-				@extend .btn-info;
-				i {
+			#container {
+				@extend .container;
+
+				header {
+					@extend .brand;
+				}
+
+				#menu {
+					ul {
+						@extend .nav;
+					}
+					@extend .visible-desktop;
+				}
+
+				#menu-tablet {
+					ul {
+						@extend .nav;
+						i {
+							@extend .hidden;
+						}
+					}
+					@extend .visible-tablet;
+				}
+
+				#menu-mobile {
+					@extend .visible-phone;
 				}
 			}
 		}
@@ -32,6 +75,7 @@ body {
 	}
 
 	footer {
+		@extend .pull-right;
 		margin-right:20px;
 	}
 
@@ -52,54 +96,12 @@ body {
 	}
 }
 
-@media screen and (max-width:1024px) {
 
-	h1 {
+
+@media (max-width: 767px) {
+
+	body nav #inner #container header {
+		float:none;
 	}
+
 }
-
-@media screen and (max-width:758px) {
-
-	body {
-		padding-top: 50px;
-
-		.hero-unit h1 {
-			font-size: 50px;
-		}
-
-		h2 {
-			font-size: 22px;
-		}
-	}
-}
-
-@media screen and (max-width:320px) {
-
-	body {
-		
-		nav {
-			margin-top:10px;
-		}
-
-		.btn {
-			font-size: 0.5em;
-		}
-
-		.hero-unit h1 {
-			font-size: 40px;
-		}
-
-		.widget {
-			h2 {
-				i {
-					display:none;
-				}
-			}
-
-			ul li span {
-				display:block;
-			}
-		}
-	}
-}
-

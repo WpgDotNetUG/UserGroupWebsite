@@ -1,0 +1,44 @@
+﻿        <nav>
+            <section id="inner">
+                <section id="container">
+                    <header>Winnipeg Dot Net User Group</header>
+                    <section id="menu">@MenuItems()</section>
+                    <section id="menu-mobile" class="btn-group">
+                        <button class="btn">Go To</button>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        @MenuItems("dropdown-menu")
+                    </section>
+                    <section id="menu-tablet">@MenuItems()</section>
+            </section>
+        </nav>
+
+@helper MenuItems(string className = "")
+{
+    var newsSelected = ViewBag.Menu == "News" ? "active" : null;
+    var homeSelected = ViewBag.Menu == "News" ? null : "active";
+    <ul class="@className">
+        <li class="@homeSelected">
+            <a href="/"><i class="icon-home"></i>Home</a>
+        </li>
+        <li><a href="http://www.eventbrite.com/org/1699161450" target="_blank">
+                <i class="icon-calendar"></i>Events
+            </a></li>
+        <li><a href="http://wpgdotnet.ideascale.com/" target="_blank">
+                <i class="icon-group"></i>Topics
+            </a></li>
+        <li class="@newsSelected"><a href="/pagenews">
+                                      <i class="icon-eye-open"></i>News
+                                  </a></li>
+        <li class="divider"></li>
+        <li><a href="mailto: kelly@mindfulsanity.com">
+                <i class="icon-envelope"></i>Contact
+            </a></li>
+        <li><a href="https://twitter.com/wpgnetug" target="_blank">
+                <i class="icon-twitter"></i>Follow
+            </a></li>
+        <li><a href="https://github.com/WpgDotNetUG/UserGroupWebsite" target="_blank">
+            <i class="icon-github"></i>Fork</a></li>
+    </ul>
+}
