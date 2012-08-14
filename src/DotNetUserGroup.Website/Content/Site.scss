@@ -4,11 +4,6 @@
 body {
 
 
-	@media (min-width: 979px) {
-		padding-bottom: 40px;
-		padding-top: 70px;
-	}
-
 	#fork-github{
 		@extend .visible-desktop;
 	}
@@ -66,14 +61,6 @@ body {
 	}
 
 
-	.hero-unit {
-		.label {
-			padding: 3px;
-			margin-right:5px;
-			margin-left:40px;
-		}
-	}
-
 	footer {
 		@extend .pull-right;
 		margin-right:20px;
@@ -91,17 +78,56 @@ body {
 		}
 	}
 
-	section#row_2 {
+	section#row_2, section#row_1 {
 		@extend .row-fluid;
 	}
 }
 
 
+@media (min-width: 979px) {
+
+	body {
+		padding-bottom: 40px;
+		padding-top: 70px;
+	}
+}
+
 
 @media (max-width: 767px) {
+
+	body {
+		.container-fluid {
+			margin: 0px;
+			padding: 0px;
+			display:block;
+		}
+	}
 
 	body nav #inner #container header {
 		float:none;
 	}
 
+	#content, aside, .widget-info,  {
+		float:none;
+		display: block;
+		width:100%;
+	}
+
+
+	#next-event {
+		margin: 5px;
+		padding: 5px;
+
+		> h1 {
+			font-size: 20px;
+		}
+
+		h2 {
+			font-size: 17px;
+		}
+	}
+
+	footer {
+		font-size:10px;
+	}
 }

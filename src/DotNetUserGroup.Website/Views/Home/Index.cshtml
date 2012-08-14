@@ -22,14 +22,14 @@
             Join us on 
             <span data-bind="text: date"></span> 
             to talk about 
-            <strong data-bind="text: title"></strong>
+            <span data-bind="text: title"></span>
             <!-- /ko -->
         </h2>
         <p data-bind="html: description"></p>
     </div>
     <a data-bind="ifnot: eventPending, attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
 </section>
-<section class="row-fluid">
+<section id="row_1">
     <section id="events" class="widget-info span6">
         <h2>
             <i class="icon-calendar"></i>

@@ -240,15 +240,15 @@ body nav #inner .navbar-fixed-bottom #container {
 .offset1 {
   margin-left: 100px; }
 
-.row-fluid, body section#row_2 {
+.row-fluid, body section#row_2, body section#row_1 {
   width: 100%;
   *zoom: 1; }
-  .row-fluid:before, body section#row_2:before, .row-fluid:after, body section#row_2:after {
+  .row-fluid:before, body section#row_2:before, body section#row_1:before, .row-fluid:after, body section#row_2:after, body section#row_1:after {
     display: table;
     content: ""; }
-  .row-fluid:after, body section#row_2:after {
+  .row-fluid:after, body section#row_2:after, body section#row_1:after {
     clear: both; }
-  .row-fluid [class*="span"], body section#row_2 [class*="span"] {
+  .row-fluid [class*="span"], body section#row_2 [class*="span"], body section#row_1 [class*="span"] {
     display: block;
     width: 100%;
     min-height: 28px;
@@ -259,42 +259,42 @@ body nav #inner .navbar-fixed-bottom #container {
     float: left;
     margin-left: 2.128%;
     *margin-left: 2.074%; }
-  .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child {
+  .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child, body section#row_1 [class*="span"]:first-child {
     margin-left: 0; }
-  .row-fluid .span12, body section#row_2 .span12 {
+  .row-fluid .span12, body section#row_2 .span12, body section#row_1 .span12 {
     width: 100.0%;
     *width: 99.947%; }
-  .row-fluid .span11, body section#row_2 .span11 {
+  .row-fluid .span11, body section#row_2 .span11, body section#row_1 .span11 {
     width: 91.489%;
     *width: 91.436%; }
-  .row-fluid .span10, body section#row_2 .span10 {
+  .row-fluid .span10, body section#row_2 .span10, body section#row_1 .span10 {
     width: 82.979%;
     *width: 82.926%; }
-  .row-fluid .span9, body section#row_2 .span9 {
+  .row-fluid .span9, body section#row_2 .span9, body section#row_1 .span9 {
     width: 74.468%;
     *width: 74.415%; }
-  .row-fluid .span8, body section#row_2 .span8 {
+  .row-fluid .span8, body section#row_2 .span8, body section#row_1 .span8 {
     width: 65.957%;
     *width: 65.904%; }
-  .row-fluid .span7, body section#row_2 .span7 {
+  .row-fluid .span7, body section#row_2 .span7, body section#row_1 .span7 {
     width: 57.447%;
     *width: 57.394%; }
-  .row-fluid .span6, body section#row_2 .span6 {
+  .row-fluid .span6, body section#row_2 .span6, body section#row_1 .span6 {
     width: 48.936%;
     *width: 48.883%; }
-  .row-fluid .span5, body section#row_2 .span5 {
+  .row-fluid .span5, body section#row_2 .span5, body section#row_1 .span5 {
     width: 40.426%;
     *width: 40.372%; }
-  .row-fluid .span4, body section#row_2 .span4 {
+  .row-fluid .span4, body section#row_2 .span4, body section#row_1 .span4 {
     width: 31.915%;
     *width: 31.862%; }
-  .row-fluid .span3, body section#row_2 .span3 {
+  .row-fluid .span3, body section#row_2 .span3, body section#row_1 .span3 {
     width: 23.404%;
     *width: 23.351%; }
-  .row-fluid .span2, body section#row_2 .span2 {
+  .row-fluid .span2, body section#row_2 .span2, body section#row_1 .span2 {
     width: 14.894%;
     *width: 14.84%; }
-  .row-fluid .span1, body section#row_2 .span1 {
+  .row-fluid .span1, body section#row_2 .span1, body section#row_1 .span1 {
     width: 6.383%;
     *width: 6.33%; }
 
@@ -759,12 +759,16 @@ textarea[class*="span"],
 .uneditable-input[class*="span"],
 .row-fluid input[class*="span"],
 body section#row_2 input[class*="span"],
+body section#row_1 input[class*="span"],
 .row-fluid select[class*="span"],
 body section#row_2 select[class*="span"],
+body section#row_1 select[class*="span"],
 .row-fluid textarea[class*="span"],
 body section#row_2 textarea[class*="span"],
+body section#row_1 textarea[class*="span"],
 .row-fluid .uneditable-input[class*="span"],
-body section#row_2 .uneditable-input[class*="span"] {
+body section#row_2 .uneditable-input[class*="span"],
+body section#row_1 .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0; }
 
@@ -774,8 +778,10 @@ body section#row_2 .uneditable-input[class*="span"] {
 .input-prepend .uneditable-input[class*="span"],
 .row-fluid .input-prepend [class*="span"],
 body section#row_2 .input-prepend [class*="span"],
+body section#row_1 .input-prepend [class*="span"],
 .row-fluid .input-append [class*="span"],
-body section#row_2 .input-append [class*="span"] {
+body section#row_2 .input-append [class*="span"],
+body section#row_1 .input-append [class*="span"] {
   display: inline-block; }
 
 input,
@@ -3089,7 +3095,7 @@ body nav footer.dropdown-menu {
   .thumbnails:after {
     clear: both; }
 
-.row-fluid .thumbnails, body section#row_2 .thumbnails {
+.row-fluid .thumbnails, body section#row_2 .thumbnails, body section#row_1 .thumbnails {
   margin-left: 0; }
 
 .thumbnails > li {
@@ -3647,7 +3653,7 @@ a.label:hover, a.badge:hover {
   .container, body nav #inner #container {
     width: auto; }
 
-  .row-fluid, body section#row_2 {
+  .row-fluid, body section#row_2, body section#row_1 {
     width: 100%; }
 
   .row,
@@ -3656,7 +3662,8 @@ a.label:hover, a.badge:hover {
 
   [class*="span"],
   .row-fluid [class*="span"],
-  body section#row_2 [class*="span"] {
+  body section#row_2 [class*="span"],
+  body section#row_1 [class*="span"] {
     float: none;
     display: block;
     width: auto;
@@ -3780,15 +3787,15 @@ a.label:hover, a.badge:hover {
   .offset1 {
     margin-left: 82px; }
 
-  .row-fluid, body section#row_2 {
+  .row-fluid, body section#row_2, body section#row_1 {
     width: 100%;
     *zoom: 1; }
-    .row-fluid:before, body section#row_2:before, .row-fluid:after, body section#row_2:after {
+    .row-fluid:before, body section#row_2:before, body section#row_1:before, .row-fluid:after, body section#row_2:after, body section#row_1:after {
       display: table;
       content: ""; }
-    .row-fluid:after, body section#row_2:after {
+    .row-fluid:after, body section#row_2:after, body section#row_1:after {
       clear: both; }
-    .row-fluid [class*="span"], body section#row_2 [class*="span"] {
+    .row-fluid [class*="span"], body section#row_2 [class*="span"], body section#row_1 [class*="span"] {
       display: block;
       width: 100%;
       min-height: 28px;
@@ -3799,42 +3806,42 @@ a.label:hover, a.badge:hover {
       float: left;
       margin-left: 2.762%;
       *margin-left: 2.709%; }
-    .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child {
+    .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child, body section#row_1 [class*="span"]:first-child {
       margin-left: 0; }
-    .row-fluid .span12, body section#row_2 .span12 {
+    .row-fluid .span12, body section#row_2 .span12, body section#row_1 .span12 {
       width: 100.0%;
       *width: 99.947%; }
-    .row-fluid .span11, body section#row_2 .span11 {
+    .row-fluid .span11, body section#row_2 .span11, body section#row_1 .span11 {
       width: 91.436%;
       *width: 91.383%; }
-    .row-fluid .span10, body section#row_2 .span10 {
+    .row-fluid .span10, body section#row_2 .span10, body section#row_1 .span10 {
       width: 82.873%;
       *width: 82.82%; }
-    .row-fluid .span9, body section#row_2 .span9 {
+    .row-fluid .span9, body section#row_2 .span9, body section#row_1 .span9 {
       width: 74.309%;
       *width: 74.256%; }
-    .row-fluid .span8, body section#row_2 .span8 {
+    .row-fluid .span8, body section#row_2 .span8, body section#row_1 .span8 {
       width: 65.746%;
       *width: 65.693%; }
-    .row-fluid .span7, body section#row_2 .span7 {
+    .row-fluid .span7, body section#row_2 .span7, body section#row_1 .span7 {
       width: 57.182%;
       *width: 57.129%; }
-    .row-fluid .span6, body section#row_2 .span6 {
+    .row-fluid .span6, body section#row_2 .span6, body section#row_1 .span6 {
       width: 48.619%;
       *width: 48.566%; }
-    .row-fluid .span5, body section#row_2 .span5 {
+    .row-fluid .span5, body section#row_2 .span5, body section#row_1 .span5 {
       width: 40.055%;
       *width: 40.002%; }
-    .row-fluid .span4, body section#row_2 .span4 {
+    .row-fluid .span4, body section#row_2 .span4, body section#row_1 .span4 {
       width: 31.492%;
       *width: 31.439%; }
-    .row-fluid .span3, body section#row_2 .span3 {
+    .row-fluid .span3, body section#row_2 .span3, body section#row_1 .span3 {
       width: 22.928%;
       *width: 22.875%; }
-    .row-fluid .span2, body section#row_2 .span2 {
+    .row-fluid .span2, body section#row_2 .span2, body section#row_1 .span2 {
       width: 14.365%;
       *width: 14.311%; }
-    .row-fluid .span1, body section#row_2 .span1 {
+    .row-fluid .span1, body section#row_2 .span1, body section#row_1 .span1 {
       width: 5.801%;
       *width: 5.748%; }
 
@@ -3999,15 +4006,15 @@ a.label:hover, a.badge:hover {
   .offset1 {
     margin-left: 130px; }
 
-  .row-fluid, body section#row_2 {
+  .row-fluid, body section#row_2, body section#row_1 {
     width: 100%;
     *zoom: 1; }
-    .row-fluid:before, body section#row_2:before, .row-fluid:after, body section#row_2:after {
+    .row-fluid:before, body section#row_2:before, body section#row_1:before, .row-fluid:after, body section#row_2:after, body section#row_1:after {
       display: table;
       content: ""; }
-    .row-fluid:after, body section#row_2:after {
+    .row-fluid:after, body section#row_2:after, body section#row_1:after {
       clear: both; }
-    .row-fluid [class*="span"], body section#row_2 [class*="span"] {
+    .row-fluid [class*="span"], body section#row_2 [class*="span"], body section#row_1 [class*="span"] {
       display: block;
       width: 100%;
       min-height: 28px;
@@ -4018,42 +4025,42 @@ a.label:hover, a.badge:hover {
       float: left;
       margin-left: 2.564%;
       *margin-left: 2.511%; }
-    .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child {
+    .row-fluid [class*="span"]:first-child, body section#row_2 [class*="span"]:first-child, body section#row_1 [class*="span"]:first-child {
       margin-left: 0; }
-    .row-fluid .span12, body section#row_2 .span12 {
+    .row-fluid .span12, body section#row_2 .span12, body section#row_1 .span12 {
       width: 100%;
       *width: 99.947%; }
-    .row-fluid .span11, body section#row_2 .span11 {
+    .row-fluid .span11, body section#row_2 .span11, body section#row_1 .span11 {
       width: 91.453%;
       *width: 91.4%; }
-    .row-fluid .span10, body section#row_2 .span10 {
+    .row-fluid .span10, body section#row_2 .span10, body section#row_1 .span10 {
       width: 82.906%;
       *width: 82.853%; }
-    .row-fluid .span9, body section#row_2 .span9 {
+    .row-fluid .span9, body section#row_2 .span9, body section#row_1 .span9 {
       width: 74.359%;
       *width: 74.306%; }
-    .row-fluid .span8, body section#row_2 .span8 {
+    .row-fluid .span8, body section#row_2 .span8, body section#row_1 .span8 {
       width: 65.812%;
       *width: 65.759%; }
-    .row-fluid .span7, body section#row_2 .span7 {
+    .row-fluid .span7, body section#row_2 .span7, body section#row_1 .span7 {
       width: 57.265%;
       *width: 57.212%; }
-    .row-fluid .span6, body section#row_2 .span6 {
+    .row-fluid .span6, body section#row_2 .span6, body section#row_1 .span6 {
       width: 48.718%;
       *width: 48.665%; }
-    .row-fluid .span5, body section#row_2 .span5 {
+    .row-fluid .span5, body section#row_2 .span5, body section#row_1 .span5 {
       width: 40.171%;
       *width: 40.118%; }
-    .row-fluid .span4, body section#row_2 .span4 {
+    .row-fluid .span4, body section#row_2 .span4, body section#row_1 .span4 {
       width: 31.624%;
       *width: 31.571%; }
-    .row-fluid .span3, body section#row_2 .span3 {
+    .row-fluid .span3, body section#row_2 .span3, body section#row_1 .span3 {
       width: 23.077%;
       *width: 23.024%; }
-    .row-fluid .span2, body section#row_2 .span2 {
+    .row-fluid .span2, body section#row_2 .span2, body section#row_1 .span2 {
       width: 14.53%;
       *width: 14.477%; }
-    .row-fluid .span1, body section#row_2 .span1 {
+    .row-fluid .span1, body section#row_2 .span1, body section#row_1 .span1 {
       width: 5.983%;
       *width: 5.93%; }
 
@@ -4128,7 +4135,7 @@ a.label:hover, a.badge:hover {
   .thumbnails > li {
     margin-left: 30px; }
 
-  .row-fluid .thumbnails, body section#row_2 .thumbnails {
+  .row-fluid .thumbnails, body section#row_2 .thumbnails, body section#row_1 .thumbnails {
     margin-left: 0; } }
 @media (max-width: 979px) {
   body {
@@ -4261,14 +4268,6 @@ a.label:hover, a.badge:hover {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important; } }
-@media (min-width: 979px) {
-  body {
-    padding-bottom: 40px;
-    padding-top: 70px; } }
-body .hero-unit .label {
-  padding: 3px;
-  margin-right: 5px;
-  margin-left: 40px; }
 body footer {
   margin-right: 20px; }
 body .sponsor a {
@@ -4278,7 +4277,32 @@ body .sponsor a {
     border: 1px solid black;
     padding: 2px; }
 
+@media (min-width: 979px) {
+  body {
+    padding-bottom: 40px;
+    padding-top: 70px; } }
 @media (max-width: 767px) {
+  body .container-fluid {
+    margin: 0px;
+    padding: 0px;
+    display: block; }
+
   body nav #inner #container header {
-    float: none; } }
+    float: none; }
+
+  #content, aside, .widget-info {
+    float: none;
+    display: block;
+    width: 100%; }
+
+  #next-event {
+    margin: 5px;
+    padding: 5px; }
+    #next-event > h1 {
+      font-size: 20px; }
+    #next-event h2 {
+      font-size: 17px; }
+
+  footer {
+    font-size: 10px; } }
 
