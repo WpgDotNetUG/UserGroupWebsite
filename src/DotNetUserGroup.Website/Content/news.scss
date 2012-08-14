@@ -1,4 +1,5 @@
 ﻿@import "lib/bootstrap";
+@import "lib/responsive";
 
 #content > header {
 	@extend .alert;
@@ -77,6 +78,43 @@
 			@include gradient-striped($grayDark);
 			background-color: $grayDark;
 			color: $white;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	#content  {
+		> header {
+			padding:5px;
+
+			h1 { 
+				font-size: 18px;
+
+				i {
+					display:none;
+				}
+			}
+		}
+	}
+
+	#news article {
+		margin:0px;
+		margin-bottom:5px;
+		padding:5px;
+
+		header h1 {
+			font-size: 14px;
+			time  {
+				display: block;
+				float:none;
+				padding: 5px;
+				font-size:1em;
+			}
+		}
+
+		.content {
+			font-size: 10px;
 		}
 	}
 }

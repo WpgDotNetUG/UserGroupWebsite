@@ -337,6 +337,8 @@
       <Iced>False</Iced>
     </None>
     <Content Include="Views\PageNews\Index.cshtml" />
+    <Content Include="Views\Shared\_navigation.cshtml" />
+    <Content Include="Views\Shared\_aside.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

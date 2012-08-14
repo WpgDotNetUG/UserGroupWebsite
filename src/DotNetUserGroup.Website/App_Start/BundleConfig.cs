@@ -28,9 +28,7 @@ namespace DotNetUserGroup.Website.App_Start
                 );
 
             bundles.Add(new StyleBundle("~/Content/css")
-                            .Include("~/Content/bootstrap.css",
-                                     "~/Content/bootstrap-responsive.css",
-                                     "~/Content/font-awesome.css",
+                            .Include("~/Content/font-awesome.css",
                                      "~/Content/site.css"));
 
             /*

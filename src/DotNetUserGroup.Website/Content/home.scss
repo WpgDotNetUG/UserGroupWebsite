@@ -1,29 +1,49 @@
 ﻿@import "lib/bootstrap";
+@import "lib/responsive";
 
 .hero-unit {
 	
-	@include gradient-striped($btnInfoBackground);
-
-
 	background-image: url('/images/wpg_bridge.jpg');
 	background-position: 0px -150px;
 	background-repeat: repeat-x; 
 
-
 	h1 {
-		color:white;
+		color: $white;
 	}
 
 	.main-event {
 		@extend .alert;
 		@extend .alert-info;
-		background-color: white;
+		background-color: $white;
 
-		h2 i {
-			margin-right:10px;
-			padding-top:5px;
+		header {
+			
+			label {
+				@extend .label;
+				@extend .label-important;
+				@extend .pull-right;
+				@include font-family-monospace;
+				display: inline;
+				padding: 5px;
+				font-size: 0.8em;
+			}
+
+			i {
+				margin-right:5px;
+				padding-top:5px;
+			}
+
+			.title {
+				font-style: italic;
+			}
 		}
+
+		article {
+			font-size-adjust: 20%;
+		}
+
 	}
+
 	a.read-more {
 		@extend .pull-right;
 		@extend .btn;
@@ -89,5 +109,37 @@
 
 	h2 a {
 		@extend .btn-success;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.hero-unit { 
+		a.read-more {
+			float: none;
+		}
+
+		.main-event header .title {
+			display:block;
+		}
+	}
+
+	.widget {
+
+		h2 {
+			font-size:16px;
+
+			a {
+				display:block;
+				float:none;
+				margin-bottom: 5px;
+			}
+
+		}
+
+		li span {
+			display:block;
+		}
+
 	}
 }
