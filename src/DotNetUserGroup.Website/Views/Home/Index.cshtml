@@ -10,22 +10,21 @@
     <h1>Winnipeg .NET User Group</h1>
     <hr />
     <div class="main-event">
-        <h2>
-            <i class="icon-thumbs-up icon-large"></i>
-            <span data-bind="if: loading">
-                Finding about next event.... please wait...
-            </span>
-            <span data-bind="if: !loading() && eventPending">
-                Next event in progress, please stay tuned!
-            </span>
-            <!-- ko ifnot: eventPending -->
-            Join us on 
-            <span data-bind="text: date"></span> 
-            to talk about 
-            <span data-bind="text: title"></span>
-            <!-- /ko -->
-        </h2>
-        <p data-bind="html: description"></p>
+        <span data-bind="if: loading">
+            Finding about next event.... please wait...
+        </span>
+        <span data-bind="if: !loading() && eventPending">
+            Next event in progress, please stay tuned!
+        </span>
+        <header data-bind="ifnot: eventPending">
+            <h2>
+                <label>Next event</label>
+                <i class="icon-thumbs-up icon-large"></i>
+                <span data-bind="text: date" class="date"></span> 
+                <span data-bind="text: title" class="title"></span>
+            </h2>
+        </header>
+        <article data-bind="html: description"></article>
     </div>
     <a data-bind="ifnot: eventPending, attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
 </section>

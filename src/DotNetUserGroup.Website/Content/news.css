@@ -4227,3 +4227,25 @@ a.label:hover, a.badge:hover {
     background-color: #333333;
     color: white; }
 
+@media (max-width: 767px) {
+  #content > header {
+    padding: 5px; }
+    #content > header h1 {
+      font-size: 18px; }
+      #content > header h1 i {
+        display: none; }
+
+  #news article {
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 5px; }
+    #news article header h1 {
+      font-size: 14px; }
+      #news article header h1 time {
+        display: block;
+        float: none;
+        padding: 5px;
+        font-size: 1em; }
+    #news article .content {
+      font-size: 10px; } }
+

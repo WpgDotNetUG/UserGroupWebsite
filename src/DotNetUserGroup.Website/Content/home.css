@@ -1456,7 +1456,7 @@ table .span24 {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
-  .dropdown-menu.pull-right, .hero-unit a.dropdown-menu.read-more, .widget h2 a.dropdown-menu, .widget-info h2 a.dropdown-menu, .widget-register h2 a.dropdown-menu {
+  .dropdown-menu.pull-right, .hero-unit .main-event header label.dropdown-menu, .hero-unit a.dropdown-menu.read-more, .widget h2 a.dropdown-menu, .widget-info h2 a.dropdown-menu, .widget-register h2 a.dropdown-menu {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -1488,7 +1488,7 @@ table .span24 {
   .open .dropdown-menu {
     display: block; }
 
-.pull-right .dropdown-menu, .hero-unit a.read-more .dropdown-menu, .widget h2 a .dropdown-menu, .widget-info h2 a .dropdown-menu, .widget-register h2 a .dropdown-menu {
+.pull-right .dropdown-menu, .hero-unit .main-event header label .dropdown-menu, .hero-unit a.read-more .dropdown-menu, .widget h2 a .dropdown-menu, .widget-info h2 a .dropdown-menu, .widget-register h2 a .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -2122,7 +2122,7 @@ input[type="submit"].btn {
   text-decoration: none;
   background-color: #eeeeee; }
 
-.nav > .pull-right, .nav > .hero-unit a.read-more, .hero-unit .nav > a.read-more, .nav > .widget h2 a, .widget h2 .nav > a, .nav > .widget-info h2 a, .widget-info h2 .nav > a, .nav > .widget-register h2 a, .widget-register h2 .nav > a {
+.nav > .pull-right, .nav > .hero-unit .main-event header label, .hero-unit .main-event header .nav > label, .nav > .hero-unit a.read-more, .hero-unit .nav > a.read-more, .nav > .widget h2 a, .widget h2 .nav > a, .nav > .widget-info h2 a, .widget-info h2 .nav > a, .nav > .widget-register h2 a, .widget-register h2 .nav > a {
   float: right; }
 
 .nav .nav-header {
@@ -2565,7 +2565,7 @@ input[type="submit"].btn {
   float: left;
   margin: 0 10px 0 0; }
 
-.navbar .nav.pull-right, .navbar .hero-unit a.nav.read-more, .hero-unit .navbar a.nav.read-more, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav {
+.navbar .nav.pull-right, .navbar .hero-unit .main-event header label.nav, .hero-unit .main-event header .navbar label.nav, .navbar .hero-unit a.nav.read-more, .hero-unit .navbar a.nav.read-more, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav {
   float: right; }
 
 .navbar .nav > li {
@@ -2609,7 +2609,7 @@ input[type="submit"].btn {
   background-color: #222222;
   border-right: 1px solid #333333; }
 
-.navbar .nav.pull-right, .navbar .hero-unit a.nav.read-more, .hero-unit .navbar a.nav.read-more, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav {
+.navbar .nav.pull-right, .navbar .hero-unit .main-event header label.nav, .hero-unit .main-event header .navbar label.nav, .navbar .hero-unit a.nav.read-more, .hero-unit .navbar a.nav.read-more, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav {
   margin-left: 10px;
   margin-right: 0; }
 
@@ -2706,8 +2706,10 @@ input[type="submit"].btn {
 .navbar .nav li.dropdown.active > .dropdown-toggle:hover {
   color: white; }
 
-.navbar .pull-right .dropdown-menu, .navbar .hero-unit a.read-more .dropdown-menu, .hero-unit .navbar a.read-more .dropdown-menu, .navbar .widget h2 a .dropdown-menu, .widget h2 .navbar a .dropdown-menu, .navbar .widget-info h2 a .dropdown-menu, .widget-info h2 .navbar a .dropdown-menu, .navbar .widget-register h2 a .dropdown-menu, .widget-register h2 .navbar a .dropdown-menu,
+.navbar .pull-right .dropdown-menu, .navbar .hero-unit .main-event header label .dropdown-menu, .hero-unit .main-event header .navbar label .dropdown-menu, .navbar .hero-unit a.read-more .dropdown-menu, .hero-unit .navbar a.read-more .dropdown-menu, .navbar .widget h2 a .dropdown-menu, .widget h2 .navbar a .dropdown-menu, .navbar .widget-info h2 a .dropdown-menu, .widget-info h2 .navbar a .dropdown-menu, .navbar .widget-register h2 a .dropdown-menu, .widget-register h2 .navbar a .dropdown-menu,
 .navbar .dropdown-menu.pull-right,
+.navbar .hero-unit .main-event header label.dropdown-menu,
+.hero-unit .main-event header .navbar label.dropdown-menu,
 .navbar .hero-unit a.dropdown-menu.read-more,
 .hero-unit .navbar a.dropdown-menu.read-more,
 .navbar .widget h2 a.dropdown-menu,
@@ -2718,8 +2720,10 @@ input[type="submit"].btn {
 .widget-register h2 .navbar a.dropdown-menu {
   left: auto;
   right: 0; }
-  .navbar .pull-right .dropdown-menu:before, .navbar .hero-unit a.read-more .dropdown-menu:before, .hero-unit .navbar a.read-more .dropdown-menu:before, .navbar .widget h2 a .dropdown-menu:before, .widget h2 .navbar a .dropdown-menu:before, .navbar .widget-info h2 a .dropdown-menu:before, .widget-info h2 .navbar a .dropdown-menu:before, .navbar .widget-register h2 a .dropdown-menu:before, .widget-register h2 .navbar a .dropdown-menu:before,
+  .navbar .pull-right .dropdown-menu:before, .navbar .hero-unit .main-event header label .dropdown-menu:before, .hero-unit .main-event header .navbar label .dropdown-menu:before, .navbar .hero-unit a.read-more .dropdown-menu:before, .hero-unit .navbar a.read-more .dropdown-menu:before, .navbar .widget h2 a .dropdown-menu:before, .widget h2 .navbar a .dropdown-menu:before, .navbar .widget-info h2 a .dropdown-menu:before, .widget-info h2 .navbar a .dropdown-menu:before, .navbar .widget-register h2 a .dropdown-menu:before, .widget-register h2 .navbar a .dropdown-menu:before,
   .navbar .dropdown-menu.pull-right:before,
+  .navbar .hero-unit .main-event header label.dropdown-menu:before,
+  .hero-unit .main-event header .navbar label.dropdown-menu:before,
   .navbar .hero-unit a.dropdown-menu.read-more:before,
   .hero-unit .navbar a.dropdown-menu.read-more:before,
   .navbar .widget h2 a.dropdown-menu:before,
@@ -2730,8 +2734,10 @@ input[type="submit"].btn {
   .widget-register h2 .navbar a.dropdown-menu:before {
     left: auto;
     right: 12px; }
-  .navbar .pull-right .dropdown-menu:after, .navbar .hero-unit a.read-more .dropdown-menu:after, .hero-unit .navbar a.read-more .dropdown-menu:after, .navbar .widget h2 a .dropdown-menu:after, .widget h2 .navbar a .dropdown-menu:after, .navbar .widget-info h2 a .dropdown-menu:after, .widget-info h2 .navbar a .dropdown-menu:after, .navbar .widget-register h2 a .dropdown-menu:after, .widget-register h2 .navbar a .dropdown-menu:after,
+  .navbar .pull-right .dropdown-menu:after, .navbar .hero-unit .main-event header label .dropdown-menu:after, .hero-unit .main-event header .navbar label .dropdown-menu:after, .navbar .hero-unit a.read-more .dropdown-menu:after, .hero-unit .navbar a.read-more .dropdown-menu:after, .navbar .widget h2 a .dropdown-menu:after, .widget h2 .navbar a .dropdown-menu:after, .navbar .widget-info h2 a .dropdown-menu:after, .widget-info h2 .navbar a .dropdown-menu:after, .navbar .widget-register h2 a .dropdown-menu:after, .widget-register h2 .navbar a .dropdown-menu:after,
   .navbar .dropdown-menu.pull-right:after,
+  .navbar .hero-unit .main-event header label.dropdown-menu:after,
+  .hero-unit .main-event header .navbar label.dropdown-menu:after,
   .navbar .hero-unit a.dropdown-menu.read-more:after,
   .hero-unit .navbar a.dropdown-menu.read-more:after,
   .navbar .widget h2 a.dropdown-menu:after,
@@ -3161,7 +3167,7 @@ a.thumbnail:hover {
 .thumbnail .caption {
   padding: 9px; }
 
-.label, .widget ul li > span:first-child, .widget-info ul li > span:first-child, .widget-register ul li > span:first-child,
+.label, .hero-unit .main-event header label, .widget ul li > span:first-child, .widget-info ul li > span:first-child, .widget-register ul li > span:first-child,
 .badge,
 #topics.widget-info li > span:first-child {
   font-size: 10.998px;
@@ -3173,7 +3179,7 @@ a.thumbnail:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999; }
 
-.label, .widget ul li > span:first-child, .widget-info ul li > span:first-child, .widget-register ul li > span:first-child {
+.label, .hero-unit .main-event header label, .widget ul li > span:first-child, .widget-info ul li > span:first-child, .widget-register ul li > span:first-child {
   padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -3190,10 +3196,10 @@ a.label:hover, a.badge:hover {
   text-decoration: none;
   cursor: pointer; }
 
-.label-important, .badge-important {
+.label-important, .hero-unit .main-event header label, .badge-important {
   background-color: #b94a48; }
 
-.label-important[href], .badge-important[href] {
+.label-important[href], .hero-unit .main-event header label[href], .badge-important[href] {
   background-color: #953b39; }
 
 .label-warning, .badge-warning {
@@ -3532,7 +3538,7 @@ a.label:hover, a.badge:hover {
     line-height: 27px;
     color: inherit; }
 
-.pull-right, .hero-unit a.read-more, .widget h2 a, .widget-info h2 a, .widget-register h2 a {
+.pull-right, .hero-unit .main-event header label, .hero-unit a.read-more, .widget h2 a, .widget-info h2 a, .widget-register h2 a {
   float: right; }
 
 .pull-left {
@@ -4265,7 +4271,7 @@ a.label:hover, a.badge:hover {
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
-  .navbar .nav-collapse .nav.pull-right, .navbar .nav-collapse .hero-unit a.nav.read-more, .hero-unit .navbar .nav-collapse a.nav.read-more, .navbar .nav-collapse .widget h2 a.nav, .widget h2 .navbar .nav-collapse a.nav, .navbar .nav-collapse .widget-info h2 a.nav, .widget-info h2 .navbar .nav-collapse a.nav, .navbar .nav-collapse .widget-register h2 a.nav, .widget-register h2 .navbar .nav-collapse a.nav {
+  .navbar .nav-collapse .nav.pull-right, .navbar .nav-collapse .hero-unit .main-event header label.nav, .hero-unit .main-event header .navbar .nav-collapse label.nav, .navbar .nav-collapse .hero-unit a.nav.read-more, .hero-unit .navbar .nav-collapse a.nav.read-more, .navbar .nav-collapse .widget h2 a.nav, .widget h2 .navbar .nav-collapse a.nav, .navbar .nav-collapse .widget-info h2 a.nav, .widget-info h2 .navbar .nav-collapse a.nav, .navbar .nav-collapse .widget-register h2 a.nav, .widget-register h2 .navbar .nav-collapse a.nav {
     float: none;
     margin-left: 0; }
 
@@ -4292,11 +4298,18 @@ a.label:hover, a.badge:hover {
     color: white; }
   .hero-unit .main-event {
     background-color: white; }
-    .hero-unit .main-event h2 i {
-      margin-right: 10px;
+    .hero-unit .main-event header label {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      display: inline;
+      padding: 5px;
+      font-size: 0.8em; }
+    .hero-unit .main-event header i {
+      margin-right: 5px;
       padding-top: 5px; }
-    .hero-unit .main-event h2 span {
-      color: #0064cd; }
+    .hero-unit .main-event header .title {
+      font-style: italic; }
+    .hero-unit .main-event article {
+      font-size-adjust: 20%; }
 
 .widget h2 i, .widget-info h2 i, .widget-register h2 i {
   margin-right: 10px;
@@ -4316,6 +4329,8 @@ a.label:hover, a.badge:hover {
 @media (max-width: 767px) {
   .hero-unit a.read-more {
     float: none; }
+  .hero-unit .main-event header .title {
+    display: block; }
 
   .widget h2, .widget-info h2, .widget-register h2 {
     font-size: 16px; }
