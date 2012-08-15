@@ -22,3 +22,4 @@ GlobalAss*
 data*.log
 *.dat
 settings.local.config
+.sass-cache/

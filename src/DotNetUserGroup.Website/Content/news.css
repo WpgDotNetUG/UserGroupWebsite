@@ -4228,16 +4228,23 @@ a.label:hover, a.badge:hover {
     color: white; }
 
 @media (max-width: 767px) {
+  body {
+    padding: 0px 5px; }
+    body nav {
+      margin-bottom: 5px; }
+    body nav #inner {
+      padding: 0px 20px; }
+
   #content > header {
-    padding: 5px; }
+    padding: 5px;
+    margin-bottom: 5px; }
     #content > header h1 {
       font-size: 18px; }
       #content > header h1 i {
         display: none; }
 
   #news article {
-    margin: 0px;
-    margin-bottom: 5px;
+    margin: 5px 5px;
     padding: 5px; }
     #news article header h1 {
       font-size: 14px; }

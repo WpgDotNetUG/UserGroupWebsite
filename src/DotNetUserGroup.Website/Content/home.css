@@ -4327,10 +4327,22 @@ a.label:hover, a.badge:hover {
     margin-right: 5px; }
 
 @media (max-width: 767px) {
+  body {
+    padding: 5px; }
+    body nav {
+      margin: 0px; }
+      body nav #container {
+        padding: 5px; }
+
+  i {
+    display: none; }
+
   .hero-unit a.read-more {
     float: none; }
   .hero-unit .main-event header .title {
     display: block; }
+  .hero-unit article {
+    display: none; }
 
   .widget h2, .widget-info h2, .widget-register h2 {
     font-size: 16px; }
@@ -4338,6 +4350,8 @@ a.label:hover, a.badge:hover {
       display: block;
       float: none;
       margin-bottom: 5px; }
+  .widget ul, .widget-info ul, .widget-register ul {
+    display: none; }
   .widget li span, .widget-info li span, .widget-register li span {
     display: block; } }
 

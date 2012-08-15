@@ -84,9 +84,22 @@
 
 @media (max-width: 767px) {
 
+	body {
+		padding: 0px 5px;
+		nav {
+			margin-bottom:5px;
+		}
+
+		nav #inner {
+			padding: 0px 20px;
+		}
+
+	}
+
 	#content  {
 		> header {
 			padding:5px;
+			margin-bottom: 5px;
 
 			h1 { 
 				font-size: 18px;
@@ -99,8 +112,7 @@
 	}
 
 	#news article {
-		margin:0px;
-		margin-bottom:5px;
+		margin:5px 5px;
 		padding:5px;
 
 		header h1 {
