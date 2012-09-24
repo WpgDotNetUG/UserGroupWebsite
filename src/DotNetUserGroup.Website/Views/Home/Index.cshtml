@@ -25,7 +25,7 @@
         </header>
         <article data-bind="html: description"></article>
     </div>
-    <a data-bind="ifnot: eventPending, attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
+    <a data-bind="visible: !eventPending(), attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
 </section>
 <section id="row_1">
     <section id="events" class="widget-info span6">
