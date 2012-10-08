@@ -16,7 +16,7 @@ class window.NextEventViewModel
 				@eventPending(false)
 				@date @formatDate(event)
 				@url "http://www.eventbrite.ca/event/#{event.Id}"
-				@description event.Description
+				@description event.Description.split('\n')[0..1].join('\n') + "..."
 				@title event.Title
 
 	hasNotHappened: (e) ->

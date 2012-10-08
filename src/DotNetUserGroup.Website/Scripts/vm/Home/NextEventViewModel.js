@@ -2,8 +2,6 @@
 
   window.NextEventViewModel = (function() {
 
-    NextEventViewModel.name = 'NextEventViewModel';
-
     function NextEventViewModel() {
       var _this = this;
       this.title = ko.observable();
@@ -31,7 +29,7 @@
           _this.eventPending(false);
           _this.date(_this.formatDate(event));
           _this.url("http://www.eventbrite.ca/event/" + event.Id);
-          _this.description(event.Description);
+          _this.description(event.Description.split('\n').slice(0, 2).join('\n') + "...");
           return _this.title(event.Title);
         }
       });
