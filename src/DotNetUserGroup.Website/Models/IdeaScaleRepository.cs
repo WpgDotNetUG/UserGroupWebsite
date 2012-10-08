@@ -18,11 +18,13 @@ namespace DotNetUserGroup.Website.Models
         {
             var topics = (dynamic[]) Request("ideas").DynamicBody;
 
-            return topics.Select(e => new FutureTopicInfo
-                               {
-                                   Topic = e.title,
-                                   Votes = e.voteCount
-                               });
+            return topics
+                .Where(e => e.status == "active")
+                .Select(e => new FutureTopicInfo
+                                 {
+                                     Topic = e.title,
+                                     Votes = e.voteCount,
+                                 });
         }
 
         private static HttpResponse Request(string method)
