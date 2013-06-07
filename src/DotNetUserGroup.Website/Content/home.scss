@@ -76,7 +76,7 @@
 			margin-bottom: 10px;
 		}
 
-		li > span:first-child {
+		li > span:first-child, li > a:first-child {
 				@extend .label;
 				@extend .label-info;
 				padding: 5px;
@@ -97,7 +97,7 @@
 
 #topics.widget-info {
 
-	li > span:first-child {
+	li > span:first-child, li > a:first-child {
 		@extend .badge;
 		@extend .badge-info;
 	}

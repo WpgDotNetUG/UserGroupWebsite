@@ -17,7 +17,7 @@ namespace DotNetUserGroup.Website.Controllers
         // GET api/topics
         public IEnumerable<FutureTopicInfo> Get()
         {
-            return _repository.All().OrderByDescending(t => t.Votes);
+            return _repository.All(); //.OrderByDescending(t => t.Votes);
         }
     }
 }

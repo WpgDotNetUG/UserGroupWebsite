@@ -1,47 +1,36 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Configuration;
-using EasyHttp.Http;
+using System.ServiceModel.Syndication;
+using System.Xml;
 
 namespace DotNetUserGroup.Website.Models
 {
     public class IdeaScaleRepository : IRepository<FutureTopicInfo>
     {
-        private const string URL = "https://wpgdotnet.ideascale.com/a/rest/v1/";
-
-        private const string CAMPAIGN_URL = URL + "campaigns/33031/";
-
-        private const string API_TOKEN_KEY = "IDEASCALE_API_TOKEN";
+        private const string URL = "http://wpgdotnet.ideascale.com/userimages/accounts/90/909119/ideascale_top_20115.xml";
 
         public IEnumerable<FutureTopicInfo> All()
         {
-            var topics = (dynamic[]) Request("ideas").DynamicBody;
-
-            return topics
-                .Where(e => e.status == "active")
-                .Select(e => new FutureTopicInfo
-                                 {
-                                     Topic = e.title,
-                                     Votes = e.voteCount,
-                                 });
+            return Request();
         }
 
-        private static HttpResponse Request(string method)
+        private static IEnumerable<FutureTopicInfo> Request()
         {
-            var http = new HttpClient();
+            var feed = XmlReader.Create(URL);
+            var topics = SyndicationFeed.Load(feed);
+	    feed.Close();
 
-            http.Request.Accept = HttpContentTypes.ApplicationJson;
-            
-            http.Request.AddExtraHeader("api_token", GetApiToken());
+            if (topics != null)
+            {
+                return topics.Items.Select(x => new FutureTopicInfo()
+                    {
+                        Topic = x.Title.Text,
+			Url = x.Links[0].Uri.ToString(),
+                        Votes = 0,
+                    });
+            }
 
-            return http.Get(CAMPAIGN_URL + method);
-        }
-
-        private static string GetApiToken()
-        {
-            return WebConfigurationManager.AppSettings[API_TOKEN_KEY]
-                   ?? Environment.GetEnvironmentVariable(API_TOKEN_KEY);
+            return Enumerable.Empty<FutureTopicInfo>();
         }
     }
 }
