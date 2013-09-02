@@ -8,14 +8,11 @@ body
 			margin-bottom: 20px;
 
 			#logo {
-				text-align:center;
-				font-size: 1.8em;
-				.description {
-					margin-top: 10px;
-					color: #2182b3;
-					.bracket {
-						color: #83b04a;
-					}
+				a {
+					line-height:80px;
+				}
+				img {
+					width: 250px;
 				}
 			}
 
@@ -23,7 +20,7 @@ body
 				margin-top: 10px;
 				.title { 
 					color: $blue-deep; 
-					font-size: 1.6em;
+					font-size: 2em;
 					font-weight: bold;
 					margin-bottom: 10px;
 					.bracket {
@@ -32,7 +29,7 @@ body
 				}
 				.description { 
 					color: $blue-gray; 
-					font-size: 1.1em;
+					font-size: 1.3em;
 					font-style: italic;
 					line-height: 20px;
 				}
@@ -52,8 +49,7 @@ body
 				#menu {
 					@extend .visible-desktop;
 					font-size: 1.8em;
-					margin: 0px;
-					margin-top: 50px;
+					margin: 40px 0 0;
 					.nav {
 						margin: 0;
 						@extend .pull-right;

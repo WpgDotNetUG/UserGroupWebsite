@@ -4451,32 +4451,27 @@ body > header {
   border-bottom: 2px solid #d5e0e4; }
   body > header nav {
     margin-bottom: 20px; }
-    body > header nav #logo {
-      text-align: center;
-      font-size: 1.8em; }
-      body > header nav #logo .description {
-        margin-top: 10px;
-        color: #2182b3; }
-        body > header nav #logo .description .bracket {
-          color: #83b04a; }
+    body > header nav #logo a {
+      line-height: 80px; }
+    body > header nav #logo img {
+      width: 250px; }
     body > header nav #description {
       margin-top: 10px; }
       body > header nav #description .title {
         color: #285670;
-        font-size: 1.6em;
+        font-size: 2em;
         font-weight: bold;
         margin-bottom: 10px; }
         body > header nav #description .title .bracket {
           color: #83b04a; }
       body > header nav #description .description {
         color: #74a2b1;
-        font-size: 1.1em;
+        font-size: 1.3em;
         font-style: italic;
         line-height: 20px; }
     body > header nav #main-menu #menu {
       font-size: 1.8em;
-      margin: 0px;
-      margin-top: 50px; }
+      margin: 40px 0 0; }
       body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul {
         margin: 0; }
         body > header nav #main-menu #menu .nav a, body > header nav #main-menu #menu aside section ul a, body > header aside section nav #main-menu #menu ul a {
