@@ -23,13 +23,16 @@ body
 				margin-top: 10px;
 				.title { 
 					color: $blue-deep; 
-					font-size: 2em;
+					font-size: 1.6em;
 					font-weight: bold;
 					margin-bottom: 10px;
+					.bracket {
+						color: #83b04a;
+					}
 				}
 				.description { 
 					color: $blue-gray; 
-					font-size: 1.2em;
+					font-size: 1.1em;
 					font-style: italic;
 					line-height: 20px;
 				}
