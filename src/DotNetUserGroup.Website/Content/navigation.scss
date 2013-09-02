@@ -6,6 +6,17 @@ body
 		nav {
 		}
 
+		#logo {
+			text-align:center;
+			font-size: 1.8em;
+			.description {
+				margin-top: 10px;
+				color: #2182b3;
+				.bracket {
+					color: #83b04a;
+				}
+			}
+		}
 		#social {
 			text-align:right;
 			height: 50px;

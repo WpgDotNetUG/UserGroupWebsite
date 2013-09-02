@@ -4375,6 +4375,14 @@ body {
 body > header {
   background: white;
   border-bottom: 2px solid #d5e0e4; }
+  body > header #logo {
+    text-align: center;
+    font-size: 1.8em; }
+    body > header #logo .description {
+      margin-top: 10px;
+      color: #2182b3; }
+      body > header #logo .description .bracket {
+        color: #83b04a; }
   body > header #social {
     text-align: right;
     height: 50px; }
