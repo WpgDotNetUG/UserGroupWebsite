@@ -144,13 +144,13 @@ a:hover {
   color: #005580;
   text-decoration: underline; }
 
-.row {
+.row, body > header nav {
   margin-left: -20px;
   *zoom: 1; }
-  .row:before, .row:after {
+  .row:before, body > header nav:before, .row:after, body > header nav:after {
     display: table;
     content: ""; }
-  .row:after {
+  .row:after, body > header nav:after {
     clear: both; }
 
 [class*="span"] {
@@ -3632,17 +3632,17 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
   display: none;
   visibility: hidden; }
 
-.visible-phone {
+.visible-phone, body > header nav #main-menu #menu-mobile {
   display: none !important; }
 
-.visible-tablet {
+.visible-tablet, body > header nav #main-menu #menu-tablet {
   display: none !important; }
 
 .hidden-desktop {
   display: none !important; }
 
 @media (max-width: 767px) {
-  .visible-phone {
+  .visible-phone, body > header nav #main-menu #menu-mobile {
     display: inherit !important; }
 
   .hidden-phone {
@@ -3651,10 +3651,10 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
   .hidden-desktop {
     display: inherit !important; }
 
-  .visible-desktop {
+  .visible-desktop, body > header nav #main-menu #menu {
     display: none !important; } }
 @media (min-width: 768px) and (max-width: 979px) {
-  .visible-tablet {
+  .visible-tablet, body > header nav #main-menu #menu-tablet {
     display: inherit !important; }
 
   .hidden-tablet {
@@ -3663,7 +3663,7 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
   .hidden-desktop {
     display: inherit !important; }
 
-  .visible-desktop {
+  .visible-desktop, body > header nav #main-menu #menu {
     display: none !important; } }
 @media (max-width: 480px) {
   .nav-collapse {
@@ -3736,7 +3736,7 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
   .row-fluid, body section#row_2, body section#row_1 {
     width: 100%; }
 
-  .row,
+  .row, body > header nav,
   .thumbnails {
     margin-left: 0; }
 
@@ -3771,13 +3771,13 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
     display: inline-block;
     width: auto; } }
 @media (min-width: 768px) and (max-width: 979px) {
-  .row {
+  .row, body > header nav {
     margin-left: -20px;
     *zoom: 1; }
-    .row:before, .row:after {
+    .row:before, body > header nav:before, .row:after, body > header nav:after {
       display: table;
       content: ""; }
-    .row:after {
+    .row:after, body > header nav:after {
       clear: both; }
 
   [class*="span"] {
@@ -3984,13 +3984,13 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
   .uneditable-input.span1 {
     width: 32px; } }
 @media (min-width: 1200px) {
-  .row {
+  .row, body > header nav {
     margin-left: -30px;
     *zoom: 1; }
-    .row:before, .row:after {
+    .row:before, body > header nav:before, .row:after, body > header nav:after {
       display: table;
       content: ""; }
-    .row:after {
+    .row:after, body > header nav:after {
       clear: both; }
 
   [class*="span"] {
@@ -4375,26 +4375,28 @@ body {
 body > header {
   background: white;
   border-bottom: 2px solid #d5e0e4; }
-  body > header #logo {
-    text-align: center;
-    font-size: 1.8em; }
-    body > header #logo .description {
-      margin-top: 10px;
-      color: #2182b3; }
-      body > header #logo .description .bracket {
-        color: #83b04a; }
-  body > header #description {
-    margin-top: 10px; }
-    body > header #description .title {
-      color: #285670;
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 10px; }
-    body > header #description .description {
-      color: #95b8c3;
-      font-size: 1.2em;
-      font-style: italic;
-      line-height: 20px; }
+  body > header nav {
+    margin-bottom: 20px; }
+    body > header nav #logo {
+      text-align: center;
+      font-size: 1.8em; }
+      body > header nav #logo .description {
+        margin-top: 10px;
+        color: #2182b3; }
+        body > header nav #logo .description .bracket {
+          color: #83b04a; }
+    body > header nav #description {
+      margin-top: 10px; }
+      body > header nav #description .title {
+        color: #285670;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 10px; }
+      body > header nav #description .description {
+        color: #95b8c3;
+        font-size: 1.2em;
+        font-style: italic;
+        line-height: 20px; }
   body > header #social {
     text-align: right;
     height: 80px; }

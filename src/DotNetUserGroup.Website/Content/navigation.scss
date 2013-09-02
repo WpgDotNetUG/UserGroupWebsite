@@ -4,35 +4,52 @@ body
 		background: $white;
 		border-bottom:2px solid $blue-border;
 		nav {
-		}
+			@extend .row;
+			margin-bottom: 20px;
 
-		#logo {
-			text-align:center;
-			font-size: 1.8em;
-			.description {
+			#logo {
+				text-align:center;
+				font-size: 1.8em;
+				.description {
+					margin-top: 10px;
+					color: #2182b3;
+					.bracket {
+						color: #83b04a;
+					}
+				}
+			}
+
+			#description {
 				margin-top: 10px;
-				color: #2182b3;
-				.bracket {
-					color: #83b04a;
+				.title { 
+					color: $blue-deep; 
+					font-size: 2em;
+					font-weight: bold;
+					margin-bottom: 10px;
+				}
+				.description { 
+					color: $blue-gray; 
+					font-size: 1.2em;
+					font-style: italic;
+					line-height: 20px;
+				}
+			}
+
+			#main-menu {
+				#menu-mobile {
+					@extend .visible-phone;
+				}
+
+				#menu-tablet {
+					@extend .visible-tablet;
+				}
+
+				#menu {
+					@extend .visible-desktop;
 				}
 			}
 		}
 
-		#description {
-			margin-top: 10px;
-			.title { 
-				color: $blue-deep; 
-				font-size: 2em;
-				font-weight: bold;
-				margin-bottom: 10px;
-			}
-			.description { 
-				color: $blue-gray; 
-				font-size: 1.2em;
-				font-style: italic;
-				line-height: 20px;
-			}
-		}
 
 		#social {
 			text-align:right;
