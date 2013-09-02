@@ -36,6 +36,8 @@ body
 			}
 
 			#main-menu {
+				@extend .navbar;
+
 				#menu-mobile {
 					@extend .visible-phone;
 				}
@@ -46,6 +48,26 @@ body
 
 				#menu {
 					@extend .visible-desktop;
+					font-size: 1.8em;
+					margin: 0px;
+					margin-top: 50px;
+					.nav {
+						margin: 0;
+						@extend .pull-right;
+						a {
+							color: $blue-menu;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+						li.active a {
+							color: $blue-menu-selected;
+							background: inherit;
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
 				}
 			}
 		}
