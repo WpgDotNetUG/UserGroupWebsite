@@ -2,18 +2,24 @@ body
 {
 	> header {
 		background: $white;
-		border-bottom:2px solid $grayLight;
+		border-bottom:2px solid $blue-border;
 		nav {
 		}
 
 		#social {
 			text-align:right;
+			height: 50px;
+
 			a {
 				color: $grayLight;
-				background: #e6f1fb;
-				padding: 20px;
+				background: $blue-background;
+				padding: 20px 20px 10px;
 				font-size: 1.2em;
-				border-bottom: 2px solid #d5e0e4;
+				border-bottom: 2px solid $blue-border;
+				
+				&:first-child {
+					border-right: 1px solid $blue-border;
+				}
 			}
 			i {
 				margin-top: 10px;

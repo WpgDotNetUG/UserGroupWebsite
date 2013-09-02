@@ -4335,7 +4335,7 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
     height: auto !important;
     overflow: visible !important; } }
 body {
-  background: #eeeeee; }
+  background: #ebf0f3; }
   body footer {
     margin-right: 20px; }
   body .sponsor a {
@@ -4374,15 +4374,18 @@ body {
     font-size: 10px; } }
 body > header {
   background: white;
-  border-bottom: 2px solid #999999; }
+  border-bottom: 2px solid #d5e0e4; }
   body > header #social {
-    text-align: right; }
+    text-align: right;
+    height: 50px; }
     body > header #social a {
       color: #999999;
-      background: #e6f1fb;
-      padding: 20px;
+      background: #ebf0f3;
+      padding: 20px 20px 10px;
       font-size: 1.2em;
       border-bottom: 2px solid #d5e0e4; }
+      body > header #social a:first-child {
+        border-right: 1px solid #d5e0e4; }
     body > header #social i {
       margin-top: 10px;
       font-size: 1.6em; }

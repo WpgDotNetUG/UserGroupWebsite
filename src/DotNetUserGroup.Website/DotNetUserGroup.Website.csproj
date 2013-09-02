@@ -184,6 +184,9 @@
     <Content Include="Content\lib\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
     </Content>
+    <Content Include="Content\navigation.css">
+      <DependentUpon>navigation.scss</DependentUpon>
+    </Content>
     <Content Include="Content\news.css">
       <DependentUpon>news.scss</DependentUpon>
     </Content>
@@ -264,6 +267,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Content\navigation.scss" />
     <None Include="Content\news.scss" />
     <None Include="Content\home.scss">
       <Compile>True</Compile>
