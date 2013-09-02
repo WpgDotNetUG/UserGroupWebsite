@@ -4383,9 +4383,21 @@ body > header {
       color: #2182b3; }
       body > header #logo .description .bracket {
         color: #83b04a; }
+  body > header #description {
+    margin-top: 10px; }
+    body > header #description .title {
+      color: #285670;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px; }
+    body > header #description .description {
+      color: #95b8c3;
+      font-size: 1.2em;
+      font-style: italic;
+      line-height: 20px; }
   body > header #social {
     text-align: right;
-    height: 50px; }
+    height: 80px; }
     body > header #social a {
       color: #999999;
       background: #ebf0f3;
