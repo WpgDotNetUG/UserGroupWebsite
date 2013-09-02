@@ -1,0 +1,31 @@
+body
+{
+	> header {
+		background: $white;
+		border-bottom:2px solid $grayLight;
+		nav {
+		}
+
+		#social {
+			text-align:right;
+			a {
+				color: $grayLight;
+				background: #e6f1fb;
+				padding: 20px;
+				font-size: 1.2em;
+				border-bottom: 2px solid #d5e0e4;
+			}
+			i {
+				margin-top: 10px;
+				font-size: 1.6em;
+			}
+			.icon-twitter {
+				color: #2ea7fe;
+			}
+			.icon-github {
+				color: $gray;
+			}
+		}
+	}
+
+}

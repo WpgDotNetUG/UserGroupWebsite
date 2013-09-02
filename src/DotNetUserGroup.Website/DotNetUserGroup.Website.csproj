@@ -199,6 +199,9 @@
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
+    <Content Include="Content\styles.css">
+      <DependentUpon>styles.scss</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\Apptius-Logo.png" />
@@ -312,6 +315,7 @@
     <Content Include="Content\News\2011-04-08-Imaginet_Party.markdown" />
     <Content Include="Content\News\2012-08-01-ror_workshop.markdown" />
     <Content Include="Content\News\2011-03-15-wp7.markdown" />
+    <Content Include="Content\styles.scss" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />

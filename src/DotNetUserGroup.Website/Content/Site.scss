@@ -1,12 +1,7 @@
-﻿@import "lib/bootstrap";
-@import "lib/responsive";
-
+﻿
 body {
+	background: $grayLighter;
 
-
-	#fork-github{
-		@extend .visible-desktop;
-	}
 
 	aside {
 		@extend .sidebar;
@@ -22,43 +17,6 @@ body {
 		}
 	}
 
-	nav {
-		@extend .navbar;
-		@extend .navbar-fixed-top;
-
-		#inner {
-			@extend .navbar-inner;
-
-			#container {
-				@extend .container;
-
-				header {
-					@extend .brand;
-				}
-
-				#menu {
-					ul {
-						@extend .nav;
-					}
-					@extend .visible-desktop;
-				}
-
-				#menu-tablet {
-					ul {
-						@extend .nav;
-						i {
-							@extend .hidden;
-						}
-					}
-					@extend .visible-tablet;
-				}
-
-				#menu-mobile {
-					@extend .visible-phone;
-				}
-			}
-		}
-	}
 
 
 	footer {
@@ -88,7 +46,6 @@ body {
 
 	body {
 		padding-bottom: 40px;
-		padding-top: 70px;
 	}
 }
 
