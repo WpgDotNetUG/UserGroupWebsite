@@ -10,12 +10,19 @@
                 Fork me on GitHub
             </a>
         </section>
-        <nav class="row">
+        <nav>
             <section id="logo" class="span4">
-                [Winnipeg Dot Net User Group]
+                <a href="/">
+                    <img src="/Content/images/logo_2013.png" alt="WPG.NET UG Logo"/>
+                </a>
             </section>
             <section id="description" class="span4">
-                Winnipeg Dot Net User Group
+                <div class="title">
+                    <span class="bracket">{</span>
+                    Winnipeg <span class="bracket">=></span> Dot Net User Group
+                    <span class="bracket">}</span>
+                </div>
+                <div class="description">A .NET user group full of lambdas, LINQ, MVC but not sharepoint!</div>
             </section>
             <section id="main-menu" class="span4">
                 <section id="menu">@MenuItems()</section>
@@ -35,7 +42,7 @@
 @helper MenuItems(string className = "")
 {
     var newsSelected = ViewBag.Menu == "News" ? "active" : null;
-    <ul class="@className">
+    <ul class="nav">
         <li><a href="http://www.eventbrite.com/org/1699161450" target="_blank">.events</a></li>
         <li><a href="http://wpgdotnet.ideascale.com/" target="_blank">.topics</a></li>
         <li class="@newsSelected"><a href="/pagenews">.news</a></li>
