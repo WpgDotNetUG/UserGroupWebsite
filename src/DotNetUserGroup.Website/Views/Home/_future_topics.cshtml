@@ -1,0 +1,13 @@
+﻿<section id="future-topics">
+    <header>future.topics</header>
+    <ul id="topic-list" data-bind="foreach: topics">
+        <li>
+            <span class="topic" data-bind="text: Topic"></span>
+            <a href="#" class="vote-topic" data-bind="attr: { href: Url }" target="_blank">Vote</a>
+        </li>
+    </ul>
+    <footer>
+        <i class="icon-star-empty" ></i>
+        <a href="http://wpgdotnet.ideascale.com/" target="_blank">See all</a>
+    </footer>
+</section>

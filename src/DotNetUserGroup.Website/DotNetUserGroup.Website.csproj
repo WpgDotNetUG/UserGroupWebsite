@@ -181,6 +181,15 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\home\future_topics.css">
+      <DependentUpon>future_topics.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\home\home.css">
+      <DependentUpon>home.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\home\past_events.css">
+      <DependentUpon>past_events.scss</DependentUpon>
+    </Content>
     <Content Include="Content\lib\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
     </Content>
@@ -193,9 +202,6 @@
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
-    <Content Include="Content\home.css">
-      <DependentUpon>home.scss</DependentUpon>
-    </Content>
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\Site.css">
@@ -268,13 +274,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\navigation.scss" />
+    <Content Include="Content\home\home.scss" />
+    <Content Include="Content\home\past_events.scss" />
+    <Content Include="Content\home\future_topics.scss" />
     <None Include="Content\news.scss" />
-    <None Include="Content\home.scss">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
-    </None>
     <None Include="Content\lib\bootstrap.scss" />
     <None Include="Content\lib\responsive.scss" />
     <None Include="Content\lib\_accordion.scss" />
@@ -355,6 +358,9 @@
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />
     <Content Include="Views\Shared\_aside.cshtml" />
+    <Content Include="Views\Home\_next_event.cshtml" />
+    <Content Include="Views\Home\_past_events.cshtml" />
+    <Content Include="Views\Home\_future_topics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,39 @@
+#future-topics {
+	@include event-box(#ffd7bb, #ffcaa1, #bc8354);
+	#topic-list {
+		list-style: none;
+		min-height:225px;
+		margin-left: -20px;
+		font-size: 1.3em;
+
+		li {
+			border-top: 1px solid #e1a579;
+			line-height: 35px;
+			padding-left: 20px;
+
+			.topic {
+				color: #9e5114;
+				font-weight: 600;
+			}
+
+			.vote-topic {
+				@extend .pull-right;
+				@include border-radius(5px);
+				background: $white;
+				color: #e1a579;
+				margin-right: 5px;
+				margin-top: 5px;
+				font-size: 0.8em;
+				line-height: 20px;
+				padding: 0px 5px;
+			}
+		}
+	}
+
+	> footer {
+		i, a {
+			color: darken(#ce8e68, 10%);
+		}
+	}
+}
+

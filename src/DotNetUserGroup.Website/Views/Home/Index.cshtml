@@ -4,54 +4,11 @@
 }
 
 <section id="events">
-    <section id="next-event">
-        <header>next.event</header>
-        <span data-bind="if: loading">
-            Finding about next event.... please wait...
-            <i class="icon-spin icon-spinner"></i>
-        </span>
-        <span data-bind="if: !loading() && eventPending">
-            Next event in progress, please stay tuned!
-        </span>
-        <header data-bind="ifnot: eventPending">
-            <h2>
-                <i class="icon-thumbs-up icon-large"></i>
-                <span data-bind="text: date" class="date"></span> 
-                <span data-bind="text: title" class="title"></span>
-            </h2>
-        </header>
-        <article data-bind="html: description"></article>
-        <a data-bind="visible: !eventPending(), attr: { href: url }" class="read-more" target="_blank">Read more and register</a>
-    </section>    
-    <section id="past-events">
-        <header>past.events</header>
-        <ul id="event-list" data-bind="foreach: events">
-            <li>
-                <i class="icon-check"></i>
-                <a href="#" data-bind="text: Title, attr: { href: Url }" target="_blank"></a>
-            </li>
-        </ul>   
-        <footer>
-            <i class="icon-list"></i>
-            <a data-bind="attr: { href: organizerUrl }" target="_blank">
-                View all
-            </a>
-        </footer>
-    </section>
-    <section id="future-topics">
-        <header>future.topics</header>
-        <h2>
-            <i class="icon-group" ></i>
-            Future Topics
-            <a href="http://wpgdotnet.ideascale.com/" target="_blank">Vote &raquo;</a>
-        </h2>
-        <ul id="list-topics" data-bind="foreach: topics">
-            <li>
-                <a data-bind="attr: { href: Url }" target="_blank">Vote</a>
-                <span data-bind="text: $data.Topic"></span>
-            </li>
-        </ul>
-    </section>
+    @{ Html.RenderPartial("_next_event"); }
+
+    @{ Html.RenderPartial("_past_events"); }
+
+    @{ Html.RenderPartial("_future_topics"); }
 </section>
 
 
