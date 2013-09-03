@@ -10,21 +10,10 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-@*        <a id="fork-github" href="https://github.com/WpgDotNetUG/UserGroupWebsite" target="_blank">
-            <img style="position: absolute; top: 40px; right: 0; border: 0;" 
-                 src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" 
-                 alt="Fork me on GitHub">
-        </a>*@
-        
         @{ Html.RenderPartial("_navigation"); }
 
         <div class="container">
-            <div class="row-fluid">
-                <section id="content" class="span10">
-                    @RenderBody()
-                </section>
-                @{ Html.RenderPartial("_aside"); }
-            </div>
+            @RenderBody()
         </div>
         <hr/>
         <footer>

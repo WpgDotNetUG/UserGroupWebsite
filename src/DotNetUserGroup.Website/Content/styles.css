@@ -4483,9 +4483,6 @@ body > header {
           text-decoration: none; }
   body > header #divider {
     height: 10px;
-    /**			border-top: 2px solid #d2d8db;
-    			border-bottom: 2px solid #d2d8db;
-    			background: #d3dddf; */
     background-color: #edeff0;
     background-image: -moz-linear-gradient(top, white, #d2d8db);
     background-image: -ms-linear-gradient(top, white, #d2d8db);
@@ -4497,7 +4494,7 @@ body > header {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfdfd', endColorstr='#cfd6d9', GradientType=0); }
   body > header #social {
     text-align: right;
-    height: 80px; }
+    height: 50px; }
     body > header #social a {
       color: #999999;
       background: #ebf0f3;
@@ -4513,6 +4510,76 @@ body > header {
       color: #2ea7fe; }
     body > header #social .icon-github {
       color: #555555; }
+
+#events {
+  display: table;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 20px;
+  background-image: url("/images/wpg_bridge.jpg");
+  background-position: 0px -450px;
+  background-repeat: repeat-x; }
+  #events #next-event {
+    display: table-cell;
+    border-right: 2px solid #ebf0f3;
+    padding-left: 20px;
+    padding-top: 20px;
+    opacity: 0.95;
+    background-color: #7edaff;
+    background-image: -moz-linear-gradient(top, #b0e7ff, #35c7ff);
+    background-image: -ms-linear-gradient(top, #b0e7ff, #35c7ff);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b0e7ff), to(#35c7ff));
+    background-image: -webkit-linear-gradient(top, #b0e7ff, #35c7ff);
+    background-image: -o-linear-gradient(top, #b0e7ff, #35c7ff);
+    background-image: linear-gradient(top, #b0e7ff, #35c7ff);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#abe6ff', endColorstr='#30c6ff', GradientType=0);
+    border-bottom: 1px solid #02b9ff;
+    width: 600px; }
+    #events #next-event > header {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #4fa6ce; }
+  #events #past-events {
+    display: table-cell;
+    border-right: 2px solid #ebf0f3;
+    padding-left: 20px;
+    padding-top: 20px;
+    opacity: 0.95;
+    background-color: #c1e8a7;
+    background-image: -moz-linear-gradient(top, #cfecbc, #aee288);
+    background-image: -ms-linear-gradient(top, #cfecbc, #aee288);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cfecbc), to(#aee288));
+    background-image: -webkit-linear-gradient(top, #cfecbc, #aee288);
+    background-image: -o-linear-gradient(top, #cfecbc, #aee288);
+    background-image: linear-gradient(top, #cfecbc, #aee288);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccebb8', endColorstr='#abe184', GradientType=0);
+    border-bottom: 1px solid #92d85f; }
+    #events #past-events > header {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #60803d; }
+  #events #future-topics {
+    display: table-cell;
+    border-right: 2px solid #ebf0f3;
+    padding-left: 20px;
+    padding-top: 20px;
+    opacity: 0.95;
+    background-color: #ffd1b0;
+    background-image: -moz-linear-gradient(top, #ffd7bb, #ffcaa1);
+    background-image: -ms-linear-gradient(top, #ffd7bb, #ffcaa1);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd7bb), to(#ffcaa1));
+    background-image: -webkit-linear-gradient(top, #ffd7bb, #ffcaa1);
+    background-image: -o-linear-gradient(top, #ffd7bb, #ffcaa1);
+    background-image: linear-gradient(top, #ffd7bb, #ffcaa1);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd4b6', endColorstr='#ffc79c', GradientType=0);
+    border-bottom: 1px solid #ffad6e; }
+    #events #future-topics > header {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #bc8354; }
 
 .hero-unit {
   background-image: url("/images/wpg_bridge.jpg");

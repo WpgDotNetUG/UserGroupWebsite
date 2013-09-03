@@ -1,12 +1,11 @@
 ﻿
 @section scripts {
-        @Scripts.Render("~/bundles/vm-home")
+   @Scripts.Render("~/bundles/vm-home")
 }
 
-<section class="hero-unit" id="next-event">
-    <h1>Winnipeg .NET User Group</h1>
-    <hr />
-    <div class="main-event">
+<section id="events">
+    <section id="next-event">
+        <header>next.event</header>
         <span data-bind="if: loading">
             Finding about next event.... please wait...
         </span>
@@ -21,11 +20,10 @@
             </h2>
         </header>
         <article data-bind="html: description"></article>
-    </div>
-    <a data-bind="visible: !eventPending(), attr: {href: url}" class="read-more" target="_blank">Read more and register</a>
-</section>
-<section id="row_1">
-    <section id="events" class="widget-info span6">
+        <a data-bind="visible: !eventPending(), attr: { href: url }" class="read-more" target="_blank">Read more and register</a>
+    </section>    
+    <section id="past-events">
+        <header>past.events</header>
         <h2>
             <i class="icon-calendar"></i>
             Past Events
@@ -42,7 +40,8 @@
             </li>
         </ul>
     </section>
-    <section id="topics" class="widget-info span6">
+    <section id="future-topics">
+        <header>future.topics</header>
         <h2>
             <i class="icon-group" ></i>
             Future Topics
@@ -56,7 +55,9 @@
         </ul>
     </section>
 </section>
-<section id="row_2">
+
+
+@*<section id="row_2">
     <section id="news" class="widget-info span6">
         <h2>
             <i class="icon-eye-open"></i>
@@ -87,4 +88,4 @@
         </p>
     </section>
 </section>
-
+*@
