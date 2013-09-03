@@ -4,9 +4,8 @@
 	@include event-box(#cfecbc, #aee288, #60803d);
 	width: 25%;
 	#event-list {
-		list-style: none;
 		margin-left: 0px;
-		min-height:225px;
+		margin-right: 10px;
 		li {
 			margin-bottom: 20px;
 			a {

@@ -4507,9 +4507,16 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #4fa6ce; }
+    #events #next-event > ul {
+      list-style: none;
+      height: 230px; }
     #events #next-event > footer {
       line-height: 50px;
       font-size: 1.2em; }
+    #events #next-event .event {
+      color: #115979;
+      font-size: 2em;
+      font-weight: 600; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
@@ -4531,13 +4538,15 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #60803d; }
+    #events #past-events > ul {
+      list-style: none;
+      height: 230px; }
     #events #past-events > footer {
       line-height: 50px;
       font-size: 1.2em; }
     #events #past-events #event-list {
-      list-style: none;
       margin-left: 0px;
-      min-height: 225px; }
+      margin-right: 10px; }
       #events #past-events #event-list li {
         margin-bottom: 20px; }
         #events #past-events #event-list li a {
@@ -4571,12 +4580,13 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #bc8354; }
+    #events #future-topics > ul {
+      list-style: none;
+      height: 230px; }
     #events #future-topics > footer {
       line-height: 50px;
       font-size: 1.2em; }
     #events #future-topics #topic-list {
-      list-style: none;
-      min-height: 225px;
       margin-left: -20px;
       font-size: 1.3em; }
       #events #future-topics #topic-list li {
