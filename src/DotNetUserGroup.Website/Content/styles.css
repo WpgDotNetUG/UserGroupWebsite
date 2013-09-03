@@ -4448,41 +4448,53 @@ body {
     font-size: 10px; } }
 body > header {
   background: white;
-  border-bottom: 2px solid #d5e0e4; }
-  body > header nav {
-    margin-bottom: 20px; }
-    body > header nav #logo a {
-      line-height: 80px; }
-    body > header nav #logo img {
-      width: 280px; }
-    body > header nav #description {
-      margin-top: 10px; }
-      body > header nav #description .title {
-        color: #285670;
-        font-size: 2em;
-        font-weight: bold;
-        margin-bottom: 10px; }
-        body > header nav #description .title .bracket {
-          color: #83b04a; }
-      body > header nav #description .description {
-        color: #74a2b1;
-        font-size: 1.3em;
-        font-style: italic;
-        line-height: 20px; }
-    body > header nav #main-menu #menu {
-      font-size: 1.8em;
-      margin: 40px 0 0; }
-      body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul {
-        margin: 0; }
-        body > header nav #main-menu #menu .nav a, body > header nav #main-menu #menu aside section ul a, body > header aside section nav #main-menu #menu ul a {
-          color: #7f9cb0; }
-          body > header nav #main-menu #menu .nav a:hover, body > header nav #main-menu #menu aside section ul a:hover, body > header aside section nav #main-menu #menu ul a:hover {
-            text-decoration: underline; }
-        body > header nav #main-menu #menu .nav li.active a, body > header nav #main-menu #menu aside section ul li.active a, body > header aside section nav #main-menu #menu ul li.active a {
-          color: #067eb1;
-          background: inherit; }
-          body > header nav #main-menu #menu .nav li.active a:hover, body > header nav #main-menu #menu aside section ul li.active a:hover, body > header aside section nav #main-menu #menu ul li.active a:hover {
-            text-decoration: none; }
+  margin-bottom: 40px; }
+  body > header nav #logo a {
+    line-height: 80px; }
+  body > header nav #logo img {
+    width: 280px; }
+  body > header nav #description {
+    margin-top: 10px; }
+    body > header nav #description .title {
+      color: #285670;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px; }
+      body > header nav #description .title .bracket {
+        color: #83b04a; }
+    body > header nav #description .description {
+      color: #74a2b1;
+      font-size: 1.3em;
+      font-style: italic;
+      line-height: 20px; }
+  body > header nav #main-menu #menu {
+    font-size: 1.8em;
+    margin: 40px 0 0; }
+    body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul {
+      margin: 0; }
+      body > header nav #main-menu #menu .nav a, body > header nav #main-menu #menu aside section ul a, body > header aside section nav #main-menu #menu ul a {
+        color: #7f9cb0; }
+        body > header nav #main-menu #menu .nav a:hover, body > header nav #main-menu #menu aside section ul a:hover, body > header aside section nav #main-menu #menu ul a:hover {
+          text-decoration: underline; }
+      body > header nav #main-menu #menu .nav li.active a, body > header nav #main-menu #menu aside section ul li.active a, body > header aside section nav #main-menu #menu ul li.active a {
+        color: #067eb1;
+        background: inherit; }
+        body > header nav #main-menu #menu .nav li.active a:hover, body > header nav #main-menu #menu aside section ul li.active a:hover, body > header aside section nav #main-menu #menu ul li.active a:hover {
+          text-decoration: none; }
+  body > header #divider {
+    height: 10px;
+    /**			border-top: 2px solid #d2d8db;
+    			border-bottom: 2px solid #d2d8db;
+    			background: #d3dddf; */
+    background-color: #edeff0;
+    background-image: -moz-linear-gradient(top, white, #d2d8db);
+    background-image: -ms-linear-gradient(top, white, #d2d8db);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d2d8db));
+    background-image: -webkit-linear-gradient(top, white, #d2d8db);
+    background-image: -o-linear-gradient(top, white, #d2d8db);
+    background-image: linear-gradient(top, white, #d2d8db);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfdfd', endColorstr='#cfd6d9', GradientType=0); }
   body > header #social {
     text-align: right;
     height: 80px; }

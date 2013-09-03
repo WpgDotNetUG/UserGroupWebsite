@@ -2,10 +2,9 @@ body
 {
 	> header {
 		background: $white;
-		border-bottom:2px solid $blue-border;
+		margin-bottom: 40px;
 		nav {
 			@extend .row;
-			margin-bottom: 20px;
 
 			#logo {
 				a {
@@ -71,6 +70,13 @@ body
 			}
 		}
 
+		#divider {
+			height: 10px;
+/**			border-top: 2px solid #d2d8db;
+			border-bottom: 2px solid #d2d8db;
+			background: #d3dddf; */
+			@include gradient-vertical(lighten(#d3dddf, 20%), #d2d8db);
+		}
 
 		#social {
 			text-align:right;
