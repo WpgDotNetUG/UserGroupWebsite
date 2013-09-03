@@ -1,0 +1,30 @@
+
+#past-events {
+
+	@include event-box(#cfecbc, #aee288, #60803d);
+	width: 25%;
+	#event-list {
+		list-style: none;
+		margin-left: 0px;
+		min-height:225px;
+		li {
+			margin-bottom: 20px;
+			a {
+				font-size: 1.4em;
+				font-weight: 600;
+				color: darken(#3e6422, 5%);
+				line-height: 20px;
+			}
+
+			i {
+				color: darken(#3e6422, 5%);
+			}
+		}
+	}
+	footer {
+		color: #547529;
+		a {
+			color: #547529;
+		}
+	}
+}

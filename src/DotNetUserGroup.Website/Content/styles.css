@@ -463,15 +463,16 @@ blockquote {
     color: #999999; }
     blockquote small:before {
       content: '\2014 \00A0'; }
-  blockquote.pull-right, body > header nav #main-menu #menu blockquote.nav {
+  blockquote.pull-right, body > header nav #main-menu #menu blockquote.nav, #events #future-topics #topic-list li blockquote.vote-topic {
     float: right;
     padding-right: 15px;
     padding-left: 0;
     border-right: 5px solid #eeeeee;
     border-left: 0; }
-    blockquote.pull-right p, body > header nav #main-menu #menu blockquote.nav p,
+    blockquote.pull-right p, body > header nav #main-menu #menu blockquote.nav p, #events #future-topics #topic-list li blockquote.vote-topic p,
     blockquote.pull-right small,
-    body > header nav #main-menu #menu blockquote.nav small {
+    body > header nav #main-menu #menu blockquote.nav small,
+    #events #future-topics #topic-list li blockquote.vote-topic small {
       text-align: right; }
 
 q:before,
@@ -1477,7 +1478,7 @@ table .span24 {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
-  .dropdown-menu.pull-right, body footer.dropdown-menu, body > header nav #main-menu #menu .dropdown-menu.nav, body > header nav #main-menu #menu aside section ul.dropdown-menu, body > header aside section nav #main-menu #menu ul.dropdown-menu, .widget h2 a.dropdown-menu, .widget-info h2 a.dropdown-menu, .widget-register h2 a.dropdown-menu {
+  .dropdown-menu.pull-right, body footer.dropdown-menu, body > header nav #main-menu #menu .dropdown-menu.nav, body > header nav #main-menu #menu aside section ul.dropdown-menu, body > header aside section nav #main-menu #menu ul.dropdown-menu, #events #future-topics #topic-list li .dropdown-menu.vote-topic, .widget h2 a.dropdown-menu, .widget-info h2 a.dropdown-menu, .widget-register h2 a.dropdown-menu {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -1509,7 +1510,7 @@ table .span24 {
   .open .dropdown-menu {
     display: block; }
 
-.pull-right .dropdown-menu, body footer .dropdown-menu, body > header nav #main-menu #menu .nav .dropdown-menu, body > header nav #main-menu #menu aside section ul .dropdown-menu, body > header aside section nav #main-menu #menu ul .dropdown-menu, .widget h2 a .dropdown-menu, .widget-info h2 a .dropdown-menu, .widget-register h2 a .dropdown-menu {
+.pull-right .dropdown-menu, body footer .dropdown-menu, body > header nav #main-menu #menu .nav .dropdown-menu, body > header nav #main-menu #menu aside section ul .dropdown-menu, body > header aside section nav #main-menu #menu ul .dropdown-menu, #events #future-topics #topic-list li .vote-topic .dropdown-menu, .widget h2 a .dropdown-menu, .widget-info h2 a .dropdown-menu, .widget-register h2 a .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -2125,7 +2126,7 @@ input[type="submit"].btn {
   text-decoration: none;
   background-color: #eeeeee; }
 
-.nav > .pull-right, body aside section ul > .pull-right, body .nav > footer, body aside section ul > footer, body > header nav #main-menu #menu .nav > .nav, body > header aside section nav #main-menu #menu ul > .nav, body > header nav #main-menu #menu aside section ul > .nav, body > header nav #main-menu #menu aside section .nav > ul, body > header nav #main-menu #menu aside section ul > ul, body > header aside section nav #main-menu #menu .nav > ul, body > header aside section nav #main-menu #menu ul > ul, .widget h2 .nav > a, body aside section .widget h2 ul > a, .widget h2 body aside section ul > a, .widget-info h2 .nav > a, body aside section .widget-info h2 ul > a, .widget-info h2 body aside section ul > a, .widget-register h2 .nav > a, body aside section .widget-register h2 ul > a, .widget-register h2 body aside section ul > a {
+.nav > .pull-right, body aside section ul > .pull-right, body .nav > footer, body aside section ul > footer, body > header nav #main-menu #menu .nav > .nav, body > header aside section nav #main-menu #menu ul > .nav, body > header nav #main-menu #menu aside section ul > .nav, body > header nav #main-menu #menu aside section .nav > ul, body > header nav #main-menu #menu aside section ul > ul, body > header aside section nav #main-menu #menu .nav > ul, body > header aside section nav #main-menu #menu ul > ul, #events #future-topics #topic-list li .nav > .vote-topic, body aside section #events #future-topics #topic-list li ul > .vote-topic, #events #future-topics #topic-list li body aside section ul > .vote-topic, .widget h2 .nav > a, body aside section .widget h2 ul > a, .widget h2 body aside section ul > a, .widget-info h2 .nav > a, body aside section .widget-info h2 ul > a, .widget-info h2 body aside section ul > a, .widget-register h2 .nav > a, body aside section .widget-register h2 ul > a, .widget-register h2 body aside section ul > a {
   float: right; }
 
 .nav .nav-header, body aside section ul .nav-header {
@@ -2574,7 +2575,7 @@ body aside section ul li.dropdown.open a:hover .caret {
   float: left;
   margin: 0 10px 0 0; }
 
-.navbar .nav.pull-right, body > header nav #main-menu .nav.pull-right, .navbar body aside section ul.pull-right, body aside section .navbar ul.pull-right, body > header nav #main-menu aside section ul.pull-right, body > header aside section nav #main-menu ul.pull-right, .navbar body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar ul.nav, body > header aside section nav #main-menu #menu ul.nav, .navbar body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar ul.nav, body > header nav #main-menu #menu aside section ul.nav, .navbar body footer.nav, body .navbar footer.nav, body > header nav #main-menu footer.nav, .navbar body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav, body > header nav #main-menu #menu .nav, .navbar body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar ul, body > header nav #main-menu #menu aside section ul, .navbar body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar ul, body > header aside section nav #main-menu #menu ul, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, body > header nav #main-menu .widget h2 a.nav, .widget h2 body > header nav #main-menu a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, body > header nav #main-menu .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav, body > header nav #main-menu .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu a.nav {
+.navbar .nav.pull-right, body > header nav #main-menu .nav.pull-right, .navbar body aside section ul.pull-right, body aside section .navbar ul.pull-right, body > header nav #main-menu aside section ul.pull-right, body > header aside section nav #main-menu ul.pull-right, .navbar body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar ul.nav, body > header aside section nav #main-menu #menu ul.nav, .navbar body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar ul.nav, body > header nav #main-menu #menu aside section ul.nav, .navbar body aside section #events #future-topics #topic-list li ul.vote-topic, body aside section #events #future-topics #topic-list li .navbar ul.vote-topic, body > header nav #main-menu aside section #events #future-topics #topic-list li ul.vote-topic, body > header aside section #events #future-topics #topic-list li nav #main-menu ul.vote-topic, .navbar #events #future-topics #topic-list li body aside section ul.vote-topic, #events #future-topics #topic-list li body aside section .navbar ul.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu aside section ul.vote-topic, #events #future-topics #topic-list li body > header aside section nav #main-menu ul.vote-topic, .navbar body footer.nav, body .navbar footer.nav, body > header nav #main-menu footer.nav, .navbar body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav, body > header nav #main-menu #menu .nav, .navbar body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar ul, body > header nav #main-menu #menu aside section ul, .navbar body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar ul, body > header aside section nav #main-menu #menu ul, .navbar #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li .navbar .nav.vote-topic, body > header nav #main-menu #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu .nav.vote-topic, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, body > header nav #main-menu .widget h2 a.nav, .widget h2 body > header nav #main-menu a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, body > header nav #main-menu .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav, body > header nav #main-menu .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu a.nav {
   float: right; }
 
 .navbar .nav > li, body > header nav #main-menu .nav > li, .navbar body aside section ul > li, body aside section .navbar ul > li, body > header nav #main-menu aside section ul > li, body > header aside section nav #main-menu ul > li {
@@ -2623,7 +2624,7 @@ body > header aside section nav #main-menu ul .active > a:hover {
   background-color: #222222;
   border-right: 1px solid #333333; }
 
-.navbar .nav.pull-right, body > header nav #main-menu .nav.pull-right, .navbar body aside section ul.pull-right, body aside section .navbar ul.pull-right, body > header nav #main-menu aside section ul.pull-right, body > header aside section nav #main-menu ul.pull-right, .navbar body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar ul.nav, body > header aside section nav #main-menu #menu ul.nav, .navbar body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar ul.nav, body > header nav #main-menu #menu aside section ul.nav, .navbar body footer.nav, body .navbar footer.nav, body > header nav #main-menu footer.nav, .navbar body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav, body > header nav #main-menu #menu .nav, .navbar body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar ul, body > header nav #main-menu #menu aside section ul, .navbar body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar ul, body > header aside section nav #main-menu #menu ul, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, body > header nav #main-menu .widget h2 a.nav, .widget h2 body > header nav #main-menu a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, body > header nav #main-menu .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav, body > header nav #main-menu .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu a.nav {
+.navbar .nav.pull-right, body > header nav #main-menu .nav.pull-right, .navbar body aside section ul.pull-right, body aside section .navbar ul.pull-right, body > header nav #main-menu aside section ul.pull-right, body > header aside section nav #main-menu ul.pull-right, .navbar body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar ul.nav, body > header aside section nav #main-menu #menu ul.nav, .navbar body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar ul.nav, body > header nav #main-menu #menu aside section ul.nav, .navbar body aside section #events #future-topics #topic-list li ul.vote-topic, body aside section #events #future-topics #topic-list li .navbar ul.vote-topic, body > header nav #main-menu aside section #events #future-topics #topic-list li ul.vote-topic, body > header aside section #events #future-topics #topic-list li nav #main-menu ul.vote-topic, .navbar #events #future-topics #topic-list li body aside section ul.vote-topic, #events #future-topics #topic-list li body aside section .navbar ul.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu aside section ul.vote-topic, #events #future-topics #topic-list li body > header aside section nav #main-menu ul.vote-topic, .navbar body footer.nav, body .navbar footer.nav, body > header nav #main-menu footer.nav, .navbar body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav, body > header nav #main-menu #menu .nav, .navbar body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar ul, body > header nav #main-menu #menu aside section ul, .navbar body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar ul, body > header aside section nav #main-menu #menu ul, .navbar #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li .navbar .nav.vote-topic, body > header nav #main-menu #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu .nav.vote-topic, .navbar .widget h2 a.nav, .widget h2 .navbar a.nav, body > header nav #main-menu .widget h2 a.nav, .widget h2 body > header nav #main-menu a.nav, .navbar .widget-info h2 a.nav, .widget-info h2 .navbar a.nav, body > header nav #main-menu .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu a.nav, .navbar .widget-register h2 a.nav, .widget-register h2 .navbar a.nav, body > header nav #main-menu .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu a.nav {
   margin-left: 10px;
   margin-right: 0; }
 
@@ -2735,7 +2736,7 @@ body > header aside section nav #main-menu ul li.dropdown.open.active > .dropdow
 .navbar .nav li.dropdown.active > .dropdown-toggle:hover, body > header nav #main-menu .nav li.dropdown.active > .dropdown-toggle:hover, .navbar body aside section ul li.dropdown.active > .dropdown-toggle:hover, body aside section .navbar ul li.dropdown.active > .dropdown-toggle:hover, body > header nav #main-menu aside section ul li.dropdown.active > .dropdown-toggle:hover, body > header aside section nav #main-menu ul li.dropdown.active > .dropdown-toggle:hover {
   color: white; }
 
-.navbar .pull-right .dropdown-menu, body > header nav #main-menu .pull-right .dropdown-menu, .navbar body footer .dropdown-menu, body .navbar footer .dropdown-menu, body > header nav #main-menu footer .dropdown-menu, .navbar body > header nav #main-menu #menu .nav .dropdown-menu, body > header nav #main-menu #menu .navbar .nav .dropdown-menu, body > header nav #main-menu #menu .nav .dropdown-menu, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu, body > header nav #main-menu #menu aside section ul .dropdown-menu, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu, body > header aside section nav #main-menu #menu ul .dropdown-menu, .navbar .widget h2 a .dropdown-menu, .widget h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget h2 a .dropdown-menu, .widget h2 body > header nav #main-menu a .dropdown-menu, .navbar .widget-info h2 a .dropdown-menu, .widget-info h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget-info h2 a .dropdown-menu, .widget-info h2 body > header nav #main-menu a .dropdown-menu, .navbar .widget-register h2 a .dropdown-menu, .widget-register h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget-register h2 a .dropdown-menu, .widget-register h2 body > header nav #main-menu a .dropdown-menu,
+.navbar .pull-right .dropdown-menu, body > header nav #main-menu .pull-right .dropdown-menu, .navbar body footer .dropdown-menu, body .navbar footer .dropdown-menu, body > header nav #main-menu footer .dropdown-menu, .navbar body > header nav #main-menu #menu .nav .dropdown-menu, body > header nav #main-menu #menu .navbar .nav .dropdown-menu, body > header nav #main-menu #menu .nav .dropdown-menu, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu, body > header nav #main-menu #menu aside section ul .dropdown-menu, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu, body > header aside section nav #main-menu #menu ul .dropdown-menu, .navbar #events #future-topics #topic-list li .vote-topic .dropdown-menu, #events #future-topics #topic-list li .navbar .vote-topic .dropdown-menu, body > header nav #main-menu #events #future-topics #topic-list li .vote-topic .dropdown-menu, #events #future-topics #topic-list li body > header nav #main-menu .vote-topic .dropdown-menu, .navbar .widget h2 a .dropdown-menu, .widget h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget h2 a .dropdown-menu, .widget h2 body > header nav #main-menu a .dropdown-menu, .navbar .widget-info h2 a .dropdown-menu, .widget-info h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget-info h2 a .dropdown-menu, .widget-info h2 body > header nav #main-menu a .dropdown-menu, .navbar .widget-register h2 a .dropdown-menu, .widget-register h2 .navbar a .dropdown-menu, body > header nav #main-menu .widget-register h2 a .dropdown-menu, .widget-register h2 body > header nav #main-menu a .dropdown-menu,
 .navbar .dropdown-menu.pull-right,
 body > header nav #main-menu .dropdown-menu.pull-right,
 .navbar body footer.dropdown-menu,
@@ -2750,6 +2751,10 @@ body > header nav #main-menu #menu aside section ul.dropdown-menu,
 .navbar body > header aside section nav #main-menu #menu ul.dropdown-menu,
 body > header aside section nav #main-menu #menu .navbar ul.dropdown-menu,
 body > header aside section nav #main-menu #menu ul.dropdown-menu,
+.navbar #events #future-topics #topic-list li .dropdown-menu.vote-topic,
+#events #future-topics #topic-list li .navbar .dropdown-menu.vote-topic,
+body > header nav #main-menu #events #future-topics #topic-list li .dropdown-menu.vote-topic,
+#events #future-topics #topic-list li body > header nav #main-menu .dropdown-menu.vote-topic,
 .navbar .widget h2 a.dropdown-menu,
 .widget h2 .navbar a.dropdown-menu,
 body > header nav #main-menu .widget h2 a.dropdown-menu,
@@ -2764,7 +2769,7 @@ body > header nav #main-menu .widget-register h2 a.dropdown-menu,
 .widget-register h2 body > header nav #main-menu a.dropdown-menu {
   left: auto;
   right: 0; }
-  .navbar .pull-right .dropdown-menu:before, body > header nav #main-menu .pull-right .dropdown-menu:before, .navbar body footer .dropdown-menu:before, body .navbar footer .dropdown-menu:before, body > header nav #main-menu footer .dropdown-menu:before, .navbar body > header nav #main-menu #menu .nav .dropdown-menu:before, body > header nav #main-menu #menu .navbar .nav .dropdown-menu:before, body > header nav #main-menu #menu .nav .dropdown-menu:before, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu:before, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu:before, body > header nav #main-menu #menu aside section ul .dropdown-menu:before, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu:before, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu:before, body > header aside section nav #main-menu #menu ul .dropdown-menu:before, .navbar .widget h2 a .dropdown-menu:before, .widget h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget h2 a .dropdown-menu:before, .widget h2 body > header nav #main-menu a .dropdown-menu:before, .navbar .widget-info h2 a .dropdown-menu:before, .widget-info h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget-info h2 a .dropdown-menu:before, .widget-info h2 body > header nav #main-menu a .dropdown-menu:before, .navbar .widget-register h2 a .dropdown-menu:before, .widget-register h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget-register h2 a .dropdown-menu:before, .widget-register h2 body > header nav #main-menu a .dropdown-menu:before,
+  .navbar .pull-right .dropdown-menu:before, body > header nav #main-menu .pull-right .dropdown-menu:before, .navbar body footer .dropdown-menu:before, body .navbar footer .dropdown-menu:before, body > header nav #main-menu footer .dropdown-menu:before, .navbar body > header nav #main-menu #menu .nav .dropdown-menu:before, body > header nav #main-menu #menu .navbar .nav .dropdown-menu:before, body > header nav #main-menu #menu .nav .dropdown-menu:before, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu:before, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu:before, body > header nav #main-menu #menu aside section ul .dropdown-menu:before, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu:before, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu:before, body > header aside section nav #main-menu #menu ul .dropdown-menu:before, .navbar #events #future-topics #topic-list li .vote-topic .dropdown-menu:before, #events #future-topics #topic-list li .navbar .vote-topic .dropdown-menu:before, body > header nav #main-menu #events #future-topics #topic-list li .vote-topic .dropdown-menu:before, #events #future-topics #topic-list li body > header nav #main-menu .vote-topic .dropdown-menu:before, .navbar .widget h2 a .dropdown-menu:before, .widget h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget h2 a .dropdown-menu:before, .widget h2 body > header nav #main-menu a .dropdown-menu:before, .navbar .widget-info h2 a .dropdown-menu:before, .widget-info h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget-info h2 a .dropdown-menu:before, .widget-info h2 body > header nav #main-menu a .dropdown-menu:before, .navbar .widget-register h2 a .dropdown-menu:before, .widget-register h2 .navbar a .dropdown-menu:before, body > header nav #main-menu .widget-register h2 a .dropdown-menu:before, .widget-register h2 body > header nav #main-menu a .dropdown-menu:before,
   .navbar .dropdown-menu.pull-right:before,
   body > header nav #main-menu .dropdown-menu.pull-right:before,
   .navbar body footer.dropdown-menu:before,
@@ -2779,6 +2784,10 @@ body > header nav #main-menu .widget-register h2 a.dropdown-menu,
   .navbar body > header aside section nav #main-menu #menu ul.dropdown-menu:before,
   body > header aside section nav #main-menu #menu .navbar ul.dropdown-menu:before,
   body > header aside section nav #main-menu #menu ul.dropdown-menu:before,
+  .navbar #events #future-topics #topic-list li .dropdown-menu.vote-topic:before,
+  #events #future-topics #topic-list li .navbar .dropdown-menu.vote-topic:before,
+  body > header nav #main-menu #events #future-topics #topic-list li .dropdown-menu.vote-topic:before,
+  #events #future-topics #topic-list li body > header nav #main-menu .dropdown-menu.vote-topic:before,
   .navbar .widget h2 a.dropdown-menu:before,
   .widget h2 .navbar a.dropdown-menu:before,
   body > header nav #main-menu .widget h2 a.dropdown-menu:before,
@@ -2793,7 +2802,7 @@ body > header nav #main-menu .widget-register h2 a.dropdown-menu,
   .widget-register h2 body > header nav #main-menu a.dropdown-menu:before {
     left: auto;
     right: 12px; }
-  .navbar .pull-right .dropdown-menu:after, body > header nav #main-menu .pull-right .dropdown-menu:after, .navbar body footer .dropdown-menu:after, body .navbar footer .dropdown-menu:after, body > header nav #main-menu footer .dropdown-menu:after, .navbar body > header nav #main-menu #menu .nav .dropdown-menu:after, body > header nav #main-menu #menu .navbar .nav .dropdown-menu:after, body > header nav #main-menu #menu .nav .dropdown-menu:after, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu:after, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu:after, body > header nav #main-menu #menu aside section ul .dropdown-menu:after, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu:after, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu:after, body > header aside section nav #main-menu #menu ul .dropdown-menu:after, .navbar .widget h2 a .dropdown-menu:after, .widget h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget h2 a .dropdown-menu:after, .widget h2 body > header nav #main-menu a .dropdown-menu:after, .navbar .widget-info h2 a .dropdown-menu:after, .widget-info h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget-info h2 a .dropdown-menu:after, .widget-info h2 body > header nav #main-menu a .dropdown-menu:after, .navbar .widget-register h2 a .dropdown-menu:after, .widget-register h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget-register h2 a .dropdown-menu:after, .widget-register h2 body > header nav #main-menu a .dropdown-menu:after,
+  .navbar .pull-right .dropdown-menu:after, body > header nav #main-menu .pull-right .dropdown-menu:after, .navbar body footer .dropdown-menu:after, body .navbar footer .dropdown-menu:after, body > header nav #main-menu footer .dropdown-menu:after, .navbar body > header nav #main-menu #menu .nav .dropdown-menu:after, body > header nav #main-menu #menu .navbar .nav .dropdown-menu:after, body > header nav #main-menu #menu .nav .dropdown-menu:after, .navbar body > header nav #main-menu #menu aside section ul .dropdown-menu:after, body > header nav #main-menu #menu aside section .navbar ul .dropdown-menu:after, body > header nav #main-menu #menu aside section ul .dropdown-menu:after, .navbar body > header aside section nav #main-menu #menu ul .dropdown-menu:after, body > header aside section nav #main-menu #menu .navbar ul .dropdown-menu:after, body > header aside section nav #main-menu #menu ul .dropdown-menu:after, .navbar #events #future-topics #topic-list li .vote-topic .dropdown-menu:after, #events #future-topics #topic-list li .navbar .vote-topic .dropdown-menu:after, body > header nav #main-menu #events #future-topics #topic-list li .vote-topic .dropdown-menu:after, #events #future-topics #topic-list li body > header nav #main-menu .vote-topic .dropdown-menu:after, .navbar .widget h2 a .dropdown-menu:after, .widget h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget h2 a .dropdown-menu:after, .widget h2 body > header nav #main-menu a .dropdown-menu:after, .navbar .widget-info h2 a .dropdown-menu:after, .widget-info h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget-info h2 a .dropdown-menu:after, .widget-info h2 body > header nav #main-menu a .dropdown-menu:after, .navbar .widget-register h2 a .dropdown-menu:after, .widget-register h2 .navbar a .dropdown-menu:after, body > header nav #main-menu .widget-register h2 a .dropdown-menu:after, .widget-register h2 body > header nav #main-menu a .dropdown-menu:after,
   .navbar .dropdown-menu.pull-right:after,
   body > header nav #main-menu .dropdown-menu.pull-right:after,
   .navbar body footer.dropdown-menu:after,
@@ -2808,6 +2817,10 @@ body > header nav #main-menu .widget-register h2 a.dropdown-menu,
   .navbar body > header aside section nav #main-menu #menu ul.dropdown-menu:after,
   body > header aside section nav #main-menu #menu .navbar ul.dropdown-menu:after,
   body > header aside section nav #main-menu #menu ul.dropdown-menu:after,
+  .navbar #events #future-topics #topic-list li .dropdown-menu.vote-topic:after,
+  #events #future-topics #topic-list li .navbar .dropdown-menu.vote-topic:after,
+  body > header nav #main-menu #events #future-topics #topic-list li .dropdown-menu.vote-topic:after,
+  #events #future-topics #topic-list li body > header nav #main-menu .dropdown-menu.vote-topic:after,
   .navbar .widget h2 a.dropdown-menu:after,
   .widget h2 .navbar a.dropdown-menu:after,
   body > header nav #main-menu .widget h2 a.dropdown-menu:after,
@@ -3613,7 +3626,7 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
     line-height: 27px;
     color: inherit; }
 
-.pull-right, body footer, body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul, .widget h2 a, .widget-info h2 a, .widget-register h2 a {
+.pull-right, body footer, body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul, #events #future-topics #topic-list li .vote-topic, .widget h2 a, .widget-info h2 a, .widget-register h2 a {
   float: right; }
 
 .pull-left {
@@ -4348,7 +4361,7 @@ a.label:hover, .widget ul li > a:hover:first-child, .widget-info ul li > a:hover
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
-  .navbar .nav-collapse .nav.pull-right, body > header nav #main-menu .nav-collapse .nav.pull-right, .navbar .nav-collapse body aside section ul.pull-right, body aside section .navbar .nav-collapse ul.pull-right, body > header nav #main-menu .nav-collapse aside section ul.pull-right, body > header aside section nav #main-menu .nav-collapse ul.pull-right, .navbar .nav-collapse body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar .nav-collapse ul.nav, body > header aside section nav #main-menu .nav-collapse #menu ul.nav, body > header aside section nav #main-menu #menu .nav-collapse ul.nav, .navbar .nav-collapse body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar .nav-collapse ul.nav, body > header nav #main-menu .nav-collapse #menu aside section ul.nav, body > header nav #main-menu #menu aside section .nav-collapse ul.nav, .navbar .nav-collapse body footer.nav, body .navbar .nav-collapse footer.nav, body > header nav #main-menu .nav-collapse footer.nav, .navbar .nav-collapse body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav-collapse .nav, body > header nav #main-menu .nav-collapse #menu .nav, body > header nav #main-menu #menu .nav-collapse .nav, .navbar .nav-collapse body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar .nav-collapse ul, body > header nav #main-menu .nav-collapse #menu aside section ul, body > header nav #main-menu #menu aside section .nav-collapse ul, .navbar .nav-collapse body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar .nav-collapse ul, body > header aside section nav #main-menu .nav-collapse #menu ul, body > header aside section nav #main-menu #menu .nav-collapse ul, .navbar .nav-collapse .widget h2 a.nav, .widget h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget h2 a.nav, .widget h2 body > header nav #main-menu .nav-collapse a.nav, .navbar .nav-collapse .widget-info h2 a.nav, .widget-info h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu .nav-collapse a.nav, .navbar .nav-collapse .widget-register h2 a.nav, .widget-register h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu .nav-collapse a.nav {
+  .navbar .nav-collapse .nav.pull-right, body > header nav #main-menu .nav-collapse .nav.pull-right, .navbar .nav-collapse body aside section ul.pull-right, body aside section .navbar .nav-collapse ul.pull-right, body > header nav #main-menu .nav-collapse aside section ul.pull-right, body > header aside section nav #main-menu .nav-collapse ul.pull-right, .navbar .nav-collapse body > header aside section nav #main-menu #menu ul.nav, body > header aside section nav #main-menu #menu .navbar .nav-collapse ul.nav, body > header aside section nav #main-menu .nav-collapse #menu ul.nav, body > header aside section nav #main-menu #menu .nav-collapse ul.nav, .navbar .nav-collapse body > header nav #main-menu #menu aside section ul.nav, body > header nav #main-menu #menu aside section .navbar .nav-collapse ul.nav, body > header nav #main-menu .nav-collapse #menu aside section ul.nav, body > header nav #main-menu #menu aside section .nav-collapse ul.nav, .navbar .nav-collapse body aside section #events #future-topics #topic-list li ul.vote-topic, body aside section #events #future-topics #topic-list li .navbar .nav-collapse ul.vote-topic, body > header nav #main-menu .nav-collapse aside section #events #future-topics #topic-list li ul.vote-topic, body > header aside section #events #future-topics #topic-list li nav #main-menu .nav-collapse ul.vote-topic, .navbar .nav-collapse #events #future-topics #topic-list li body aside section ul.vote-topic, #events #future-topics #topic-list li body aside section .navbar .nav-collapse ul.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu .nav-collapse aside section ul.vote-topic, #events #future-topics #topic-list li body > header aside section nav #main-menu .nav-collapse ul.vote-topic, .navbar .nav-collapse body footer.nav, body .navbar .nav-collapse footer.nav, body > header nav #main-menu .nav-collapse footer.nav, .navbar .nav-collapse body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu .navbar .nav-collapse .nav, body > header nav #main-menu .nav-collapse #menu .nav, body > header nav #main-menu #menu .nav-collapse .nav, .navbar .nav-collapse body > header nav #main-menu #menu aside section ul, body > header nav #main-menu #menu aside section .navbar .nav-collapse ul, body > header nav #main-menu .nav-collapse #menu aside section ul, body > header nav #main-menu #menu aside section .nav-collapse ul, .navbar .nav-collapse body > header aside section nav #main-menu #menu ul, body > header aside section nav #main-menu #menu .navbar .nav-collapse ul, body > header aside section nav #main-menu .nav-collapse #menu ul, body > header aside section nav #main-menu #menu .nav-collapse ul, .navbar .nav-collapse #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li .navbar .nav-collapse .nav.vote-topic, body > header nav #main-menu .nav-collapse #events #future-topics #topic-list li .nav.vote-topic, #events #future-topics #topic-list li body > header nav #main-menu .nav-collapse .nav.vote-topic, .navbar .nav-collapse .widget h2 a.nav, .widget h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget h2 a.nav, .widget h2 body > header nav #main-menu .nav-collapse a.nav, .navbar .nav-collapse .widget-info h2 a.nav, .widget-info h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget-info h2 a.nav, .widget-info h2 body > header nav #main-menu .nav-collapse a.nav, .navbar .nav-collapse .widget-register h2 a.nav, .widget-register h2 .navbar .nav-collapse a.nav, body > header nav #main-menu .nav-collapse .widget-register h2 a.nav, .widget-register h2 body > header nav #main-menu .nav-collapse a.nav {
     float: none;
     margin-left: 0; }
 
@@ -4494,6 +4507,9 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #4fa6ce; }
+    #events #next-event > footer {
+      line-height: 50px;
+      font-size: 1.2em; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
@@ -4515,6 +4531,9 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #60803d; }
+    #events #past-events > footer {
+      line-height: 50px;
+      font-size: 1.2em; }
     #events #past-events #event-list {
       list-style: none;
       margin-left: 0px;
@@ -4529,9 +4548,7 @@ body > header {
         #events #past-events #event-list li i {
           color: #32511c; }
     #events #past-events footer {
-      color: #547529;
-      line-height: 50px;
-      font-size: 1.2em; }
+      color: #547529; }
       #events #past-events footer a {
         color: #547529; }
   #events #future-topics {
@@ -4554,6 +4571,34 @@ body > header {
       font-size: 1.8em;
       margin-bottom: 20px;
       color: #bc8354; }
+    #events #future-topics > footer {
+      line-height: 50px;
+      font-size: 1.2em; }
+    #events #future-topics #topic-list {
+      list-style: none;
+      min-height: 225px;
+      margin-left: -20px;
+      font-size: 1.3em; }
+      #events #future-topics #topic-list li {
+        border-top: 1px solid #e1a579;
+        line-height: 35px;
+        padding-left: 20px; }
+        #events #future-topics #topic-list li .topic {
+          color: #9e5114;
+          font-weight: 600; }
+        #events #future-topics #topic-list li .vote-topic {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          background: white;
+          color: #e1a579;
+          margin-right: 5px;
+          margin-top: 5px;
+          font-size: 0.8em;
+          line-height: 20px;
+          padding: 0px 5px; }
+    #events #future-topics > footer i, #events #future-topics > footer a {
+      color: #c27141; }
 
 .widget h2 i, .widget-info h2 i, .widget-register h2 i {
   margin-right: 10px;

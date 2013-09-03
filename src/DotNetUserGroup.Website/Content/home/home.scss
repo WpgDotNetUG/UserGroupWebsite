@@ -1,4 +1,27 @@
-﻿
+﻿@mixin event-box($start-color, $end-color, $title) {
+	display:table-cell;
+	border-right: 2px solid $blue-background;
+	padding-left: 20px;
+	padding-top: 20px;
+	opacity: 0.95;
+
+	> header {
+		font-size: 1.8em;
+		margin-bottom: 20px;
+		color: $title;
+	}
+
+	> footer {
+		line-height:50px;
+		font-size: 1.2em;
+	}
+
+
+	@include gradient-vertical($start-color, $end-color);
+
+	border-bottom: 1px solid darken($end-color, 10%);
+}
+
 #events {
 	display: table;
 	width: 100%;
@@ -8,61 +31,13 @@
 	background-image: url('/images/wpg_bridge.jpg');
 	background-position: 0px -450px;
 	background-repeat: repeat-x; 
-	@mixin event-box($start-color, $end-color, $title) {
-		display:table-cell;
-		border-right: 2px solid $blue-background;
-		padding-left: 20px;
-		padding-top: 20px;
-		opacity: 0.95;
 
-		> header {
-			font-size: 1.8em;
-			margin-bottom: 20px;
-			color: $title;
-		}
-
-		@include gradient-vertical($start-color, $end-color);
-
-		border-bottom: 1px solid darken($end-color, 10%);
-	}
-
-	
 	#next-event {
 		@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
 		width: 50%;
 	}
-	#past-events {
-		@include event-box(#cfecbc, #aee288, #60803d);
-		width: 25%;
-		#event-list {
-			list-style: none;
-			margin-left: 0px;
-			min-height:225px;
-			li {
-				margin-bottom: 20px;
-				a {
-					font-size: 1.4em;
-					font-weight: 600;
-					color: darken(#3e6422, 5%);
-					line-height: 20px;
-				}
-				i {
-					color: darken(#3e6422, 5%);
-				}
-			}
-		}
-		footer {
-			color: #547529;
-			line-height:50px;
-			font-size: 1.2em;
-			a {
-				color: #547529;
-			}
-		}
-	}
-	#future-topics {
-		@include event-box(#ffd7bb, #ffcaa1, #bc8354);
-	}
+	@import 'past_events';
+	@import 'future_topics';
 }
 
 .widget {

@@ -1,0 +1,19 @@
+﻿    <section id="next-event">
+        <header>next.event</header>
+        <span data-bind="if: loading">
+            Finding about next event.... please wait...
+            <i class="icon-spin icon-spinner"></i>
+        </span>
+        <span data-bind="if: !loading() && eventPending">
+            Next event in progress, please stay tuned!
+        </span>
+        <header data-bind="ifnot: eventPending">
+            <h2>
+                <i class="icon-thumbs-up icon-large"></i>
+                <span data-bind="text: date" class="date"></span> 
+                <span data-bind="text: title" class="title"></span>
+            </h2>
+        </header>
+        <article data-bind="html: description"></article>
+        <a data-bind="visible: !eventPending(), attr: { href: url }" class="read-more" target="_blank">Read more and register</a>
+    </section>    
