@@ -4427,7 +4427,7 @@ body > header {
       font-style: italic;
       line-height: 20px; }
   body > header nav #main-menu #menu {
-    font-size: 2.4em;
+    font-size: 2.3em;
     margin: 40px 0 0; }
     body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul {
       margin: 0; }
@@ -4447,7 +4447,8 @@ body > header {
     border-bottom: 1px solid #d2d8db; }
   body > header #social {
     text-align: right;
-    height: 50px; }
+    height: 50px;
+    padding-top: 10px; }
     body > header #social a {
       color: #999999;
       background: #ebf0f3;
