@@ -11,6 +11,11 @@
 		color: $title;
 	}
 
+	> ul {
+		list-style: none;
+		height:230px;
+	}
+
 	> footer {
 		line-height:50px;
 		font-size: 1.2em;
@@ -35,6 +40,11 @@
 	#next-event {
 		@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
 		width: 50%;
+		.event {
+			color: #115979;
+			font-size: 2em;
+			font-weight: 600;
+		}
 	}
 	@import 'past_events';
 	@import 'future_topics';
