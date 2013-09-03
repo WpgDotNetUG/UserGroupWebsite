@@ -19,7 +19,7 @@ body
 				margin-top: 10px;
 				.title { 
 					color: $blue-deep; 
-					font-size: 2em;
+					font-size: 1.5em;
 					font-weight: bold;
 					margin-bottom: 10px;
 					.bracket {
@@ -28,7 +28,7 @@ body
 				}
 				.description { 
 					color: $blue-gray; 
-					font-size: 1.3em;
+					font-size: 1em;
 					font-style: italic;
 					line-height: 20px;
 				}
@@ -47,7 +47,7 @@ body
 
 				#menu {
 					@extend .visible-desktop;
-					font-size: 1.8em;
+					font-size: 2.4em;
 					margin: 40px 0 0;
 					.nav {
 						margin: 0;
@@ -71,8 +71,10 @@ body
 		}
 
 		#divider {
-			height: 10px;
-			@include gradient-vertical(lighten(#d3dddf, 20%), #d2d8db);
+			height: 4px;
+			background: #d3dddf;
+			border-top: 1px solid #d2d8db;
+			border-bottom: 1px solid #d2d8db;
 		}
 
 		#social {
@@ -82,8 +84,8 @@ body
 			a {
 				color: $grayLight;
 				background: $blue-background;
-				padding: 20px 20px 10px;
-				font-size: 1.2em;
+				padding: 20px 15px 10px;
+				font-size: 1em;
 				border-bottom: 2px solid $blue-border;
 				
 				&:first-child {
@@ -92,7 +94,7 @@ body
 			}
 			i {
 				margin-top: 10px;
-				font-size: 1.6em;
+				font-size: 1.2em;
 			}
 			.icon-twitter {
 				color: #2ea7fe;

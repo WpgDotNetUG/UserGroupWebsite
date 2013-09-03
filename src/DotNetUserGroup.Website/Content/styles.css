@@ -4457,18 +4457,18 @@ body > header {
     margin-top: 10px; }
     body > header nav #description .title {
       color: #285670;
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: bold;
       margin-bottom: 10px; }
       body > header nav #description .title .bracket {
         color: #83b04a; }
     body > header nav #description .description {
       color: #74a2b1;
-      font-size: 1.3em;
+      font-size: 1em;
       font-style: italic;
       line-height: 20px; }
   body > header nav #main-menu #menu {
-    font-size: 1.8em;
+    font-size: 2.4em;
     margin: 40px 0 0; }
     body > header nav #main-menu #menu .nav, body > header nav #main-menu #menu aside section ul, body > header aside section nav #main-menu #menu ul {
       margin: 0; }
@@ -4482,30 +4482,24 @@ body > header {
         body > header nav #main-menu #menu .nav li.active a:hover, body > header nav #main-menu #menu aside section ul li.active a:hover, body > header aside section nav #main-menu #menu ul li.active a:hover {
           text-decoration: none; }
   body > header #divider {
-    height: 10px;
-    background-color: #edeff0;
-    background-image: -moz-linear-gradient(top, white, #d2d8db);
-    background-image: -ms-linear-gradient(top, white, #d2d8db);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d2d8db));
-    background-image: -webkit-linear-gradient(top, white, #d2d8db);
-    background-image: -o-linear-gradient(top, white, #d2d8db);
-    background-image: linear-gradient(top, white, #d2d8db);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfdfd', endColorstr='#cfd6d9', GradientType=0); }
+    height: 4px;
+    background: #d3dddf;
+    border-top: 1px solid #d2d8db;
+    border-bottom: 1px solid #d2d8db; }
   body > header #social {
     text-align: right;
     height: 50px; }
     body > header #social a {
       color: #999999;
       background: #ebf0f3;
-      padding: 20px 20px 10px;
-      font-size: 1.2em;
+      padding: 20px 15px 10px;
+      font-size: 1em;
       border-bottom: 2px solid #d5e0e4; }
       body > header #social a:first-child {
         border-right: 1px solid #d5e0e4; }
     body > header #social i {
       margin-top: 10px;
-      font-size: 1.6em; }
+      font-size: 1.2em; }
     body > header #social .icon-twitter {
       color: #2ea7fe; }
     body > header #social .icon-github {
@@ -4535,7 +4529,7 @@ body > header {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#abe6ff', endColorstr='#30c6ff', GradientType=0);
     border-bottom: 1px solid #02b9ff;
-    width: 600px; }
+    width: 50%; }
     #events #next-event > header {
       font-size: 1.8em;
       margin-bottom: 10px;
@@ -4555,7 +4549,8 @@ body > header {
     background-image: linear-gradient(top, #cfecbc, #aee288);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccebb8', endColorstr='#abe184', GradientType=0);
-    border-bottom: 1px solid #92d85f; }
+    border-bottom: 1px solid #92d85f;
+    width: 25%; }
     #events #past-events > header {
       font-size: 1.8em;
       margin-bottom: 10px;
