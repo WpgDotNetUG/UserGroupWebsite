@@ -1,52 +1,67 @@
 ﻿
-.hero-unit {
-	
+#events {
+	display: table;
+	width: 100%;
+	height: 350px;
+	margin-bottom: 20px;
+
 	background-image: url('/images/wpg_bridge.jpg');
-	background-position: 0px -150px;
+	background-position: 0px -450px;
 	background-repeat: repeat-x; 
+	@mixin event-box($start-color, $end-color, $title) {
+		display:table-cell;
+		border-right: 2px solid $blue-background;
+		padding-left: 20px;
+		padding-top: 20px;
+		opacity: 0.95;
 
-	h1 {
-		color: $white;
-	}
-
-	.main-event {
-		@extend .alert;
-		@extend .alert-info;
-		background-color: $white;
-
-		header {
-			
-			label {
-				@extend .label;
-				@extend .label-important;
-				@extend .pull-right;
-				@include font-family-monospace;
-				display: inline;
-				padding: 5px;
-				font-size: 0.8em;
-			}
-
-			i {
-				margin-right:5px;
-				padding-top:5px;
-			}
-
-			.title {
-				font-style: italic;
-			}
+		> header {
+			font-size: 1.8em;
+			margin-bottom: 20px;
+			color: $title;
 		}
 
-		article {
-			font-size-adjust: 20%;
-		}
+		@include gradient-vertical($start-color, $end-color);
 
+		border-bottom: 1px solid darken($end-color, 10%);
 	}
 
-	a.read-more {
-		@extend .pull-right;
-		@extend .btn;
-		@extend .btn-large;
-		@extend .btn-primary;
+	
+	#next-event {
+		@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
+		width: 50%;
+	}
+	#past-events {
+		@include event-box(#cfecbc, #aee288, #60803d);
+		width: 25%;
+		#event-list {
+			list-style: none;
+			margin-left: 0px;
+			min-height:225px;
+			li {
+				margin-bottom: 20px;
+				a {
+					font-size: 1.4em;
+					font-weight: 600;
+					color: darken(#3e6422, 5%);
+					line-height: 20px;
+				}
+				i {
+					color: darken(#3e6422, 5%);
+				}
+			}
+		}
+		footer {
+			color: #547529;
+			line-height:50px;
+			font-size: 1.2em;
+			a {
+				color: #547529;
+			}
+		}
+	}
+	#future-topics {
+		@include event-box(#ffd7bb, #ffcaa1, #bc8354);
 	}
 }
 
