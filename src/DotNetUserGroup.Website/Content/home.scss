@@ -17,7 +17,7 @@
 
 		> header {
 			font-size: 1.8em;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 			color: $title;
 		}
 
@@ -29,63 +29,39 @@
 	
 	#next-event {
 		@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
-		width: 600px;
+		width: 50%;
 	}
 	#past-events {
 		@include event-box(#cfecbc, #aee288, #60803d);
+		width: 25%;
+		#event-list {
+			list-style: none;
+			margin-left: 0px;
+			min-height:225px;
+			li {
+				margin-bottom: 20px;
+				a {
+					font-size: 1.4em;
+					font-weight: 600;
+					color: darken(#3e6422, 5%);
+					line-height: 20px;
+				}
+				i {
+					color: darken(#3e6422, 5%);
+				}
+			}
+		}
+		footer {
+			color: #547529;
+			line-height:50px;
+			font-size: 1.2em;
+			a {
+				color: #547529;
+			}
+		}
 	}
 	#future-topics {
 		@include event-box(#ffd7bb, #ffcaa1, #bc8354);
-	}
-}
-.hero-unit {
-	
-	background-image: url('/images/wpg_bridge.jpg');
-	background-position: 0px -150px;
-	background-repeat: repeat-x; 
-
-	h1 {
-		color: $white;
-	}
-
-	.main-event {
-		@extend .alert;
-		@extend .alert-info;
-		background-color: $white;
-
-		header {
-			
-			label {
-				@extend .label;
-				@extend .label-important;
-				@extend .pull-right;
-				@include font-family-monospace;
-				display: inline;
-				padding: 5px;
-				font-size: 0.8em;
-			}
-
-			i {
-				margin-right:5px;
-				padding-top:5px;
-			}
-
-			.title {
-				font-style: italic;
-			}
-		}
-
-		article {
-			font-size-adjust: 20%;
-		}
-
-	}
-
-	a.read-more {
-		@extend .pull-right;
-		@extend .btn;
-		@extend .btn-large;
-		@extend .btn-primary;
 	}
 }
 

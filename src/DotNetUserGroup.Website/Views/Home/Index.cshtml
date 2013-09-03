@@ -8,6 +8,7 @@
         <header>next.event</header>
         <span data-bind="if: loading">
             Finding about next event.... please wait...
+            <i class="icon-spin icon-spinner"></i>
         </span>
         <span data-bind="if: !loading() && eventPending">
             Next event in progress, please stay tuned!
@@ -24,21 +25,18 @@
     </section>    
     <section id="past-events">
         <header>past.events</header>
-        <h2>
-            <i class="icon-calendar"></i>
-            Past Events
-            <a data-bind="attr: { href: organizerUrl }" target="_blank">
-                View all &raquo;
-            </a>
-        </h2>
-        <ul id="list-events" data-bind="foreach: events">
+        <ul id="event-list" data-bind="foreach: events">
             <li>
-                <span data-bind="text: $data.Date"></span>
-                <a data-bind="attr: { href: Url }" target="_blank">
-                    <span data-bind="text: $data.Title"></span>
-                </a>
+                <i class="icon-check"></i>
+                <a href="#" data-bind="text: Title, attr: { href: Url }" target="_blank"></a>
             </li>
-        </ul>
+        </ul>   
+        <footer>
+            <i class="icon-list"></i>
+            <a data-bind="attr: { href: organizerUrl }" target="_blank">
+                View all
+            </a>
+        </footer>
     </section>
     <section id="future-topics">
         <header>future.topics</header>

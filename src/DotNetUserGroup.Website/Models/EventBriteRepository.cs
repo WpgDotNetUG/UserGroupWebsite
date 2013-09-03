@@ -7,7 +7,7 @@ namespace DotNetUserGroup.Website.Models
 {
     public class EventBriteRepository : IRepository<UserGroupEvent>
     {
-        private const string url = "https://www.eventbrite.com/json/";
+        private const string Url = "https://www.eventbrite.com/json/";
 
         public IEnumerable<UserGroupEvent> All()
         {
@@ -49,7 +49,7 @@ namespace DotNetUserGroup.Website.Models
 
             http.Request.Accept = HttpContentTypes.ApplicationJson;
 
-            var response = http.Get(url + "/" + method, configuration);
+            var response = http.Get(Url + "/" + method, configuration);
 
             return response;
         }
