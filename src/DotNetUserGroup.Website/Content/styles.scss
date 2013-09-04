@@ -7,7 +7,9 @@ $blue-deep: #285670;
 $blue-gray: darken(#95b8c3, 10%);
 $blue-menu: #7f9cb0;
 $blue-menu-selected: #067eb1;
+$blue-text: #198cae;
 
 @import 'Site';
 @import 'navigation';
+@import 'footer';
 @import 'home/home';

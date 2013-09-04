@@ -12,16 +12,11 @@
     <body>
         @{ Html.RenderPartial("_navigation"); }
 
-        <div class="container">
+        <section class="container">
             @RenderBody()
-        </div>
-        <hr/>
-        <footer>
-            &copy; Winnipeg Dot Net User Group 2012 
-            - 
-            v3.0
-            - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
-        </footer>
+        </section>
+         
+        @{ Html.RenderPartial("_footer"); }
 
         @Scripts.Render("~/scripts/date.js")
         @Scripts.Render("~/bundles/jquery")
