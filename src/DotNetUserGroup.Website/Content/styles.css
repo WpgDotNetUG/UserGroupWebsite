@@ -4481,8 +4481,8 @@ body #main-footer #sponsors .logos {
       -moz-box-shadow: 3px 3px 2px #8ba8ba;
       box-shadow: 3px 3px 2px #8ba8ba; }
 body #main-footer #copyright {
-  border-top: 1px solid #555555;
-  margin-right: 20px; }
+  margin-top: 20px;
+  color: #198cae; }
 
 #events {
   display: table;
