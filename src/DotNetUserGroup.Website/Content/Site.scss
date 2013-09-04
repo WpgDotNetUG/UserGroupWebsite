@@ -2,28 +2,6 @@
 body {
 	background: $blue-background;
 
-
-	aside {
-		@extend .sidebar;
-
-		section {
-			@extend .well;
-			@extend .sidebar-nav;
-
-			ul {
-				@extend .nav;
-				@extend .nav-list;
-			}
-		}
-	}
-
-
-
-	footer {
-		@extend .pull-right;
-		margin-right:20px;
-	}
-
 	.sponsor {
 		a {
 			margin-bottom:5px;
@@ -84,7 +62,4 @@ body {
 		}
 	}
 
-	footer {
-		font-size:10px;
-	}
 }

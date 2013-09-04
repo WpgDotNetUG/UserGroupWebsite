@@ -1,0 +1,84 @@
+﻿@using System.Web.Configuration
+
+<footer id="main-footer">
+    <section class="row">
+        <article id="sponsors" class="span4">
+            <section class="title">.sponsors</section>
+            <section class="description">
+                We would like to thank the following companies to their sponsorship
+                of our group! If you would like to become a sponsor please 
+                <a href="mailto:winnipegdotnet@gmail.com">drop us a line</a>.
+            </section>
+            <ul class="logos">
+                @LocalSponsors()
+                @NonLocalSponsors()
+            </ul>
+        </article>
+        <article id="twitter-feed" class="span4">
+                
+        </article>
+        <article id="newsletter" class="span4">
+@*<section id="row_2">
+    <section id="news" class="widget-info span6">
+        <h2>
+            <i class="icon-eye-open"></i>
+            News
+            <a href="/pagenews" id="news-read-all">Read all &raquo;</a>
+        </h2>
+        <ul id="list-news" data-bind="foreach: news">
+            <li>
+                <span data-bind="text: $data.Date"></span>
+                <span data-bind="text: $data.Title"></span> 
+            </li>
+        </ul>
+    </section>
+    <section id="register" class="widget-register span6">
+        <h2>
+            <i class="icon-envelope"></i>
+            Get Notified
+            <a href="http://eepurl.com/clTOr" target="_blank">Signup &raquo;</a>
+        </h2>
+        <p>
+            Want to make sure you don't miss a meeting? 
+        </p>
+        <p>
+            Then take a minute and <b>sign up for the Winnipeg .Net User Group mailing list</b>!. 
+        </p>
+        <p>
+            You can be on top of our event schedule, and all you need to do is check you email. Sign up now and don't miss another meeting.
+        </p>
+    </section>
+</section>
+*@                
+        </article>
+    </section>
+    <section id="copyright">
+        &copy; Winnipeg Dot Net User Group 2013 
+        - 
+        v3.0
+        - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
+    </section>
+</footer>
+
+
+@helper LocalSponsors() {
+    @Sponsor("http://apptius.com", "apptius-logo.png", "Apptius")
+    @Sponsor("http://www.dmt.ca", "dmt.jpg", "DMT")
+    @Sponsor("http://imaginet.com", "imaginet.png", "Imaginet")
+    @Sponsor("http://protegra.com/", "Protegra-Logo.png", "Protegra")
+}
+
+@helper NonLocalSponsors() {
+    @Sponsor("http://www.ineta.org", "Ineta-Logo.png", "INETA")
+    @Sponsor("http://manning.com", "manning.jpg", "Manning")
+    @Sponsor("http://msdn.microsoft.com", "Msdn-Logo.png", "MSDN")
+    @Sponsor("http://www.pluralsight-training.net/microsoft/", "pluralsight-logo-for-sponsorships-small.png", "Pluralsight")
+    @Sponsor("http://oreilly.com/", "oreilly.gif", "O'Reilly")
+}
+
+@helper Sponsor(string url, string img, string alt)
+    {
+    <li class="sponsor">
+        <a href="@url" target="_blank"><img src="~/Images/@img" alt="@alt" /></a>
+    </li>
+}
