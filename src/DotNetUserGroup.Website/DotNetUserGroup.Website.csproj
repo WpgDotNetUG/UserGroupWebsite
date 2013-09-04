@@ -181,6 +181,9 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\footer.css">
+      <DependentUpon>footer.scss</DependentUpon>
+    </Content>
     <Content Include="Content\home\future_topics.css">
       <DependentUpon>future_topics.scss</DependentUpon>
     </Content>
@@ -323,6 +326,7 @@
     <Content Include="Content\News\2012-08-01-ror_workshop.markdown" />
     <Content Include="Content\News\2011-03-15-wp7.markdown" />
     <Content Include="Content\styles.scss" />
+    <Content Include="Content\footer.scss" />
     <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -357,10 +361,12 @@
     </None>
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />
-    <Content Include="Views\Shared\_aside.cshtml" />
     <Content Include="Views\Home\_next_event.cshtml" />
     <Content Include="Views\Home\_past_events.cshtml" />
     <Content Include="Views\Home\_future_topics.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
