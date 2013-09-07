@@ -1,0 +1,38 @@
+#next-event {
+	@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
+	width: 50%;
+	.event {
+		.title {
+			color: #115979; 
+			font-size: 2em;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+
+		$blue-text: #1081a8;
+		.description {
+			color: $blue-text;
+			padding-right: 20px;
+		}
+
+		.location {
+			color: #206484;
+			font-size: 1.2em;
+			i {
+				// color: #206484;
+				font-size: 2.5em;
+				display: inline-block;
+				margin: 10px 10px 5px 0px;
+				text-align: center;
+				width: 30px;
+			}
+			.venue, .calendar {
+				display:inline-block;
+				font-weight:600;
+			}
+			span {
+				font-weight:600;
+			}
+		}
+	}
+}

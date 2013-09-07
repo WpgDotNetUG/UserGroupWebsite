@@ -4519,10 +4519,28 @@ body #main-footer #copyright {
     #events #next-event > footer {
       line-height: 50px;
       font-size: 1.2em; }
-    #events #next-event .event {
+    #events #next-event .event .title {
       color: #115979;
       font-size: 2em;
-      font-weight: 600; }
+      font-weight: 600;
+      margin-bottom: 10px; }
+    #events #next-event .event .description {
+      color: #1081a8;
+      padding-right: 20px; }
+    #events #next-event .event .location {
+      color: #206484;
+      font-size: 1.2em; }
+      #events #next-event .event .location i {
+        font-size: 2.5em;
+        display: inline-block;
+        margin: 10px 10px 5px 0px;
+        text-align: center;
+        width: 30px; }
+      #events #next-event .event .location .venue, #events #next-event .event .location .calendar {
+        display: inline-block;
+        font-weight: 600; }
+      #events #next-event .event .location span {
+        font-weight: 600; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;

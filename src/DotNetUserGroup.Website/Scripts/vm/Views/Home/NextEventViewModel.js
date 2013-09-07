@@ -3,17 +3,14 @@
 
   window.NextEventViewModel = (function() {
     function NextEventViewModel() {
-      this.processResult = __bind(this.processResult, this);      this.title = ko.observable();
-      this.date = ko.observable();
-      this.url = ko.observable();
-      this.description = ko.observable();
+      this.processResult = __bind(this.processResult, this);      this.event = ko.observable(UserGroupEvent.Empty());
       this.eventPending = ko.observable(true);
       this.loading = ko.observable(true);
       $.getJSON('../api/events', this.processResult);
     }
 
     NextEventViewModel.prototype.processResult = function(data, status, jqXHR) {
-      var e, event, events;
+      var e, events;
 
       this.loading(false);
       events = (function() {
@@ -29,21 +26,13 @@
         return _results;
       }).call(this);
       if (events.length) {
-        event = events[0];
-        this.eventPending(false);
-        this.date(this.formatDate(event));
-        this.url("http://www.eventbrite.ca/event/" + event.Id);
-        this.description(event.Description.split('\n').slice(0, 2).join('\n') + "...");
-        return this.title(event.Title);
+        this.event = new UserGroupEvent(events[0]);
+        return this.eventPending(false);
       }
     };
 
     NextEventViewModel.prototype.hasNotHappened = function(e) {
       return Date.parse(e.Date).compareTo(Date.today()) > 0;
-    };
-
-    NextEventViewModel.prototype.formatDate = function(e) {
-      return Date.parse(e.Date).toString('MMM dd');
     };
 
     return NextEventViewModel;

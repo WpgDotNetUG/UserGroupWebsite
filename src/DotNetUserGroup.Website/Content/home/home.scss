@@ -37,15 +37,7 @@
 	background-position: 0px -450px;
 	background-repeat: repeat-x; 
 
-	#next-event {
-		@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
-		width: 50%;
-		.event {
-			color: #115979;
-			font-size: 2em;
-			font-weight: 600;
-		}
-	}
+	@import 'next_event';
 	@import 'past_events';
 	@import 'future_topics';
 }
