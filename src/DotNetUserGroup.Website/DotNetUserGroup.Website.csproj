@@ -190,6 +190,9 @@
     <Content Include="Content\home\home.css">
       <DependentUpon>home.scss</DependentUpon>
     </Content>
+    <Content Include="Content\home\next_event.css">
+      <DependentUpon>next_event.scss</DependentUpon>
+    </Content>
     <Content Include="Content\home\past_events.css">
       <DependentUpon>past_events.scss</DependentUpon>
     </Content>
@@ -249,22 +252,25 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Scripts\vm\Home\NextEventViewModel.js">
-      <DependentUpon>NextEventViewModel.coffee</DependentUpon>
-    </Content>
-    <Content Include="Scripts\vm\Home\Home.js">
-      <DependentUpon>Home.coffee</DependentUpon>
+    <Content Include="Scripts\vm\Models\Event.js">
+      <DependentUpon>UserGroupEvent.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\vm\News\News.js">
       <DependentUpon>News.coffee</DependentUpon>
     </Content>
-    <Content Include="Scripts\vm\Home\NewsViewModel.js">
-      <DependentUpon>NewsViewModel.coffee</DependentUpon>
-    </Content>
-    <Content Include="Scripts\vm\Home\EventsViewModel.js">
+    <Content Include="Scripts\vm\Views\Home\EventsViewModel.js">
       <DependentUpon>EventsViewModel.coffee</DependentUpon>
     </Content>
-    <Content Include="Scripts\vm\Home\TopicsViewModel.js">
+    <Content Include="Scripts\vm\Views\Home\Home.js">
+      <DependentUpon>Home.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\NewsViewModel.js">
+      <DependentUpon>NewsViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\NextEventViewModel.js">
+      <DependentUpon>NextEventViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\TopicsViewModel.js">
       <DependentUpon>TopicsViewModel.coffee</DependentUpon>
     </Content>
     <Content Include="Web.config">
@@ -280,6 +286,7 @@
     <Content Include="Content\home\home.scss" />
     <Content Include="Content\home\past_events.scss" />
     <Content Include="Content\home\future_topics.scss" />
+    <Content Include="Content\home\next_event.scss" />
     <None Include="Content\news.scss" />
     <None Include="Content\lib\bootstrap.scss" />
     <None Include="Content\lib\responsive.scss" />
@@ -343,22 +350,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
-    <None Include="Scripts\vm\Home\NextEventViewModel.coffee" />
-    <None Include="Scripts\vm\Home\Home.coffee" />
+    <Content Include="Scripts\vm\Models\UserGroupEvent.coffee" />
     <None Include="Scripts\vm\News\News.coffee" />
-    <None Include="Scripts\vm\Home\NewsViewModel.coffee" />
-    <None Include="Scripts\vm\Home\EventsViewModel.coffee">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <Bare>False</Bare>
-      <Iced>False</Iced>
-    </None>
-    <None Include="Scripts\vm\Home\TopicsViewModel.coffee">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <Bare>False</Bare>
-      <Iced>False</Iced>
-    </None>
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />
     <Content Include="Views\Home\_next_event.cshtml" />
@@ -367,6 +360,11 @@
     <Content Include="Views\Shared\_footer.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Scripts\vm\Views\Home\EventsViewModel.coffee" />
+    <Content Include="Scripts\vm\Views\Home\Home.coffee" />
+    <Content Include="Scripts\vm\Views\Home\NewsViewModel.coffee" />
+    <Content Include="Scripts\vm\Views\Home\NextEventViewModel.coffee" />
+    <Content Include="Scripts\vm\Views\Home\TopicsViewModel.coffee" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

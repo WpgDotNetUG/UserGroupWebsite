@@ -1,10 +1,7 @@
 class window.NextEventViewModel
 
     constructor: ->
-        @title = ko.observable()
-        @date = ko.observable()
-        @url = ko.observable()
-        @description = ko.observable()
+        @event = ko.observable UserGroupEvent.Empty()
         @eventPending = ko.observable(true)
         @loading = ko.observable(true)
 
@@ -14,13 +11,8 @@ class window.NextEventViewModel
         @loading(false)
         events = (e for e in data when @hasNotHappened(e))
         if events.length
-            event = events[0]
+            @event = new UserGroupEvent(events[0])
             @eventPending(false)
-            @date @formatDate(event)
-            @url "http://www.eventbrite.ca/event/#{event.Id}"
-            @description event.Description.split('\n')[0..1].join('\n') + "..."
-            @title event.Title
                  
     hasNotHappened: (e) -> Date.parse(e.Date).compareTo(Date.today()) > 0
 
-    formatDate: (e) -> Date.parse(e.Date).toString('MMM dd')

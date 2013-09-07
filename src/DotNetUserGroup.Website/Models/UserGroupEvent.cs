@@ -9,5 +9,8 @@ namespace DotNetUserGroup.Website.Models
         public string Address { get; set; }
         public long Id { get; set; }
         public string Description { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Status { get; set; }
+        public string Venue { get; set; }
     }
 }

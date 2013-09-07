@@ -20,13 +20,16 @@ namespace DotNetUserGroup.Website.Models
                 foreach (var e in response.events)
                 {
                     var @event = e.@event;
-
+                    var venue = @event.venue;
                     result.Add(new UserGroupEvent
                     {
                         Title = @event.title,
                         Date = DateTime.Parse(@event.start_date),
+                        EndDate = DateTime.Parse(@event.end_date),
+                        Status = @event.status,
                         Id = @event.id,
-                        Address = @event.venue.address,
+                        Address = venue.address,
+                        Venue = venue.name,
                         Description = @event.description
                     });
                 }
