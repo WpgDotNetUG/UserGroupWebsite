@@ -13,13 +13,17 @@
             <header data-bind="text: title" class="title"></header>
             <article data-bind="html: description" class='description'></article>
             <section class="location">
-                <i class="icon-calendar"></i>
+                <span class="image">
+                    <i class="icon-calendar"></i>
+                </span>
                 <section class="calendar">
                     <div data-bind="text: date"></div>
                     <div data-bind="text: time"></div> 
                 </section>
                 <br/>
-                <i class="icon-map-marker"></i>
+                <span class="image">
+                    <i class="icon-map-marker"></i>
+                </span>
                 <section class="venue">
                     <div data-bind="text: venue"></div>
                     <div data-bind="text: address"></div>

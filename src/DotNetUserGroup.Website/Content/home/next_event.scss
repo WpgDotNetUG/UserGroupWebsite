@@ -18,20 +18,22 @@
 		.location {
 			color: #206484;
 			font-size: 1.2em;
-			i {
-				// color: #206484;
+			.image {
 				font-size: 2.5em;
 				display: inline-block;
 				margin: 10px 10px 5px 0px;
 				text-align: center;
-				width: 30px;
+				width: 40px;
+				i {
+					width: 25px;
+					margin: auto;
+				}
 			}
 			.venue, .calendar {
 				display:inline-block;
-				font-weight:600;
-			}
-			span {
-				font-weight:600;
+				div:first-child {
+					font-weight:600;
+				}
 			}
 		}
 	}

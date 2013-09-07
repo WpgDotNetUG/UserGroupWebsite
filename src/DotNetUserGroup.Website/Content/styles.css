@@ -4530,17 +4530,21 @@ body #main-footer #copyright {
     #events #next-event .event .location {
       color: #206484;
       font-size: 1.2em; }
-      #events #next-event .event .location i {
+      #events #next-event .event .location .image {
         font-size: 2.5em;
         display: inline-block;
         margin: 10px 10px 5px 0px;
         text-align: center;
-        width: 30px; }
+        width: 40px; }
+        #events #next-event .event .location .image i {
+          width: 25px;
+          margin: auto; }
       #events #next-event .event .location .venue, #events #next-event .event .location .calendar {
-        display: inline-block;
-        font-weight: 600; }
-      #events #next-event .event .location span {
-        font-weight: 600; }
+        display: inline-block; }
+        #events #next-event .event .location .venue div:first-child, #events #next-event .event .location .calendar div:first-child {
+          font-weight: 600; }
+        #events #next-event .event .location .venue div:last-child, #events #next-event .event .location .calendar div:last-child {
+          margin-top: 3px; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
