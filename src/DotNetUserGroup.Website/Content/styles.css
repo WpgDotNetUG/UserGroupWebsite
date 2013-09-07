@@ -4543,8 +4543,11 @@ body #main-footer #copyright {
         display: inline-block; }
         #events #next-event .event .location .venue div:first-child, #events #next-event .event .location .calendar div:first-child {
           font-weight: 600; }
-        #events #next-event .event .location .venue div:last-child, #events #next-event .event .location .calendar div:last-child {
-          margin-top: 3px; }
+    #events #next-event > footer {
+      text-align: right; }
+      #events #next-event > footer .read-more {
+        background: #1aa1d7;
+        color: white; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
