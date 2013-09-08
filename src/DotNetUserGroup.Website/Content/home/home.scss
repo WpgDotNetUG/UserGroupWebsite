@@ -17,14 +17,12 @@
 	}
 
 	> footer {
-		line-height:50px;
+		line-height:60px;
 		font-size: 1.2em;
 	}
 
 
 	@include gradient-vertical($start-color, $end-color);
-
-	border-bottom: 1px solid darken($end-color, 10%);
 }
 
 #events {
