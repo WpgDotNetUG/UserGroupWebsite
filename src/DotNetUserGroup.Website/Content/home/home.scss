@@ -1,4 +1,4 @@
-﻿@mixin event-box($start-color, $end-color, $title) {
+﻿@mixin event-box($start-color, $end-color, $title, $footer) {
 	display:table-cell;
 	border-right: 2px solid $blue-background;
 	padding-left: 20px;
@@ -17,14 +17,39 @@
 	}
 
 	> footer {
-		line-height:50px;
+		line-height:60px;
 		font-size: 1.2em;
+		position: relative;
+		bottom: 1px;
+		text-align: right;
+		> a {
+			background: $footer;
+			color: $white;
+			border-radius: 15px 0 0 0;
+			bottom: 0;
+			color: #FFFFFF;
+			line-height: 50px;
+			padding: 20px;
+			position: relative;
+			right: 0;
+			text-decoration: none;
+			font-size: 1.2em;
+			font-weight: bold;
+			border-bottom: 1px solid darken($footer, 10%);
+			&:hover {
+				background: darken($footer, 10%);
+			}
+			i {
+				margin-left: 5px;
+				vertical-align: middle;
+				font-size: 1.5em;
+			}
+		}
+
 	}
 
 
 	@include gradient-vertical($start-color, $end-color);
-
-	border-bottom: 1px solid darken($end-color, 10%);
 }
 
 #events {

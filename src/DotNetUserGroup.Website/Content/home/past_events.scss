@@ -1,7 +1,7 @@
 
 #past-events {
 
-	@include event-box(#cfecbc, #aee288, #60803d);
+	@include event-box(#cfecbc, #aee288, #60803d, #60803d);
 	width: 25%;
 	#event-list {
 		margin-left: 0px;
@@ -18,12 +18,6 @@
 			i {
 				color: darken(#3e6422, 5%);
 			}
-		}
-	}
-	footer {
-		color: #547529;
-		a {
-			color: #547529;
 		}
 	}
 }
