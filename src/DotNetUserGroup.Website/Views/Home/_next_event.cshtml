@@ -1,13 +1,13 @@
 ﻿    <section id="next-event">
         <header>next.event</header>
         <section class="event">
-            <span data-bind="if: loading">
+            <!-- ko if: loading -->
                 Finding about next event...
                 <i class="icon-spin icon-spinner"></i>
-            </span>
-            <span data-bind="if: !loading() && eventPending">
+            <!-- /ko -->
+            <!-- ko if: !loading() && eventPending -->
                 Next event in progress, please stay tuned!
-            </span>
+            <!-- /ko -->
             <!-- ko ifnot: eventPending -->
             <!-- ko with: event -->
             <header data-bind="text: title" class="title"></header>
