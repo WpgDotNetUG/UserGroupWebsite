@@ -4518,17 +4518,16 @@ body #main-footer #copyright {
     #events #next-event > footer {
       line-height: 60px;
       font-size: 1.2em;
-      position: relative;
-      bottom: 1px;
-      text-align: right; }
+      text-align: right;
+      padding: 0px;
+      border: none; }
       #events #next-event > footer > a {
         background: #1aa1d7;
         color: white;
         border-radius: 15px 0 0 0;
-        bottom: 0;
+        bottom: -4px;
         color: #FFFFFF;
-        line-height: 50px;
-        padding: 20px;
+        padding: 15px 20px;
         position: relative;
         right: 0;
         text-decoration: none;
@@ -4541,30 +4540,32 @@ body #main-footer #copyright {
           margin-left: 5px;
           vertical-align: middle;
           font-size: 1.5em; }
-    #events #next-event .event .title {
-      color: #115979;
-      font-size: 2em;
-      font-weight: 600;
-      margin-bottom: 10px; }
-    #events #next-event .event .description {
-      color: #1081a8;
-      padding-right: 20px; }
-    #events #next-event .event .location {
-      color: #206484;
-      font-size: 1.2em; }
-      #events #next-event .event .location .image {
-        font-size: 2.5em;
-        display: inline-block;
-        margin: 10px 10px 5px 0px;
-        text-align: center;
-        width: 40px; }
-        #events #next-event .event .location .image i {
-          width: 25px;
-          margin: auto; }
-      #events #next-event .event .location .venue, #events #next-event .event .location .calendar {
-        display: inline-block; }
-        #events #next-event .event .location .venue div:first-child, #events #next-event .event .location .calendar div:first-child {
-          font-weight: 600; }
+    #events #next-event .event {
+      height: 239px; }
+      #events #next-event .event .title {
+        color: #115979;
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 10px; }
+      #events #next-event .event .description {
+        color: #1081a8;
+        padding-right: 20px; }
+      #events #next-event .event .location {
+        color: #206484;
+        font-size: 1.2em; }
+        #events #next-event .event .location .image {
+          font-size: 2.5em;
+          display: inline-block;
+          margin: 10px 10px 5px 0px;
+          text-align: center;
+          width: 40px; }
+          #events #next-event .event .location .image i {
+            width: 25px;
+            margin: auto; }
+        #events #next-event .event .location .venue, #events #next-event .event .location .calendar {
+          display: inline-block; }
+          #events #next-event .event .location .venue div:first-child, #events #next-event .event .location .calendar div:first-child {
+            font-weight: 600; }
     #events #next-event > footer {
       bottom: -5px; }
   #events #past-events {
@@ -4593,17 +4594,16 @@ body #main-footer #copyright {
     #events #past-events > footer {
       line-height: 60px;
       font-size: 1.2em;
-      position: relative;
-      bottom: 1px;
-      text-align: right; }
+      text-align: right;
+      padding: 0px;
+      border: none; }
       #events #past-events > footer > a {
         background: #60803d;
         color: white;
         border-radius: 15px 0 0 0;
-        bottom: 0;
+        bottom: -4px;
         color: #FFFFFF;
-        line-height: 50px;
-        padding: 20px;
+        padding: 15px 20px;
         position: relative;
         right: 0;
         text-decoration: none;
@@ -4653,17 +4653,16 @@ body #main-footer #copyright {
     #events #future-topics > footer {
       line-height: 60px;
       font-size: 1.2em;
-      position: relative;
-      bottom: 1px;
-      text-align: right; }
+      text-align: right;
+      padding: 0px;
+      border: none; }
       #events #future-topics > footer > a {
         background: #cd8d68;
         color: white;
         border-radius: 15px 0 0 0;
-        bottom: 0;
+        bottom: -4px;
         color: #FFFFFF;
-        line-height: 50px;
-        padding: 20px;
+        padding: 15px 20px;
         position: relative;
         right: 0;
         text-decoration: none;
