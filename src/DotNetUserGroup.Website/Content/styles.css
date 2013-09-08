@@ -4517,7 +4517,30 @@ body #main-footer #copyright {
       height: 230px; }
     #events #next-event > footer {
       line-height: 60px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      position: relative;
+      bottom: 1px;
+      text-align: right; }
+      #events #next-event > footer > a {
+        background: #1aa1d7;
+        color: white;
+        border-radius: 15px 0 0 0;
+        bottom: 0;
+        color: #FFFFFF;
+        line-height: 50px;
+        padding: 20px;
+        position: relative;
+        right: 0;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 1px solid #147faa; }
+        #events #next-event > footer > a:hover {
+          background: #147faa; }
+        #events #next-event > footer > a i {
+          margin-left: 5px;
+          vertical-align: middle;
+          font-size: 1.5em; }
     #events #next-event .event .title {
       color: #115979;
       font-size: 2em;
@@ -4543,29 +4566,7 @@ body #main-footer #copyright {
         #events #next-event .event .location .venue div:first-child, #events #next-event .event .location .calendar div:first-child {
           font-weight: 600; }
     #events #next-event > footer {
-      position: relative;
-      bottom: -5px;
-      text-align: right; }
-      #events #next-event > footer .read-more {
-        background: #1aa1d7;
-        color: white;
-        border-radius: 15px 0 0 0;
-        bottom: 0;
-        color: #FFFFFF;
-        line-height: 50px;
-        padding: 20px;
-        position: relative;
-        right: 0;
-        text-decoration: none;
-        font-size: 1.2em;
-        font-weight: bold;
-        border-bottom: 1px solid #4597b6; }
-        #events #next-event > footer .read-more:hover {
-          background: #147faa; }
-        #events #next-event > footer .read-more i {
-          margin-left: 5px;
-          vertical-align: middle;
-          font-size: 1.5em; }
+      bottom: -5px; }
   #events #past-events {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
@@ -4591,7 +4592,30 @@ body #main-footer #copyright {
       height: 230px; }
     #events #past-events > footer {
       line-height: 60px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      position: relative;
+      bottom: 1px;
+      text-align: right; }
+      #events #past-events > footer > a {
+        background: #60803d;
+        color: white;
+        border-radius: 15px 0 0 0;
+        bottom: 0;
+        color: #FFFFFF;
+        line-height: 50px;
+        padding: 20px;
+        position: relative;
+        right: 0;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 1px solid #465d2d; }
+        #events #past-events > footer > a:hover {
+          background: #465d2d; }
+        #events #past-events > footer > a i {
+          margin-left: 5px;
+          vertical-align: middle;
+          font-size: 1.5em; }
     #events #past-events #event-list {
       margin-left: 0px;
       margin-right: 10px; }
@@ -4604,10 +4628,6 @@ body #main-footer #copyright {
           line-height: 20px; }
         #events #past-events #event-list li i {
           color: #32511c; }
-    #events #past-events footer {
-      color: #547529; }
-      #events #past-events footer a {
-        color: #547529; }
   #events #future-topics {
     display: table-cell;
     border-right: 2px solid #ebf0f3;
@@ -4632,7 +4652,30 @@ body #main-footer #copyright {
       height: 230px; }
     #events #future-topics > footer {
       line-height: 60px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      position: relative;
+      bottom: 1px;
+      text-align: right; }
+      #events #future-topics > footer > a {
+        background: #cd8d68;
+        color: white;
+        border-radius: 15px 0 0 0;
+        bottom: 0;
+        color: #FFFFFF;
+        line-height: 50px;
+        padding: 20px;
+        position: relative;
+        right: 0;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 1px solid #c07042; }
+        #events #future-topics > footer > a:hover {
+          background: #c07042; }
+        #events #future-topics > footer > a i {
+          margin-left: 5px;
+          vertical-align: middle;
+          font-size: 1.5em; }
     #events #future-topics #topic-list {
       margin-left: -20px;
       font-size: 1.3em; }
@@ -4654,8 +4697,6 @@ body #main-footer #copyright {
           font-size: 0.8em;
           line-height: 20px;
           padding: 0px 5px; }
-    #events #future-topics > footer i, #events #future-topics > footer a {
-      color: #c27141; }
 
 .widget h2 i, .widget-info h2 i, .widget-register h2 i {
   margin-right: 10px;

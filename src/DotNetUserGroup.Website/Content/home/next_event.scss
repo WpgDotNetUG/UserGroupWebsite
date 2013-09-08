@@ -1,5 +1,5 @@
 #next-event {
-	@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce);
+	@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce, #1aa1d7);
 	width: 50%;
 	.event {
 		.title {
@@ -38,31 +38,6 @@
 		}
 	}
 	> footer {
-		position: relative;
 		bottom: -5px;
-		text-align: right;
-		.read-more {
-			background: #1aa1d7;
-			color: $white;
-			border-radius: 15px 0 0 0;
-			bottom: 0;
-			color: #FFFFFF;
-			line-height: 50px;
-			padding: 20px;
-			position: relative;
-			right: 0;
-			text-decoration: none;
-			font-size: 1.2em;
-			font-weight: bold;
-			border-bottom: 1px solid darken(#1aa1d7, 10%);
-			&:hover {
-				background: darken(#1aa1d7, 10%);
-			}
-			i {
-				margin-left: 5px;
-				vertical-align: middle;
-				font-size: 1.5em;
-			}
-		}
 	}
 }
