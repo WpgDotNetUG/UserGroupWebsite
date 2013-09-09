@@ -11,5 +11,10 @@
     @{ Html.RenderPartial("_future_topics"); }
 </section>
 
+<section id="news">
+    <ul data-bind="foreach: news">
+       <li data-bind="text: Title"></li> 
+    </ul>
+</section>
 
 

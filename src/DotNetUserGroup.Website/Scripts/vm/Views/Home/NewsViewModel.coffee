@@ -1,15 +1,19 @@
 class window.NewsViewModel
 
-	constructor: (limit = -1) ->
-		@news = ko.observableArray()
-		$.getJSON '../api/news', (data) => 
-			es = ({
-				Title: e.Title 
-				Date: @parseDate(e.Date)
-				Body: e.Body
-			} for e in data[0..(if limit == -1 then -1 else limit - 1)])
-			@news(es)
+    constructor: (@limit = -1) ->
+        @news = ko.observableArray()
+        $.getJSON '../api/news', @loadNews
 
-	parseDate: (d) ->
-		str = new Date(Date.parse(d)).toString()
-		str.split(' ')[1..2].join(' ')
+    loadNews: (data) => 
+        max = (if @limit == -1 then -1 else @limit - 1)
+        @news(@createNewsItem(e) for e in data[0..max])
+
+    createNewsItem: (e) =>
+        newsItem =
+            Title: e.Title 
+            Date: @parseDate(e.Date)
+            Body: e.Body
+        
+    parseDate: (d) ->
+        str = new Date(Date.parse(d)).toString()
+        str.split(' ')[1..2].join(' ')
