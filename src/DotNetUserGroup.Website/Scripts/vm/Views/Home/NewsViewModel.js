@@ -7,14 +7,15 @@
       this.createNewsItem = __bind(this.createNewsItem, this);
       this.loadNews = __bind(this.loadNews, this);
       this.news = ko.observableArray();
+      this.title = ko.observable();
       $.getJSON('../api/news', this.loadNews);
     }
 
     NewsViewModel.prototype.loadNews = function(data) {
-      var e, max;
+      var e, max, _ref;
 
       max = (this.limit === -1 ? -1 : this.limit - 1);
-      return this.news((function() {
+      this.news((function() {
         var _i, _len, _ref, _results;
 
         _ref = data.slice(0, +max + 1 || 9e9);
@@ -25,6 +26,7 @@
         }
         return _results;
       }).call(this));
+      return this.title((_ref = this.news()[0]) != null ? _ref.Title : void 0);
     };
 
     NewsViewModel.prototype.createNewsItem = function(e) {
