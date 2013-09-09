@@ -4614,11 +4614,13 @@ body #main-footer #copyright {
       -webkit-border-radius: 0 15px 15px 0;
       -moz-border-radius: 0 15px 15px 0;
       border-radius: 0 15px 15px 0; }
-    #news .news-item i {
+    #news .news-item .news-icon {
       display: table-cell;
       color: #9fcbe5;
       font-size: 2em;
       text-align: center; }
+      #news .news-item .news-icon:hover {
+        text-decoration: none; }
     #news .news-item .arrow-right {
       width: 0;
       height: 0;
@@ -4631,6 +4633,8 @@ body #main-footer #copyright {
       font-size: 1.5em;
       padding-left: 20px;
       font-weight: 600; }
+      #news .news-item .news-title a:hover {
+        text-decoration: none; }
 
 @media (max-width: 767px) {
   body {
