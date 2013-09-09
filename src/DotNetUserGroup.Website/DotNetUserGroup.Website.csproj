@@ -201,9 +201,6 @@
     <Content Include="Content\home\past_events.css">
       <DependentUpon>past_events.scss</DependentUpon>
     </Content>
-    <Content Include="Content\lib\bootstrap.css">
-      <DependentUpon>bootstrap.scss</DependentUpon>
-    </Content>
     <Content Include="Content\navigation.css">
       <DependentUpon>navigation.scss</DependentUpon>
     </Content>
@@ -213,8 +210,6 @@
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -244,9 +239,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\date.js" />
-    <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
@@ -294,46 +291,6 @@
     <Content Include="Content\home\next_event.scss" />
     <Content Include="Content\home\news.scss" />
     <None Include="Content\news.scss" />
-    <None Include="Content\lib\bootstrap.scss" />
-    <None Include="Content\lib\responsive.scss" />
-    <None Include="Content\lib\_accordion.scss" />
-    <None Include="Content\lib\_alerts.scss" />
-    <None Include="Content\lib\_breadcrumbs.scss" />
-    <None Include="Content\lib\_button-groups.scss" />
-    <None Include="Content\lib\_buttons.scss" />
-    <None Include="Content\lib\_carousel.scss" />
-    <None Include="Content\lib\_close.scss" />
-    <None Include="Content\lib\_code.scss" />
-    <None Include="Content\lib\_component-animations.scss" />
-    <None Include="Content\lib\_dropdowns.scss" />
-    <None Include="Content\lib\_forms.scss" />
-    <None Include="Content\lib\_grid.scss" />
-    <None Include="Content\lib\_hero-unit.scss" />
-    <None Include="Content\lib\_labels-badges.scss" />
-    <None Include="Content\lib\_layouts.scss" />
-    <None Include="Content\lib\_mixins.scss" />
-    <None Include="Content\lib\_modals.scss" />
-    <None Include="Content\lib\_navbar.scss" />
-    <None Include="Content\lib\_navs.scss" />
-    <None Include="Content\lib\_pager.scss" />
-    <None Include="Content\lib\_pagination.scss" />
-    <None Include="Content\lib\_popovers.scss" />
-    <None Include="Content\lib\_progress-bars.scss" />
-    <None Include="Content\lib\_reset.scss" />
-    <None Include="Content\lib\_responsive-1200px-min.scss" />
-    <None Include="Content\lib\_responsive-767px-max.scss" />
-    <None Include="Content\lib\_responsive-768px-979px.scss" />
-    <None Include="Content\lib\_responsive-navbar.scss" />
-    <None Include="Content\lib\_responsive-utilities.scss" />
-    <None Include="Content\lib\_scaffolding.scss" />
-    <None Include="Content\lib\_sprites.scss" />
-    <None Include="Content\lib\_tables.scss" />
-    <None Include="Content\lib\_thumbnails.scss" />
-    <None Include="Content\lib\_tooltip.scss" />
-    <None Include="Content\lib\_type.scss" />
-    <None Include="Content\lib\_utilities.scss" />
-    <None Include="Content\lib\_variables.scss" />
-    <None Include="Content\lib\_wells.scss" />
     <Content Include="Content\News\2011-05-09-azure_fest.markdown" />
     <Content Include="Content\News\2011-04-08-Imaginet_Party.markdown" />
     <Content Include="Content\News\2012-08-01-ror_workshop.markdown" />
@@ -357,6 +314,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.coffee" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\vm\News\News.coffee" />
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />
