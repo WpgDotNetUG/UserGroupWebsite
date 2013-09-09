@@ -192,6 +192,9 @@
     <Content Include="Content\home\home.css">
       <DependentUpon>home.scss</DependentUpon>
     </Content>
+    <Content Include="Content\home\news.css">
+      <DependentUpon>news.scss</DependentUpon>
+    </Content>
     <Content Include="Content\home\next_event.css">
       <DependentUpon>next_event.scss</DependentUpon>
     </Content>
@@ -289,6 +292,7 @@
     <Content Include="Content\home\past_events.scss" />
     <Content Include="Content\home\future_topics.scss" />
     <Content Include="Content\home\next_event.scss" />
+    <Content Include="Content\home\news.scss" />
     <None Include="Content\news.scss" />
     <None Include="Content\lib\bootstrap.scss" />
     <None Include="Content\lib\responsive.scss" />

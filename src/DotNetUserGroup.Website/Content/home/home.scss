@@ -66,52 +66,7 @@
 	@import 'future_topics';
 }
 
-#news {
-	display:table;
-	width: 100%;
-	border-bottom: 2px solid #c2cbd0;
-	margin-bottom: 20px;
-
-	.news-item {
-		background: $white;
-		line-height: 50px;
-		display: table-row;
-
-		header {
-			display: table-cell;
-			background: #1682af;
-			color: $white;
-			font-size: 1.5em;
-			width: 100px;
-			text-align: center;
-			font-weight: 600;
-			@include border-radius(0 15px 15px 0);
-		}
-
-		i {
-			display:table-cell;
-			color: darken(#c7e1f0, 10%);
-			font-size: 2em;
-			text-align: center;
-		}
-
-		.arrow-right {
-			width: 0; 
-			height: 0; 
-			display: table-cell;
-			border-top: 20px solid transparent;
-			border-bottom: 20px solid transparent;
-			border-left: 20px solid #1682af;
-		}
-		.news-title {
-			display: table-cell;
-			font-size: 1.5em;
-			padding-left:20px;
-			font-weight: 600;
-		}
-
-	}
-}
+@import 'news';
 
 @media (max-width: 767px) {
 
