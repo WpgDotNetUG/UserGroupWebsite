@@ -1,11 +1,9 @@
 body
 {
 	> header {
-		background: $white;
+		background: @white;
 		margin-bottom: 40px;
 		nav {
-			@extend .row;
-
 			#logo {
 				a {
 					line-height:80px;
@@ -18,7 +16,7 @@ body
 				margin-top: 10px;
 				font-style: italic;
 				.title { 
-					color: $blue-deep; 
+					color: @blue-deep; 
 					font-size: 1.8em;
 					font-weight: bold;
 					margin-bottom: 10px;
@@ -27,38 +25,37 @@ body
 					}
 				}
 				.description { 
-					color: $blue-gray; 
+					color: @blue-gray; 
 					font-size: 1.3em;
 					line-height: 20px;
 				}
 			}
 
 			#main-menu {
-				@extend .navbar;
 
 				#menu-mobile {
-					@extend .visible-phone;
+					.visible-xs;
 				}
 
 				#menu-tablet {
-					@extend .visible-tablet;
+					.visible-md;
 				}
 
 				#menu {
-					@extend .visible-desktop;
+					.visible-lg;
 					font-size: 2.3em;
 					margin: 40px 0 0;
 					.nav {
 						margin: 0;
-						@extend .pull-right;
+						&:extend(.pull-right);
 						a {
-							color: $blue-menu;
+							color: @blue-menu;
 							&:hover {
 								text-decoration: underline;
 							}
 						}
 						li.active a {
-							color: $blue-menu-selected;
+							color: @blue-menu-selected;
 							background: inherit;
 							&:hover {
 								text-decoration: none;
@@ -81,14 +78,14 @@ body
 			height: 50px;
 			padding-top:10px;
 			a {
-				color: $grayLight;
-				background: $blue-background;
+				color: @gray-light;
+				background: @blue-background;
 				padding: 20px 15px 10px;
 				font-size: 1em;
-				border-bottom: 2px solid $blue-border;
+				border-bottom: 2px solid @blue-border;
 				
 				&:first-child {
-					border-right: 1px solid $blue-border;
+					border-right: 1px solid @blue-border;
 				}
 			}
 			i {
@@ -99,7 +96,7 @@ body
 				color: #2ea7fe;
 			}
 			.icon-github {
-				color: $gray;
+				color: @gray;
 			}
 		}
 	}

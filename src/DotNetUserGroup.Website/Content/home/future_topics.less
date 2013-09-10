@@ -1,5 +1,5 @@
 #future-topics {
-	@include event-box(#ffd7bb, #ffcaa1, #bc8354, #cd8d68);
+	.event-box(#ffd7bb, #ffcaa1, #bc8354, #cd8d68);
 	#topic-list {
 		margin-left: -20px;
 		font-size: 1.3em;
@@ -15,8 +15,8 @@
 			}
 
 			.vote-topic {
-				@extend .pull-right;
-				@include border-radius(5px);
+				&:extend(.pull-right);
+				border-radius:5px;
 				background: $white;
 				color: #e1a579;
 				margin-right: 5px;

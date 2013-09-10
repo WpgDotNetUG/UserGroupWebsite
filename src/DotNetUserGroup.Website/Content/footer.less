@@ -1,23 +1,23 @@
 body
 {
 	#main-footer {
-		@extend .container;
+		&:extend(.container);
 
 		#sponsors {
 			.title {
 				font-size: 1.6em;
 				font-weight: bold;
 				margin-bottom: 10px;
-				color: $blue-deep;
+				color: @blue-deep;
 			}
 			.description {
-				color: $blue-text;
+				color: @blue-text;
 				font-size: 1.1em;
 				line-height: 20px;
 				margin-bottom: 10px;
 
 				a {
-					color: darken($blue-text, 15%);
+					color: darken(@blue-text, 15%);
 				}
 			}
 
@@ -31,19 +31,19 @@ body
 						width: 100px;
 						height: 50px;
 						border: none;
-						background: $white;
+						background: @white;
 						padding: 5px;
-						@include border-radius(5px);
-						@include box-shadow(3px 3px 2px darken($blue-background, 30%));					
+						border-radius: 5px;
+						.box-shadow(3px 3px 2px darken(@blue-background, 30%));					
 					}
 				}
 			}
 		}
 
 		#copyright {
-			@extend .pull-right;
+			&:extend(.pull-right);
 			margin-top:20px;
-			color: $blue-text;
+			color: @blue-text;
 
 		}
 	}

@@ -1,5 +1,5 @@
 #next-event {
-	@include event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce, #1aa1d7);
+	.event-box(lighten(#7dd8ff, 10%), #35c7ff, #4fa6ce, #1aa1d7);
 	width: 50%;
 	.event {
 		height: 239px;
@@ -10,9 +10,9 @@
 			margin-bottom: 10px;
 		}
 
-		$blue-text: #1081a8;
+		@blue-text: #1081a8;
 		.description {
-			color: $blue-text;
+			color: @blue-text;
 			padding-right: 20px;
 		}
 
