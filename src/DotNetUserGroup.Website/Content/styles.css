@@ -6248,7 +6248,7 @@ body #main-footer #copyright {
   height: 350px;
   margin-bottom: 20px;
   background-image: url('/images/wpg_bridge.jpg');
-  background-position: 0px -450px;
+  background-position: 0px -400px;
   background-repeat: repeat-x;
 }
 #events #next-event {
@@ -6272,7 +6272,7 @@ body #main-footer #copyright {
 }
 #events #next-event > ul {
   list-style: none;
-  height: 230px;
+  height: 300px;
 }
 #events #next-event > footer {
   line-height: 60px;
@@ -6303,7 +6303,7 @@ body #main-footer #copyright {
   font-size: 1.5em;
 }
 #events #next-event .event {
-  height: 239px;
+  height: 300px;
 }
 #events #next-event .event .title {
   color: #115979;
@@ -6342,9 +6342,56 @@ body #main-footer #copyright {
   bottom: -5px;
 }
 #events #past-events {
+  display: table-cell;
+  border-right: 2px solid #ebf0f3;
+  padding-left: 20px;
+  padding-top: 20px;
+  opacity: 0.95;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#cfecbc), to(#aee288));
+  background-image: -webkit-linear-gradient(top, #cfecbc, 0%, #aee288, 100%);
+  background-image: -moz-linear-gradient(top, #cfecbc 0%, #aee288 100%);
+  background-image: linear-gradient(to bottom, #cfecbc 0%, #aee288 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcfecbc', endColorstr='#ffaee288', GradientType=0);
   width: 25%;
 }
-@include event-box(#cfecbc, #aee288, #60803d, #60803d);
+#events #past-events > header {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #60803d;
+}
+#events #past-events > ul {
+  list-style: none;
+  height: 300px;
+}
+#events #past-events > footer {
+  line-height: 60px;
+  font-size: 1.2em;
+  text-align: right;
+  padding: 0px;
+  border: none;
+}
+#events #past-events > footer > a {
+  background: #60803d;
+  color: #ffffff;
+  border-radius: 15px 0 0 0;
+  bottom: -4px;
+  padding: 15px 20px;
+  position: relative;
+  right: 0;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 1px solid #465d2d;
+}
+#events #past-events > footer > a:hover {
+  background: #465d2d;
+}
+#events #past-events > footer > a i {
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
 #events #past-events #event-list {
   margin-left: 0px;
   margin-right: 10px;
@@ -6381,7 +6428,7 @@ body #main-footer #copyright {
 }
 #events #future-topics > ul {
   list-style: none;
-  height: 230px;
+  height: 300px;
 }
 #events #future-topics > footer {
   line-height: 60px;
