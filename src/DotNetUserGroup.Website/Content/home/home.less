@@ -1,6 +1,6 @@
-﻿@mixin event-box($start-color, $end-color, $title, $footer) {
+﻿.event-box(@start-color; @end-color; @title; @footer) {
 	display:table-cell;
-	border-right: 2px solid $blue-background;
+	border-right: 2px solid @blue-background;
 	padding-left: 20px;
 	padding-top: 20px;
 	opacity: 0.95;
@@ -8,7 +8,7 @@
 	> header {
 		font-size: 1.8em;
 		margin-bottom: 20px;
-		color: $title;
+		color: @title;
 	}
 
 	> ul {
@@ -23,8 +23,8 @@
 		padding: 0px;
 		border:none;
 		> a {
-			background: $footer;
-			color: $white;
+			background: @footer;
+			color: @white;
 			border-radius: 15px 0 0 0;
 			bottom: -4px;
 			color: #FFFFFF;
@@ -34,9 +34,9 @@
 			text-decoration: none;
 			font-size: 1.2em;
 			font-weight: bold;
-			border-bottom: 1px solid darken($footer, 10%);
+			border-bottom: 1px solid darken(@footer, 10%);
 			&:hover {
-				background: darken($footer, 10%);
+				background: darken(@footer, 10%);
 			}
 			i {
 				margin-left: 5px;
@@ -48,7 +48,7 @@
 	}
 
 
-	@include gradient-vertical($start-color, $end-color);
+	@include gradient-vertical(@start-color, @end-color);
 }
 
 #events {
