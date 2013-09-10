@@ -4,15 +4,14 @@ body
 		background: @white;
 		margin-bottom: 40px;
 		nav {
-			#logo {
-				a {
-					line-height:80px;
-				}
-				img {
-				}
+            border: none;
+			.navbar-brand {
+				line-height:80px;
+                padding-left:0px;
 			}
 
 			#description {
+                width: 400px;
 				margin-top: 10px;
 				font-style: italic;
 				.title { 
@@ -43,17 +42,21 @@ body
 
 				#menu {
 					.visible-lg;
-					font-size: 2.3em;
+					font-size: 2em;
 					margin: 40px 0 0;
 					.nav {
 						margin: 0;
-						&:extend(.pull-right);
 						a {
+                            padding-right:0px;
 							color: @blue-menu;
 							&:hover {
 								text-decoration: underline;
+                                background:inherit;
 							}
 						}
+                        li {
+                            display: inline-block !important;
+                        }
 						li.active a {
 							color: @blue-menu-selected;
 							background: inherit;
