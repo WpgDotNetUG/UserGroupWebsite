@@ -6486,22 +6486,22 @@ body #main-footer #copyright {
   width: 100%;
   border-bottom: 2px solid #c2cbd0;
   margin-bottom: 20px;
+  background: #ffffff;
 }
 #news .news-item {
-  background: $white;
   line-height: 50px;
   display: table-row;
 }
 #news .news-item header {
   display: table-cell;
   background: #1682af;
-  color: $white;
+  color: #ffffff;
   font-size: 1.5em;
   width: 100px;
   text-align: center;
   font-weight: 600;
+  border-radius: 0 15px 15px 0;
 }
-@include border-radius(0 15px 15px 0);
 #news .news-item .news-icon {
   display: table-cell;
   color: #9fcbe5;
