@@ -3,6 +3,7 @@
 	#topic-list {
 		margin-left: -20px;
 		font-size: 1.3em;
+        padding: 0;
 
 		li {
 			border-top: 1px solid #e1a579;
@@ -15,15 +16,21 @@
 			}
 
 			.vote-topic {
-				&:extend(.pull-right);
+				float: right;
 				border-radius:5px;
-				background: $white;
+				background: @white;
+                border: 1px solid;
 				color: #e1a579;
 				margin-right: 5px;
 				margin-top: 5px;
 				font-size: 0.8em;
 				line-height: 20px;
 				padding: 0px 5px;
+
+                :hover {
+                    text-decoration: none;
+                    font-weight:600;
+                }
 			}
 		}
 	}

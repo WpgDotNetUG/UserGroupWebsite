@@ -22,7 +22,7 @@ namespace DotNetUserGroup.Website.Models
 
             if (topics != null)
             {
-                return topics.Items.Select(x => new FutureTopicInfo()
+                return topics.Items.Select(x => new FutureTopicInfo
                     {
                         Topic = x.Title.Text,
 			Url = x.Links[0].Uri.ToString(),

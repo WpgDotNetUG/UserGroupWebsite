@@ -5378,8 +5378,7 @@ body.modal-open,
   clear: both;
 }
 .pull-right,
-body #main-footer #copyright,
-#events#future-topics #topic-list li .vote-topic {
+body #main-footer #copyright {
   float: right !important;
 }
 .pull-left {
@@ -5957,6 +5956,7 @@ body > header nav {
 body > header nav .navbar-brand {
   line-height: 80px;
   padding-left: 0px;
+  margin-right: 20px;
 }
 body > header nav #description {
   width: 400px;
@@ -6394,13 +6394,14 @@ body #main-footer #copyright {
 }
 #events #past-events #event-list {
   margin-left: 0px;
-  margin-right: 10px;
+  margin-right: 15px;
+  padding: 0;
 }
 #events #past-events #event-list li {
   margin-bottom: 20px;
 }
 #events #past-events #event-list li a {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 600;
   color: #32511c;
   line-height: 20px;
@@ -6461,6 +6462,7 @@ body #main-footer #copyright {
 #events #future-topics #topic-list {
   margin-left: -20px;
   font-size: 1.3em;
+  padding: 0;
 }
 #events #future-topics #topic-list li {
   border-top: 1px solid #e1a579;
@@ -6472,14 +6474,20 @@ body #main-footer #copyright {
   font-weight: 600;
 }
 #events #future-topics #topic-list li .vote-topic {
+  float: right;
   border-radius: 5px;
-  background: $white;
+  background: #ffffff;
+  border: 1px solid;
   color: #e1a579;
   margin-right: 5px;
   margin-top: 5px;
   font-size: 0.8em;
   line-height: 20px;
   padding: 0px 5px;
+}
+#events #future-topics #topic-list li .vote-topic :hover {
+  text-decoration: none;
+  font-weight: 600;
 }
 #news {
   display: table;
