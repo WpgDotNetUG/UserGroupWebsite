@@ -6222,6 +6222,7 @@ body #main-footer #sponsors .description a {
 }
 body #main-footer #sponsors .logos {
   list-style-type: none;
+  padding-left: 5px;
 }
 body #main-footer #sponsors .logos .sponsor {
   margin: 0;
@@ -6229,8 +6230,10 @@ body #main-footer #sponsors .logos .sponsor {
   margin-bottom: 10px;
 }
 body #main-footer #sponsors .logos .sponsor img {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 80px;
+  margin-right: 20px;
+  margin-bottom: 10px;
   border: none;
   background: #ffffff;
   padding: 5px;
