@@ -177,49 +177,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
-    <Content Include="Content\bootstrap-responsive.css" />
-    <Content Include="Content\bootstrap-responsive.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap.min.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\footer.css">
-      <DependentUpon>footer.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\home\future_topics.css">
-      <DependentUpon>future_topics.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\home\home.css">
-      <DependentUpon>home.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\home\news.css">
-      <DependentUpon>news.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\home\next_event.css">
-      <DependentUpon>next_event.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\home\past_events.css">
-      <DependentUpon>past_events.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\lib\bootstrap.css">
-      <DependentUpon>bootstrap.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\navigation.css">
-      <DependentUpon>navigation.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\news.css">
-      <DependentUpon>news.scss</DependentUpon>
-    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
-    <Content Include="Content\Site.css">
-      <DependentUpon>Site.scss</DependentUpon>
-    </Content>
     <Content Include="Content\styles.css">
-      <DependentUpon>styles.scss</DependentUpon>
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles.min.css">
+      <DependentUpon>styles.less</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -244,9 +218,64 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\date.js" />
-    <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\footer.less" />
+    <Content Include="Content\navigation.less" />
+    <Content Include="Content\Site.less" />
+    <Content Include="Content\styles.less" />
+    <Content Include="Content\news.less" />
+    <Content Include="Content\home\future_topics.less" />
+    <Content Include="Content\home\home.less" />
+    <Content Include="Content\home\news.less" />
+    <Content Include="Content\home\next_event.less" />
+    <Content Include="Content\home\past_events.less" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
@@ -256,6 +285,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\less-1.4.1.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.js">
       <DependentUpon>UserGroupEvent.coffee</DependentUpon>
@@ -287,60 +317,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\navigation.scss" />
-    <Content Include="Content\home\home.scss" />
-    <Content Include="Content\home\past_events.scss" />
-    <Content Include="Content\home\future_topics.scss" />
-    <Content Include="Content\home\next_event.scss" />
-    <Content Include="Content\home\news.scss" />
-    <None Include="Content\news.scss" />
-    <None Include="Content\lib\bootstrap.scss" />
-    <None Include="Content\lib\responsive.scss" />
-    <None Include="Content\lib\_accordion.scss" />
-    <None Include="Content\lib\_alerts.scss" />
-    <None Include="Content\lib\_breadcrumbs.scss" />
-    <None Include="Content\lib\_button-groups.scss" />
-    <None Include="Content\lib\_buttons.scss" />
-    <None Include="Content\lib\_carousel.scss" />
-    <None Include="Content\lib\_close.scss" />
-    <None Include="Content\lib\_code.scss" />
-    <None Include="Content\lib\_component-animations.scss" />
-    <None Include="Content\lib\_dropdowns.scss" />
-    <None Include="Content\lib\_forms.scss" />
-    <None Include="Content\lib\_grid.scss" />
-    <None Include="Content\lib\_hero-unit.scss" />
-    <None Include="Content\lib\_labels-badges.scss" />
-    <None Include="Content\lib\_layouts.scss" />
-    <None Include="Content\lib\_mixins.scss" />
-    <None Include="Content\lib\_modals.scss" />
-    <None Include="Content\lib\_navbar.scss" />
-    <None Include="Content\lib\_navs.scss" />
-    <None Include="Content\lib\_pager.scss" />
-    <None Include="Content\lib\_pagination.scss" />
-    <None Include="Content\lib\_popovers.scss" />
-    <None Include="Content\lib\_progress-bars.scss" />
-    <None Include="Content\lib\_reset.scss" />
-    <None Include="Content\lib\_responsive-1200px-min.scss" />
-    <None Include="Content\lib\_responsive-767px-max.scss" />
-    <None Include="Content\lib\_responsive-768px-979px.scss" />
-    <None Include="Content\lib\_responsive-navbar.scss" />
-    <None Include="Content\lib\_responsive-utilities.scss" />
-    <None Include="Content\lib\_scaffolding.scss" />
-    <None Include="Content\lib\_sprites.scss" />
-    <None Include="Content\lib\_tables.scss" />
-    <None Include="Content\lib\_thumbnails.scss" />
-    <None Include="Content\lib\_tooltip.scss" />
-    <None Include="Content\lib\_type.scss" />
-    <None Include="Content\lib\_utilities.scss" />
-    <None Include="Content\lib\_variables.scss" />
-    <None Include="Content\lib\_wells.scss" />
     <Content Include="Content\News\2011-05-09-azure_fest.markdown" />
     <Content Include="Content\News\2011-04-08-Imaginet_Party.markdown" />
     <Content Include="Content\News\2012-08-01-ror_workshop.markdown" />
     <Content Include="Content\News\2011-03-15-wp7.markdown" />
-    <Content Include="Content\styles.scss" />
-    <Content Include="Content\footer.scss" />
-    <None Include="Content\Site.scss" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
     <Content Include="Images\bullet.png" />
@@ -357,6 +337,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.coffee" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\vm\News\News.coffee" />
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />

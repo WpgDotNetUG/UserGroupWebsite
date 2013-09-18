@@ -1,0 +1,108 @@
+body
+{
+	> header {
+		background: @white;
+		margin-bottom: 40px;
+		nav {
+            border: none;
+			.navbar-brand {
+				line-height:80px;
+                padding-left:0px;
+                margin-right: 20px;
+			}
+
+			#description {
+                width: 400px;
+				margin-top: 10px;
+				font-style: italic;
+				.title { 
+					color: @blue-deep; 
+					font-size: 1.8em;
+					font-weight: bold;
+					margin-bottom: 10px;
+					.bracket {
+						color: #83b04a;
+					}
+				}
+				.description { 
+					color: @blue-gray; 
+					font-size: 1.3em;
+					line-height: 20px;
+				}
+			}
+
+			#main-menu {
+
+				#menu-mobile {
+					.visible-xs;
+				}
+
+				#menu-tablet {
+					.visible-md;
+				}
+
+				#menu {
+					.visible-lg;
+					font-size: 2em;
+					margin: 40px 0 0;
+					.nav {
+						margin: 0;
+						a {
+                            padding-right:0px;
+							color: @blue-menu;
+							&:hover {
+								text-decoration: underline;
+                                background:inherit;
+							}
+						}
+                        li {
+                            display: inline-block !important;
+                        }
+						li.active a {
+							color: @blue-menu-selected;
+							background: inherit;
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#divider {
+			height: 4px;
+			background: #d3dddf;
+			border-top: 1px solid #d2d8db;
+			border-bottom: 1px solid #d2d8db;
+		}
+
+		#social {
+			text-align:right;
+			height: 50px;
+			padding-top:10px;
+			a {
+				color: @gray-light;
+				background: @blue-background;
+				padding: 20px 15px 10px;
+				font-size: 1em;
+				border-bottom: 2px solid @blue-border;
+				
+				&:first-child {
+					border-right: 1px solid @blue-border;
+				}
+			}
+			i {
+				margin-top: 10px;
+				font-size: 1.2em;
+			}
+			.icon-twitter {
+				color: #2ea7fe;
+			}
+			.icon-github {
+				color: @gray;
+			}
+		}
+	}
+
+}
