@@ -7,7 +7,7 @@ namespace DotNetUserGroup.Website.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery")
-                .Include("~/Scripts/jquery-1.9.1.js")
+                .Include("~/Scripts/jquery-1.9.1.min.js")
             );
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
