@@ -177,12 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
-    <Content Include="Content\bootstrap\bootstrap.css">
-      <DependentUpon>bootstrap.less</DependentUpon>
-    </Content>
-    <Content Include="Content\bootstrap\bootstrap.min.css">
-      <DependentUpon>bootstrap.less</DependentUpon>
-    </Content>
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -281,7 +275,6 @@
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
