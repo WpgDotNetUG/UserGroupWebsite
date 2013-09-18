@@ -6270,9 +6270,11 @@ body #main-footer #copyright {
   margin-bottom: 20px;
   color: #4fa6ce;
 }
-#events #next-event > ul {
+#events #next-event .content,
+#events #next-event ul {
   list-style: none;
   height: 300px;
+  margin-bottom: 10px;
 }
 #events #next-event > footer {
   line-height: 60px;
@@ -6301,9 +6303,6 @@ body #main-footer #copyright {
   margin-left: 5px;
   vertical-align: middle;
   font-size: 1.5em;
-}
-#events #next-event .event {
-  height: 300px;
 }
 #events #next-event .event .title {
   color: #115979;
@@ -6360,9 +6359,11 @@ body #main-footer #copyright {
   margin-bottom: 20px;
   color: #60803d;
 }
-#events #past-events > ul {
+#events #past-events .content,
+#events #past-events ul {
   list-style: none;
   height: 300px;
+  margin-bottom: 10px;
 }
 #events #past-events > footer {
   line-height: 60px;
@@ -6427,9 +6428,11 @@ body #main-footer #copyright {
   margin-bottom: 20px;
   color: #bc8354;
 }
-#events #future-topics > ul {
+#events #future-topics .content,
+#events #future-topics ul {
   list-style: none;
   height: 300px;
+  margin-bottom: 10px;
 }
 #events #future-topics > footer {
   line-height: 60px;
@@ -6485,7 +6488,7 @@ body #main-footer #copyright {
   line-height: 20px;
   padding: 0px 5px;
 }
-#events #future-topics #topic-list li .vote-topic :hover {
+#events #future-topics #topic-list li .vote-topic:hover {
   text-decoration: none;
   font-weight: 600;
 }
