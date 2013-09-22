@@ -6241,6 +6241,39 @@ body #main-footer #sponsors .logos .sponsor img {
   -webkit-box-shadow: 3px 3px 2px #8ba8ba;
   box-shadow: 3px 3px 2px #8ba8ba;
 }
+body #main-footer #newsletter {
+  text-align: center;
+}
+body #main-footer #newsletter .miss-meeting {
+  border: 4px solid #699f4c;
+  background: #dcf7cc;
+  border-radius: 5px;
+  color: #669248;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+body #main-footer #newsletter .signup,
+body #main-footer #newsletter .add-me {
+  color: #198cae;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+body #main-footer #newsletter .follow-events {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+body #main-footer #newsletter .add-me {
+  float: right;
+  text-decoration: none;
+}
+body #main-footer #newsletter .add-me i {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
 body #main-footer #copyright {
   margin-top: 20px;
   color: #198cae;
@@ -6498,7 +6531,7 @@ body #main-footer #copyright {
 #news {
   display: table;
   width: 100%;
-  border-bottom: 2px solid #c2cbd0;
+  border-bottom: 4px solid #c2cbd0;
   margin-bottom: 20px;
   background: #ffffff;
 }
