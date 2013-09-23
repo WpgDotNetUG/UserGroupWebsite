@@ -642,7 +642,8 @@ pre code {
   overflow-y: scroll;
 }
 .container,
-body #main-footer {
+body #main-footer .footer-info,
+body #main-footer #copyright .info {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -804,7 +805,8 @@ body #main-footer {
 }
 @media (min-width: 768px) {
   .container,
-  body #main-footer {
+  body #main-footer .footer-info,
+  body #main-footer #copyright .info {
     max-width: 750px;
   }
   .col-sm-1,
@@ -958,7 +960,8 @@ body #main-footer {
 }
 @media (min-width: 992px) {
   .container,
-  body #main-footer {
+  body #main-footer .footer-info,
+  body #main-footer #copyright .info {
     max-width: 970px;
   }
   .col-md-1,
@@ -1121,7 +1124,8 @@ body #main-footer {
 }
 @media (min-width: 1200px) {
   .container,
-  body #main-footer {
+  body #main-footer .footer-info,
+  body #main-footer #copyright .info {
     max-width: 1170px;
   }
   .col-lg-1,
@@ -5377,8 +5381,7 @@ body.modal-open,
 .clearfix:after {
   clear: both;
 }
-.pull-right,
-body #main-footer #copyright {
+.pull-right {
   float: right !important;
 }
 .pull-left {
@@ -5915,9 +5918,7 @@ body {
   background: #ebf0f3;
 }
 @media (min-width: 979px) {
-  body {
-    padding-bottom: 40px;
-  }
+  
 }
 @media (max-width: 767px) {
   body .container-fluid {
@@ -5945,6 +5946,12 @@ body {
   #next-event h2 {
     font-size: 17px;
   }
+}
+body .divider {
+  height: 4px;
+  background: #d3dddf;
+  border-top: 1px solid #d2d8db;
+  border-bottom: 1px solid #d2d8db;
 }
 body > header {
   background: #ffffff;
@@ -6177,12 +6184,6 @@ body > header nav #main-menu #menu .nav li.active a {
 body > header nav #main-menu #menu .nav li.active a:hover {
   text-decoration: none;
 }
-body > header #divider {
-  height: 4px;
-  background: #d3dddf;
-  border-top: 1px solid #d2d8db;
-  border-bottom: 1px solid #d2d8db;
-}
 body > header #social {
   text-align: right;
   height: 40px;
@@ -6293,6 +6294,14 @@ body #main-footer #newsletter .add-me i {
   font-size: 1.5em;
 }
 body #main-footer #copyright {
+  background: #ffffff;
+  padding-bottom: 20px;
+}
+body #main-footer #copyright .divider {
+  margin-top: 20px;
+}
+body #main-footer #copyright .info {
+  text-align: center;
   margin-top: 20px;
   color: #198cae;
 }

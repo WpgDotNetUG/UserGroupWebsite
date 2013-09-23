@@ -1,7 +1,9 @@
 body
 {
 	#main-footer {
-		&:extend(.container);
+        .footer-info {
+		    &:extend(.container);
+        }
 
 		.title {
 			font-size: 1.6em;
@@ -95,11 +97,19 @@ body
                 }
             }
         }
-		#copyright {
-			&:extend(.pull-right);
-			margin-top:20px;
-			color: @blue-text;
-
+		
+        #copyright {
+    		background: @white;
+            padding-bottom: 20px;
+            .divider {
+                margin-top:20px;
+            }
+            .info {
+		        &:extend(.container);
+			    text-align:center;
+    			margin-top:20px;
+	    		color: @blue-text;
+            }
 		}
 	}
 
