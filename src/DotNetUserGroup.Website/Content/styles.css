@@ -5981,21 +5981,6 @@ body > header nav #main-menu #menu .nav li.active a {
 body > header nav #main-menu #menu .nav li.active a:hover {
   text-decoration: none;
 }
-@media (max-width: 767px) {
-  body > header nav #main-menu #menu {
-    font-size: 1.8em;
-  }
-}
-@media (max-width: 800px) {
-  body > header nav #main-menu #menu {
-    font-size: 1.8em;
-  }
-}
-@media (max-width: 1024px) {
-  body > header nav #main-menu #menu {
-    font-size: 1.8em;
-  }
-}
 body > header #social {
   text-align: right;
   height: 40px;
@@ -6020,6 +6005,28 @@ body > header #social .icon-twitter {
 }
 body > header #social .icon-github {
   color: #555555;
+}
+@media (max-width: 767px) {
+  body.mobile #main-menu #menu {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  body.mobile #main-menu #menu .nav li {
+    display: block;
+  }
+  body.mobile #main-menu #menu .nav li a {
+    padding: 5px 0 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body.mobile #main-menu #menu {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body.mobile #main-menu #menu {
+    font-size: 1.8em;
+  }
 }
 body #main-footer .title {
   font-size: 1.6em;
