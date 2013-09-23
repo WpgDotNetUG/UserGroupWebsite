@@ -6309,7 +6309,7 @@ body #main-footer #copyright {
   display: table-cell;
   border-right: 2px solid #ebf0f3;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   opacity: 0.95;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#b0e7ff), to(#35c7ff));
   background-image: -webkit-linear-gradient(top, #b0e7ff, 0%, #35c7ff, 100%);
@@ -6321,13 +6321,13 @@ body #main-footer #copyright {
 }
 #events #next-event > header {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #4fa6ce;
 }
 #events #next-event .content,
 #events #next-event ul {
   list-style: none;
-  height: 300px;
+  height: 230px;
   margin-bottom: 10px;
 }
 #events #next-event > footer {
@@ -6398,7 +6398,7 @@ body #main-footer #copyright {
   display: table-cell;
   border-right: 2px solid #ebf0f3;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   opacity: 0.95;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#cfecbc), to(#aee288));
   background-image: -webkit-linear-gradient(top, #cfecbc, 0%, #aee288, 100%);
@@ -6410,13 +6410,13 @@ body #main-footer #copyright {
 }
 #events #past-events > header {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #60803d;
 }
 #events #past-events .content,
 #events #past-events ul {
   list-style: none;
-  height: 300px;
+  height: 230px;
   margin-bottom: 10px;
 }
 #events #past-events > footer {
@@ -6468,7 +6468,7 @@ body #main-footer #copyright {
   display: table-cell;
   border-right: 2px solid #ebf0f3;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   opacity: 0.95;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffd7bb), to(#ffcaa1));
   background-image: -webkit-linear-gradient(top, #ffd7bb, 0%, #ffcaa1, 100%);
@@ -6479,13 +6479,13 @@ body #main-footer #copyright {
 }
 #events #future-topics > header {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #bc8354;
 }
 #events #future-topics .content,
 #events #future-topics ul {
   list-style: none;
-  height: 300px;
+  height: 230px;
   margin-bottom: 10px;
 }
 #events #future-topics > footer {
