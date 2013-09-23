@@ -5967,7 +5967,7 @@ body > header nav #description .title {
   color: #285670;
   font-size: 1.8em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 body > header nav #description .title .bracket {
   color: #83b04a;
@@ -5976,6 +5976,8 @@ body > header nav #description .description {
   color: #74a2b1;
   font-size: 1.3em;
   line-height: 20px;
+  letter-spacing: 0.6px;
+  line-height: 22px;
 }
 body > header nav #main-menu #menu-mobile {
   display: none !important;
@@ -6205,11 +6207,26 @@ body > header #social .icon-twitter {
 body > header #social .icon-github {
   color: #555555;
 }
-body #main-footer #sponsors .title {
+body #main-footer .title {
   font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 10px;
   color: #285670;
+  line-height: 30px;
+  height: 35px;
+}
+body #main-footer .title .text {
+  position: relative;
+  float: left;
+  z-index: 1000;
+  background: #ebf0f3;
+  padding-right: 10px;
+}
+body #main-footer .title .line {
+  background: #285670;
+  height: 2px;
+  position: relative;
+  top: 15px;
 }
 body #main-footer #sponsors .description {
   color: #198cae;
