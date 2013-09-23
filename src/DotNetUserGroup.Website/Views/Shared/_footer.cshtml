@@ -1,7 +1,8 @@
 ﻿@using System.Web.Configuration
 
 <footer id="main-footer">
-    <section class="row">
+    <section class="footer-info">
+        <section class="row">
         <article id="sponsors" class="col-md-4">
             <section class="title">
                 <div class="text">.sponsors</div>
@@ -39,11 +40,16 @@
             </a>
         </article>
     </section>
+    </section>
+
     <section id="copyright">
-        &copy; Winnipeg Dot Net User Group 2013 
-        - 
-        v3.0
-        - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
+        <div class="divider"></div>
+        <section class="info">
+            &copy; Winnipeg Dot Net User Group 2013 
+            - 
+            v3.0
+            - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
+        </section>
     </section>
 </footer>
 
