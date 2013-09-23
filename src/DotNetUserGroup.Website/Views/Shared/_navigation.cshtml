@@ -14,7 +14,7 @@
             <a href="/" class="navbar-brand">
                 <img src="~/Images/logo_2013.png" alt="WPG.NET UG Logo"/>
             </a>
-            <section id="description" class="navbar-left">
+            <section id="description" class="navbar-left hidden-xs">
                 <div class="title">
                     Winnipeg Dot Net User Group
                 </div>
@@ -22,14 +22,6 @@
             </section>
             <section id="main-menu" class="navbar-right">
                 <section id="menu">@MenuItems()</section>
-                <section id="menu-mobile" class="btn-group">
-                    <button class="btn">Go To</button>
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    @MenuItems("dropdown-menu")
-                </section>
-                <section id="menu-tablet">@MenuItems()</section>
             </section>
         </nav>
     </div>

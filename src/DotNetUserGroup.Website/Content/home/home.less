@@ -1,68 +1,80 @@
 ﻿.event-box(@start-color; @end-color; @title; @footer) {
-	display:table-cell;
-	border-right: 2px solid @blue-background;
-	padding-left: 20px;
-	padding-top: 10px;
-	opacity: 0.95;
+    display: table-cell;
+    border-right: 2px solid @blue-background;
+    padding-left: 20px;
+    padding-top: 10px;
+    opacity: 0.95;
+    #gradient.vertical(@start-color, @end-color);
 
-	> header {
-		font-size: 1.8em;
-		margin-bottom: 10px;
-		color: @title;
-	}
-
-	.content, ul {
-		list-style: none;
-		height:230px;
+    > header {
+        font-size: 1.8em;
         margin-bottom: 10px;
-	}
+        color: @title;
+    }
 
-	> footer {
-		line-height:60px;
-		font-size: 1.2em;
-		text-align:right;
-		padding: 0px;
-		border:none;
-		> a {
-			background: @footer;
-			color: @white;
-			border-radius: 15px 0 0 0;
-			bottom: -4px;
-			padding: 15px 20px;
-			position: relative;
-			right: 0;
-			text-decoration: none;
-			font-size: 1.2em;
-			font-weight: bold;
-			border-bottom: 1px solid darken(@footer, 10%);
-			&:hover {
-				background: darken(@footer, 10%);
-			}
-			i {
-				margin-left: 5px;
-				vertical-align: middle;
-				font-size: 1.5em;
-			}
-		}
+    .content, ul {
+        list-style: none;
+        height: 230px;
+        margin-bottom: 10px;
+    }
 
-	}
+    > footer {
+        line-height: 60px;
+        font-size: 1.2em;
+        text-align: right;
+        padding: 0px;
+        border: none;
 
+        > a {
+            background: @footer;
+            color: @white;
+            border-radius: 15px 0 0 0;
+            bottom: -4px;
+            padding: 15px 20px;
+            position: relative;
+            right: 0;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 1px solid darken(@footer, 10%);
 
-	#gradient.vertical(@start-color, @end-color);
+            &:hover {
+                background: darken(@footer, 10%);
+            }
+
+            i {
+                margin-left: 5px;
+                vertical-align: middle;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        pading:0;
+        border:none;
+        margin-bottom:20px;
+        display:block;
+    }
 }
 
 #events {
-	display: table;
-	width: 100%;
-	height: 350px;
-	margin-bottom: 20px;
+    display: table;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    background-image: url('/images/wpg_bridge.jpg');
+    background-position: 0px -400px;
+    background-repeat: repeat-x;
 
-	background-image: url('/images/wpg_bridge.jpg');
-	background-position: 0px -400px;
-	background-repeat: repeat-x; 
+    @import 'next_event';
+    @import 'past_events';
+    @import 'future_topics';
 
-	@import 'next_event';
-	@import 'past_events';
-	@import 'future_topics';
+    @media (max-width: 767px) {
+        display: auto;
+        height: auto;
+        background-image: none;
+    }
 }
 
