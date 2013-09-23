@@ -4,7 +4,9 @@ class window.EventsViewModel
         @events = ko.observableArray()
         @organizerUrl = ko.observable('http://www.eventbrite.com/org/1699161450')
 
-        $.getJSON '../api/events', @processResult
+        UserGroupEvent.findAll
+          success: @processResult
+          complete: => @loading false
 
     processResult: (data) =>
         es = (@mapEvent(e) for e in data when Date.parse(e.Date).compareTo(Date.today()) < 0)

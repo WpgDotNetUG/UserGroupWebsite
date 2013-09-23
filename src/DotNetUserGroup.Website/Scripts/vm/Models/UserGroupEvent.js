@@ -1,8 +1,9 @@
-(function() {
+﻿(function() {
+
   window.UserGroupEvent = (function() {
+
     function UserGroupEvent(event) {
       var _ref;
-
       this.date = ko.observable(this.formatDate(event.Date));
       this.venue = ko.observable(event.Venue);
       this.address = ko.observable(event.Address);
@@ -18,13 +19,22 @@
 
     UserGroupEvent.prototype.formatTime = function(e) {
       var end, start;
-
       if (!e.EndDate) {
         return;
       }
       start = Date.parse(e.Date).toString('HH:mm');
       end = Date.parse(e.EndDate).toString('HH:mm');
       return "" + start + " to " + end;
+    };
+
+    UserGroupEvent.findAll = function(options) {
+      return $.ajax({
+        type: 'GET',
+        url: '../api/events',
+        success: options.success,
+        error: options.error,
+        complete: options.complete
+      });
     };
 
     UserGroupEvent.Empty = function() {

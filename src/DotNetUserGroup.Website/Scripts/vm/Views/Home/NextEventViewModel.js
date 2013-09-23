@@ -1,21 +1,27 @@
-(function() {
+﻿(function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   window.NextEventViewModel = (function() {
+
     function NextEventViewModel() {
-      this.processResult = __bind(this.processResult, this);      this.event = ko.observable(UserGroupEvent.Empty());
+      this.processResult = __bind(this.processResult, this);
+
+      var _this = this;
+      this.event = ko.observable(UserGroupEvent.Empty());
       this.eventPending = ko.observable(true);
       this.loading = ko.observable(true);
-      $.getJSON('../api/events', this.processResult);
+      UserGroupEvent.findAll({
+        success: this.processResult,
+        complete: function() {
+          return _this.loading(false);
+        }
+      });
     }
 
     NextEventViewModel.prototype.processResult = function(data, status, jqXHR) {
       var e, events;
-
-      this.loading(false);
       events = (function() {
         var _i, _len, _results;
-
         _results = [];
         for (_i = 0, _len = data.length; _i < _len; _i++) {
           e = data[_i];
