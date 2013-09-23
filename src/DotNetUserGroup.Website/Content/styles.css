@@ -5952,6 +5952,7 @@ body > header {
 }
 body > header nav {
   border: none;
+  margin-bottom: 0px !important;
 }
 body > header nav .navbar-brand {
   line-height: 80px;
@@ -5960,12 +5961,12 @@ body > header nav .navbar-brand {
 }
 body > header nav #description {
   width: 400px;
-  margin-top: 10px;
+  margin-top: 15px;
   font-style: italic;
 }
 body > header nav #description .title {
   color: #285670;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -5974,7 +5975,7 @@ body > header nav #description .title .bracket {
 }
 body > header nav #description .description {
   color: #74a2b1;
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 20px;
   letter-spacing: 0.6px;
   line-height: 22px;
@@ -6184,7 +6185,7 @@ body > header #divider {
 }
 body > header #social {
   text-align: right;
-  height: 50px;
+  height: 40px;
   padding-top: 10px;
 }
 body > header #social a {
