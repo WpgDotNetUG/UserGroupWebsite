@@ -10,30 +10,30 @@
             <!-- /ko -->
             <!-- ko ifnot: eventPending -->
             <!-- ko with: event -->
-            <header data-bind="text: title" class="title"></header>
-            <article data-bind="html: description" class='description'></article>
-            <section class="location">
-                <span class="image">
-                    <i class="icon-calendar"></i>
-                </span>
-                <section class="calendar">
-                    <div data-bind="text: date"></div>
-                    <div data-bind="text: time"></div> 
+                <header data-bind="text: title" class="title"></header>
+                <article data-bind="html: description" class='description'></article>
+                <section class="location">
+                    <span class="image">
+                        <i class="icon-calendar"></i>
+                    </span>
+                    <section class="calendar">
+                        <div data-bind="text: fDate"></div>
+                        <div data-bind="text: time"></div> 
+                    </section>
+                    <br/>
+                    <span class="image">
+                        <i class="icon-map-marker"></i>
+                    </span>
+                    <section class="venue">
+                        <div data-bind="text: venue"></div>
+                        <div data-bind="text: address"></div>
+                    </section>
                 </section>
-                <br/>
-                <span class="image">
-                    <i class="icon-map-marker"></i>
-                </span>
-                <section class="venue">
-                    <div data-bind="text: venue"></div>
-                    <div data-bind="text: address"></div>
-                </section>
-            </section>
             <!-- /ko -->
             <!-- /ko -->
         </section>
         <footer>
-            <a href="#" data-bind="visible: !eventPending(), attr: { href: event.url }" class="read-more" target="_blank">
+            <a href="#" data-bind="visible: !eventPending(), attr: { href: event.url }" target="_blank">
                 Count Me In!
                 <i class="icon-chevron-sign-right"></i>
             </a>
