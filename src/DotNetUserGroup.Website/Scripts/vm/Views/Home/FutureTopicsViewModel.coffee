@@ -1,4 +1,4 @@
-class window.TopicsViewModel
+class window.FutureTopicsViewModel
 
 	constructor: ->
 		@topics = ko.observableArray()

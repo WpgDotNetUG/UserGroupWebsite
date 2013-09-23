@@ -1,4 +1,4 @@
-class window.EventsViewModel
+class window.PastEventsViewModel
 
     constructor: ->
         @events = ko.observableArray()
