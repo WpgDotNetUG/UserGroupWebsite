@@ -5917,36 +5917,6 @@ td.visible-print {
 body {
   background: #ebf0f3;
 }
-@media (min-width: 979px) {
-  
-}
-@media (max-width: 767px) {
-  body .container-fluid {
-    margin: 0px;
-    padding: 0px;
-    display: block;
-  }
-  body nav #inner #container header {
-    float: none;
-  }
-  #content,
-  aside,
-  .widget-info {
-    float: none;
-    display: block;
-    width: 100%;
-  }
-  #next-event {
-    margin: 5px;
-    padding: 5px;
-  }
-  #next-event > h1 {
-    font-size: 20px;
-  }
-  #next-event h2 {
-    font-size: 17px;
-  }
-}
 body .divider {
   height: 4px;
   background: #d3dddf;
@@ -5983,7 +5953,6 @@ body > header nav #description .title .bracket {
 body > header nav #description .description {
   color: #74a2b1;
   font-size: 1.1em;
-  line-height: 20px;
   letter-spacing: 0.6px;
   line-height: 22px;
 }
@@ -6367,6 +6336,14 @@ body #main-footer #copyright .info {
   vertical-align: middle;
   font-size: 1.5em;
 }
+@media (max-width: 767px) {
+  #events #next-event {
+    pading: 0;
+    border: none;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
 #events #next-event .event .title {
   color: #115979;
   font-size: 2em;
@@ -6403,6 +6380,11 @@ body #main-footer #copyright .info {
 }
 #events #next-event > footer {
   bottom: -5px;
+}
+@media (max-width: 767px) {
+  #events #next-event {
+    width: 100%;
+  }
 }
 #events #past-events {
   display: table-cell;
@@ -6457,6 +6439,14 @@ body #main-footer #copyright .info {
   vertical-align: middle;
   font-size: 1.5em;
 }
+@media (max-width: 767px) {
+  #events #past-events {
+    pading: 0;
+    border: none;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
 #events #past-events #event-list {
   margin-left: 0px;
   margin-right: 15px;
@@ -6473,6 +6463,11 @@ body #main-footer #copyright .info {
 }
 #events #past-events #event-list li i {
   color: #32511c;
+}
+@media (max-width: 767px) {
+  #events #past-events {
+    width: 100%;
+  }
 }
 #events #future-topics {
   display: table-cell;
@@ -6526,6 +6521,14 @@ body #main-footer #copyright .info {
   vertical-align: middle;
   font-size: 1.5em;
 }
+@media (max-width: 767px) {
+  #events #future-topics {
+    pading: 0;
+    border: none;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
 #events #future-topics #topic-list {
   margin-left: -20px;
   font-size: 1em;
@@ -6563,4 +6566,11 @@ body #main-footer #copyright .info {
   text-decoration: none;
   color: #9e5114;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  #events {
+    display: auto;
+    height: auto;
+    background-image: none;
+  }
 }
