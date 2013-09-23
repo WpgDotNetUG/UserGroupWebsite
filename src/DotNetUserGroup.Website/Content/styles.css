@@ -5991,6 +5991,11 @@ body > header nav #main-menu #menu .nav li.active a:hover {
     font-size: 1.8em;
   }
 }
+@media (max-width: 1024px) {
+  body > header nav #main-menu #menu {
+    font-size: 1.8em;
+  }
+}
 body > header #social {
   text-align: right;
   height: 40px;
