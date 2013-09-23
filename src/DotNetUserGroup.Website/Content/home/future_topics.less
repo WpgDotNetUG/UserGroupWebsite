@@ -2,14 +2,17 @@
 	.event-box(#ffd7bb, #ffcaa1, #bc8354, #cd8d68);
 	#topic-list {
 		margin-left: -20px;
-		font-size: 1.3em;
+		font-size: 1em;
         padding: 0;
 
 		li {
 			border-top: 1px solid #e1a579;
-			line-height: 35px;
+			line-height: 30px;
 			padding-left: 20px;
 
+            &:last-child {
+                border-bottom: 1px solid #e1a579;
+            }
 			.topic {
 				color: #9e5114;
 				font-weight: 600;
@@ -26,9 +29,12 @@
 				font-size: 0.8em;
 				line-height: 20px;
 				padding: 0px 5px;
+                text-align:center;
+                width: 40px;
 
                 &:hover {
                     text-decoration: none;
+				    color: #9e5114;
                     font-weight:600;
                 }
 			}
