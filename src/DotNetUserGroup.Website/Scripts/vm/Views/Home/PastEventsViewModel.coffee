@@ -3,20 +3,13 @@ class window.PastEventsViewModel
     constructor: ->
         @events = ko.observableArray()
         @organizerUrl = ko.observable('http://www.eventbrite.com/org/1699161450')
-
         UserGroupEvent.findAll
-          success: @processResult
-          complete: => @loading false
+          success: @loadPastEvents
 
-    processResult: (data) =>
-        es = (@mapEvent(e) for e in data when Date.parse(e.Date).compareTo(Date.today()) < 0)
+    loadPastEvents: (events) =>
+        es = (e for e in events when @isInThePast(e))
         @events(es[0..2])
 
-    mapEvent: (e) =>
-     result =
-        Title: e.Title
-        Date: Date.parse(e.Date).toString('MMM dd')
-        Url: "http://www.eventbrite.ca/event/#{e.Id}"
-        Address: e.Address
+    isInThePast: (e) => e.date()?.compareTo(Date.today()) < 0
  
                  

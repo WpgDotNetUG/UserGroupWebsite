@@ -3,8 +3,12 @@
   window.UserGroupEvent = (function() {
 
     function UserGroupEvent(event) {
-      var _ref;
-      this.date = ko.observable(this.formatDate(event.Date));
+      var _ref,
+        _this = this;
+      this.date = ko.observable(event.Date && Date.parse(event.Date));
+      this.fDate = ko.computed(function() {
+        return _this.formatDate(_this.date());
+      });
       this.venue = ko.observable(event.Venue);
       this.address = ko.observable(event.Address);
       this.time = ko.observable(this.formatTime(event));
@@ -14,7 +18,7 @@
     }
 
     UserGroupEvent.prototype.formatDate = function(d) {
-      return d && Date.parse(d).toString('dddd, MMMM dd, yyyy');
+      return d != null ? d.toString('dddd, MMMM dd, yyyy') : void 0;
     };
 
     UserGroupEvent.prototype.formatTime = function(e) {
@@ -31,7 +35,18 @@
       return $.ajax({
         type: 'GET',
         url: '../api/events',
-        success: options.success,
+        success: function(data) {
+          var e;
+          return options.success((function() {
+            var _i, _len, _results;
+            _results = [];
+            for (_i = 0, _len = data.length; _i < _len; _i++) {
+              e = data[_i];
+              _results.push(new UserGroupEvent(e));
+            }
+            return _results;
+          })());
+        },
         error: options.error,
         complete: options.complete
       });

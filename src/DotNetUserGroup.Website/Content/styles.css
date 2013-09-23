@@ -6348,6 +6348,11 @@ body #main-footer #copyright .info {
     width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  #events #past-events #event-list li a {
+    font-size: 1em;
+  }
+}
 #events #future-topics {
   display: table-cell;
   border-right: 2px solid #ebf0f3;

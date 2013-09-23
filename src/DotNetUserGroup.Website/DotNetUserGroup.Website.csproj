@@ -283,13 +283,22 @@
     <Content Include="Scripts\vm\Models\UserGroupEvent.js">
       <DependentUpon>UserGroupEvent.coffee</DependentUpon>
     </Content>
+    <Content Include="Scripts\vm\Models\UserGroupEvent.min.js">
+      <DependentUpon>UserGroupEvent.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\vm\News\News.js">
       <DependentUpon>News.coffee</DependentUpon>
     </Content>
-    <Content Include="Scripts\vm\Views\Home\EventsViewModel.js">
-      <DependentUpon>EventsViewModel.coffee</DependentUpon>
+    <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.js">
+      <DependentUpon>FutureTopicsViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.min.js">
+      <DependentUpon>FutureTopicsViewModel.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\vm\Views\Home\Home.js">
+      <DependentUpon>Home.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\Home.min.js">
       <DependentUpon>Home.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\vm\Views\Home\NewsViewModel.js">
@@ -298,8 +307,14 @@
     <Content Include="Scripts\vm\Views\Home\NextEventViewModel.js">
       <DependentUpon>NextEventViewModel.coffee</DependentUpon>
     </Content>
-    <Content Include="Scripts\vm\Views\Home\TopicsViewModel.js">
-      <DependentUpon>TopicsViewModel.coffee</DependentUpon>
+    <Content Include="Scripts\vm\Views\Home\NextEventViewModel.min.js">
+      <DependentUpon>NextEventViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\PastEventsViewModel.js">
+      <DependentUpon>PastEventsViewModel.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Views\Home\PastEventsViewModel.min.js">
+      <DependentUpon>PastEventsViewModel.coffee</DependentUpon>
     </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -340,11 +355,11 @@
     <Content Include="Views\Shared\_footer.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Scripts\vm\Views\Home\EventsViewModel.coffee" />
+    <Content Include="Scripts\vm\Views\Home\PastEventsViewModel.coffee" />
     <Content Include="Scripts\vm\Views\Home\Home.coffee" />
     <Content Include="Scripts\vm\Views\Home\NewsViewModel.coffee" />
     <Content Include="Scripts\vm\Views\Home\NextEventViewModel.coffee" />
-    <Content Include="Scripts\vm\Views\Home\TopicsViewModel.coffee" />
+    <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.coffee" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

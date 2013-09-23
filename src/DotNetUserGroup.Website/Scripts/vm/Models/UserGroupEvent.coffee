@@ -1,7 +1,8 @@
 class window.UserGroupEvent
 
     constructor: (event) ->
-        @date    = ko.observable @formatDate(event.Date)
+        @date    = ko.observable event.Date && Date.parse(event.Date)
+        @fDate   = ko.computed => @formatDate(@date())
         @venue   = ko.observable event.Venue
         @address = ko.observable event.Address
         @time    = ko.observable @formatTime(event)
@@ -9,7 +10,7 @@ class window.UserGroupEvent
         @title   = ko.observable event.Title
         @description = ko.observable event.Description?.split('\n')[0..0].join('\n') + "..."
 
-    formatDate: (d) -> d && Date.parse(d).toString('dddd, MMMM dd, yyyy')
+    formatDate: (d) -> d?.toString('dddd, MMMM dd, yyyy')
 
     formatTime: (e) -> 
         return unless e.EndDate
@@ -21,7 +22,7 @@ class window.UserGroupEvent
         $.ajax
             type: 'GET'
             url: '../api/events'
-            success: options.success
+            success: (data) -> options.success(new UserGroupEvent(e) for e in data)
             error: options.error
             complete: options.complete
 
