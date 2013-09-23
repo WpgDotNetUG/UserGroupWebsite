@@ -6542,6 +6542,8 @@ body #main-footer #copyright .info {
 #events #future-topics #topic-list li .topic {
   color: #9e5114;
   font-weight: 600;
+  width: 200px;
+  display: inline-block;
 }
 #events #future-topics #topic-list li .vote-topic {
   float: right;
