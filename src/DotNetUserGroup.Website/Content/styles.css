@@ -6212,6 +6212,21 @@ body #main-footer .title {
   font-weight: bold;
   margin-bottom: 10px;
   color: #285670;
+  line-height: 30px;
+  height: 35px;
+}
+body #main-footer .title .text {
+  position: relative;
+  float: left;
+  z-index: 1000;
+  background: #ebf0f3;
+  padding-right: 10px;
+}
+body #main-footer .title .line {
+  background: #285670;
+  height: 2px;
+  position: relative;
+  top: 15px;
 }
 body #main-footer #sponsors .description {
   color: #198cae;
