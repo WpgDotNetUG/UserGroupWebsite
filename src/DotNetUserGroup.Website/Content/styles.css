@@ -6197,6 +6197,15 @@ body #main-footer #copyright .info {
   font-size: 1.5em;
 }
 @media (max-width: 767px) {
+  #events #next-event > header {
+    font-size: 1.5em;
+  }
+  #events #next-event .content,
+  #events #next-event ul {
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
   #events #next-event {
     pading: 0;
     border: none;
@@ -6228,7 +6237,7 @@ body #main-footer #copyright .info {
 }
 #events #next-event .event .location .image {
   font-size: 2em;
-  display: inline-block;
+  display: table-cell;
   margin: 10px 10px 5px 0px;
   text-align: center;
   width: 40px;
@@ -6240,7 +6249,8 @@ body #main-footer #copyright .info {
 }
 #events #next-event .event .location .venue,
 #events #next-event .event .location .calendar {
-  display: inline-block;
+  display: table-cell;
+  vertical-align: top;
 }
 #events #next-event .event .location .venue div:first-child,
 #events #next-event .event .location .calendar div:first-child {
@@ -6311,6 +6321,15 @@ body #main-footer #copyright .info {
   margin-left: 5px;
   vertical-align: middle;
   font-size: 1.5em;
+}
+@media (max-width: 767px) {
+  #events #past-events > header {
+    font-size: 1.5em;
+  }
+  #events #past-events .content,
+  #events #past-events ul {
+    height: auto;
+  }
 }
 @media (max-width: 767px) {
   #events #past-events {
@@ -6411,6 +6430,15 @@ body #main-footer #copyright .info {
   margin-left: 5px;
   vertical-align: middle;
   font-size: 1.5em;
+}
+@media (max-width: 767px) {
+  #events #future-topics > header {
+    font-size: 1.5em;
+  }
+  #events #future-topics .content,
+  #events #future-topics ul {
+    height: auto;
+  }
 }
 @media (max-width: 767px) {
   #events #future-topics {
