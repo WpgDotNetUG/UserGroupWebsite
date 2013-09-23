@@ -42,16 +42,7 @@ body
 
 			#main-menu {
 
-				#menu-mobile {
-					.visible-xs;
-				}
-
-				#menu-tablet {
-					.visible-md;
-				}
-
 				#menu {
-					.visible-lg;
 					font-size: 2em;
 					margin: 40px 0 0;
 					.nav {
@@ -77,6 +68,14 @@ body
 					}
 				}
 			}
+
+            @media (max-width: 767px) {
+                #main-menu {
+                    #menu {
+                        font-size: 1.8em;
+                    }
+                }
+            }
 		}
 
 
