@@ -9,6 +9,7 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body class="mobile">
+        @{ ViewBag.IsMobile = true; }
         @{ Html.RenderPartial("_navigation"); }
 
         <section class="container">
@@ -16,7 +17,6 @@
         </section>
          
         @{ Html.RenderPartial("_footer"); }
-        <h1>This is the mobile layout!</h1>
 
         @Scripts.Render("~/scripts/date.js")
         @Scripts.Render("~/bundles/jquery")
