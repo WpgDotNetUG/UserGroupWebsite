@@ -46,7 +46,11 @@
         <div class="divider"></div>
         <section class="info">
             &copy; Winnipeg Dot Net User Group 2013 
-            - 
+            <br/> 
+            @if (ViewBag.IsMobile == true)
+            {
+                @: mobile -
+            }
             v3.0
             - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
         </section>
@@ -63,10 +67,11 @@
 
 @helper NonLocalSponsors() {
     @Sponsor("http://www.ineta.org", "Ineta-Logo.png", "INETA")
-    @Sponsor("http://manning.com", "manning.jpg", "Manning")
+    @Sponsor("http://www.jetbrains.com", "jetbrains_logo.png", "Jetbrains")
+    @* @Sponsor("http://manning.com", "manning.jpg", "Manning")
     @Sponsor("http://msdn.microsoft.com", "Msdn-Logo.png", "MSDN")
     @Sponsor("http://www.pluralsight-training.net/microsoft/", "pluralsight-logo-for-sponsorships-small.png", "Pluralsight")
-    @Sponsor("http://oreilly.com/", "oreilly.gif", "O'Reilly")
+    @Sponsor("http://oreilly.com/", "oreilly.gif", "O'Reilly") *@
 }
 
 @helper Sponsor(string url, string img, string alt)
