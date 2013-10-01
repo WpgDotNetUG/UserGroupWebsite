@@ -9,6 +9,7 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body class="mobile">
+        @{ ViewBag.IsMobile = true; }
         @{ Html.RenderPartial("_navigation"); }
 
         <section class="container">
