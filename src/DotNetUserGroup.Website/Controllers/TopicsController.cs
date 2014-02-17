@@ -19,5 +19,10 @@ namespace DotNetUserGroup.Website.Controllers
         {
             return _repository.All(); //.OrderByDescending(t => t.Votes);
         }
+
+        public IEnumerable<FutureTopicInfo> Get(int count)
+        {
+            return _repository.All().Take(count);
+        } 
     }
 }
