@@ -187,6 +187,7 @@
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\slippry-1.2.css" />
     <Content Include="Content\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
@@ -285,6 +286,13 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\less-1.4.1.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\slippry-1.2.min.js" />
+    <Content Include="Scripts\vm\Models\FutureTopic.js">
+      <DependentUpon>FutureTopic.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vm\Models\FutureTopic.min.js">
+      <DependentUpon>FutureTopic.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\vm\Models\UserGroupEvent.js">
       <DependentUpon>UserGroupEvent.coffee</DependentUpon>
     </Content>
@@ -351,6 +359,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.coffee" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\vm\Models\FutureTopic.coffee" />
     <None Include="Scripts\vm\News\News.coffee" />
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />

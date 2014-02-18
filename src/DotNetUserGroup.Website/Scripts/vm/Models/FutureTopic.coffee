@@ -12,4 +12,4 @@ class window.FutureTopic
             url: '../api/topics'
             success: (data) -> options.success(new FutureTopic(e) for e in data)
             error: options.error
-            complete: options.complete
+            complete: options.complete 
