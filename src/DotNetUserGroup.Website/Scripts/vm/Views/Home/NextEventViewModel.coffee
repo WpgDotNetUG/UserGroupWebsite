@@ -20,7 +20,10 @@ class window.NextEventViewModel
         @event nextEvents[0] unless @eventPending()
         
     loadTopics: (topics) =>
-        @topics(topics[0..3])
+        @topics(topics[0..7])
+        $('.sy-list').slippry({
+            adaptiveHeight: false
+        });
                  
     hasNotHappened: (e) -> e.date()?.compareTo(Date.today()) > 0
 

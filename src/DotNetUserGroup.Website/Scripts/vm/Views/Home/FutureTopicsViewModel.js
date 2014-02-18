@@ -8,6 +8,7 @@
 
       var _this = this;
       this.topics = ko.observableArray();
+      this.loading = ko.observable(true);
       FutureTopic.findAll({
         success: this.loadTopics,
         complete: function() {

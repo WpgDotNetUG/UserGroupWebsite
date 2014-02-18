@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
 
   $(function() {
     ko.applyBindings(new NextEventViewModel(), $('#next-event')[0]);

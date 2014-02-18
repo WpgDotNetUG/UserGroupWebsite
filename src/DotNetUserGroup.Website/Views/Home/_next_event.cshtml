@@ -7,14 +7,11 @@
             <!-- /ko -->
             <!-- ko if: !loading() && eventPending -->
             We are currently planning the next event, please vote on the topics you would like to see!
-            <ul id="topic-list" data-bind="foreach: topics">
+            <ul id="topic-list" class="sy-list" data-bind="foreach: topics">
                 <li>
                     <article class="topic">
-                        <header data-bind="text: Title"></header>
-                        <p data-bind="text: Summary"></p>
-                        <footer>
-                            <a href="#" class="vote-topic" data-bind="attr: { href: Url }" target="_blank">Vote</a>
-                        </footer>
+                        <header data-bind="text: title"></header>
+                        <p data-bind="html: summary"></p>
                     </article>
                 </li>
             </ul>

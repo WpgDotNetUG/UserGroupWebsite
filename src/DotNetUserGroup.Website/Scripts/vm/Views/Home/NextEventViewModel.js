@@ -47,7 +47,10 @@
     };
 
     NextEventViewModel.prototype.loadTopics = function(topics) {
-      return this.topics(topics.slice(0, 4));
+      this.topics(topics.slice(0, 8));
+      return $('.sy-list').slippry({
+        adaptiveHeight: false
+      });
     };
 
     NextEventViewModel.prototype.hasNotHappened = function(e) {

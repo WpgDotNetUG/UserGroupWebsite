@@ -184,6 +184,8 @@
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\slippry-1.2.css" />
+    <Content Include="Scripts\slippry-1.2.min.js" />
     <Content Include="Content\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>

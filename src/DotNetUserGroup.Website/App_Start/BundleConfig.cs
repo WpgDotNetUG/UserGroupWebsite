@@ -21,9 +21,13 @@ namespace DotNetUserGroup.Website.App_Start
                             .Include("~/Scripts/vm/Views/Home/*.js")
                 );
 
+            bundles.Add(new ScriptBundle("~/bundles/slippry")
+                            .Include("~/Scripts/slippry-1.2.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css")
                             .Include("~/Content/font-awesome.css",
-                                     "~/Content/styles.css"));
+                                     "~/Content/styles.css",
+                                     "~/Content/slippry-1.2.css"));
         }
     }
 }

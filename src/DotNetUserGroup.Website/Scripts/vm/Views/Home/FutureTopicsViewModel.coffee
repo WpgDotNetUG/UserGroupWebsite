@@ -2,6 +2,7 @@ class window.FutureTopicsViewModel
 
 	constructor: ->
 		@topics = ko.observableArray()
+		@loading = ko.observable(true)
 		
 		FutureTopic.findAll
           success: @loadTopics
