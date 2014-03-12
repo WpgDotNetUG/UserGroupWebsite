@@ -11,7 +11,7 @@
       this.loading = ko.observable(true);
       FutureTopic.findAll({
         success: this.loadTopics,
-        complete: function() {
+        done: function() {
           return _this.loading(false);
         }
       });

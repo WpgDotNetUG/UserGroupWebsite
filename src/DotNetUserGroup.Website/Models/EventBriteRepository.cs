@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Configuration;
 using EasyHttp.Http;
 
@@ -11,29 +12,15 @@ namespace DotNetUserGroup.Website.Models
 
         public IEnumerable<UserGroupEvent> All()
         {
-            var result = new List<UserGroupEvent>();
+            IEnumerable<UserGroupEvent> result;
 
             var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
 
             try
             {
-                foreach (var e in response.events)
-                {
-                    var @event = e.@event;
-                    var venue = @event.venue;
-                    result.Add(new UserGroupEvent
-                    {
-                        Title = @event.title,
-                        Date = DateTime.Parse(@event.start_date),
-                        EndDate = DateTime.Parse(@event.end_date),
-                        Status = @event.status,
-                        Id = @event.id,
-                        Address = venue.address,
-                        Venue = venue.name,
-                        Description = @event.description
-                    });
-                }
+                var events = (IEnumerable<dynamic>) response.events;
 
+                result = events.Select(CreateEvent);
             }
             catch (Exception e)
             {
@@ -44,6 +31,23 @@ namespace DotNetUserGroup.Website.Models
             }
 
             return result;
+        }
+
+        private static UserGroupEvent CreateEvent(dynamic e)
+        {
+            var @event = e.@event;
+            var venue = @event.venue;
+            return new UserGroupEvent
+            {
+                Title = @event.title,
+                Date = DateTime.Parse(@event.start_date),
+                EndDate = DateTime.Parse(@event.end_date),
+                Status = @event.status,
+                Id = @event.id,
+                Address = venue.address,
+                Venue = venue.name,
+                Description = @event.description
+            };
         }
 
         private static HttpResponse Request(string method, object configuration)

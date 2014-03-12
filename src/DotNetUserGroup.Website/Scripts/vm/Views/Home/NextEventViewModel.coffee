@@ -2,9 +2,9 @@ class window.NextEventViewModel
 
     constructor: ->
         @event = ko.observable UserGroupEvent.Empty()
-        @eventPending = ko.observable(true)
-        @loading = ko.observable(true)
         @topics = ko.observableArray()
+        @loading = ko.observable true
+        @eventPending = ko.observable true
 
         UserGroupEvent.findAll
           success: @loadNextEvent
@@ -15,15 +15,12 @@ class window.NextEventViewModel
           complete: => @loading false
 
     loadNextEvent: (events) =>
-        nextEvents = (e for e in events when @hasNotHappened(e))
-        @eventPending(nextEvents.length == 0)
-        @event nextEvents[0] unless @eventPending()
+        liveEvents = (e for e in events when e.isLive())
+        @eventPending liveEvents.length == 0
+        @event liveEvents[liveEvents.length - 1] unless @eventPending()
         
     loadTopics: (topics) =>
-        @topics(topics[0..7])
-        $('.sy-list').slippry({
-            adaptiveHeight: false
-        });
+      @topics(topics[0..7])
+      $('.sy-list').slippry(adaptiveHeight: false)
                  
-    hasNotHappened: (e) -> e.date()?.compareTo(Date.today()) > 0
 

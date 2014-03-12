@@ -10,9 +10,9 @@
 
       var _this = this;
       this.event = ko.observable(UserGroupEvent.Empty());
-      this.eventPending = ko.observable(true);
-      this.loading = ko.observable(true);
       this.topics = ko.observableArray();
+      this.loading = ko.observable(true);
+      this.eventPending = ko.observable(true);
       UserGroupEvent.findAll({
         success: this.loadNextEvent,
         complete: function() {
@@ -28,21 +28,21 @@
     }
 
     NextEventViewModel.prototype.loadNextEvent = function(events) {
-      var e, nextEvents;
-      nextEvents = (function() {
+      var e, liveEvents;
+      liveEvents = (function() {
         var _i, _len, _results;
         _results = [];
         for (_i = 0, _len = events.length; _i < _len; _i++) {
           e = events[_i];
-          if (this.hasNotHappened(e)) {
+          if (e.isLive()) {
             _results.push(e);
           }
         }
         return _results;
-      }).call(this);
-      this.eventPending(nextEvents.length === 0);
+      })();
+      this.eventPending(liveEvents.length === 0);
       if (!this.eventPending()) {
-        return this.event(nextEvents[0]);
+        return this.event(liveEvents[liveEvents.length - 1]);
       }
     };
 
@@ -51,11 +51,6 @@
       return $('.sy-list').slippry({
         adaptiveHeight: false
       });
-    };
-
-    NextEventViewModel.prototype.hasNotHappened = function(e) {
-      var _ref;
-      return ((_ref = e.date()) != null ? _ref.compareTo(Date.today()) : void 0) > 0;
     };
 
     return NextEventViewModel;
