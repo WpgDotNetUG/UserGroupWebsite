@@ -2,4 +2,11 @@ class window.FutureTopicsViewModel
 
 	constructor: ->
 		@topics = ko.observableArray()
-		$.getJSON '../api/topics', (data) => @topics(data[0..4])
+		@loading = ko.observable(true)
+		
+		FutureTopic.findAll
+          success: @loadTopics
+          complete: => @loading false
+		
+	loadTopics: (topics) =>
+	    @topics(topics[0..4])

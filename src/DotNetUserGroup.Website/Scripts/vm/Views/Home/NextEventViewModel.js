@@ -1,17 +1,26 @@
-﻿(function() {
+(function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   window.NextEventViewModel = (function() {
 
     function NextEventViewModel() {
+      this.loadTopics = __bind(this.loadTopics, this);
+
       this.loadNextEvent = __bind(this.loadNextEvent, this);
 
       var _this = this;
       this.event = ko.observable(UserGroupEvent.Empty());
       this.eventPending = ko.observable(true);
       this.loading = ko.observable(true);
+      this.topics = ko.observableArray();
       UserGroupEvent.findAll({
         success: this.loadNextEvent,
+        complete: function() {
+          return _this.loading(false);
+        }
+      });
+      FutureTopic.findAll({
+        success: this.loadTopics,
         complete: function() {
           return _this.loading(false);
         }
@@ -35,6 +44,13 @@
       if (!this.eventPending()) {
         return this.event(nextEvents[0]);
       }
+    };
+
+    NextEventViewModel.prototype.loadTopics = function(topics) {
+      this.topics(topics.slice(0, 8));
+      return $('.sy-list').slippry({
+        adaptiveHeight: false
+      });
     };
 
     NextEventViewModel.prototype.hasNotHappened = function(e) {

@@ -7,7 +7,8 @@ namespace DotNetUserGroup.Website.Models
 {
     public class IdeaScaleRepository : IRepository<FutureTopicInfo>
     {
-        private const string URL = "http://wpgdotnet.ideascale.com/userimages/accounts/90/909119/ideascale_top_20115.xml";
+        private const string URL =
+            "http://wpgdotnet.ideascale.com/userimages/accounts/90/909119/ideascale_top_20115.xml";
 
         public IEnumerable<FutureTopicInfo> All()
         {
@@ -18,14 +19,15 @@ namespace DotNetUserGroup.Website.Models
         {
             var feed = XmlReader.Create(URL);
             var topics = SyndicationFeed.Load(feed);
-	    feed.Close();
+            feed.Close();
 
             if (topics != null)
             {
                 return topics.Items.Select(x => new FutureTopicInfo
                     {
                         Topic = x.Title.Text,
-			Url = x.Links[0].Uri.ToString(),
+                        Summary = x.Summary.Text,
+                        Url = x.Links[0].Uri.ToString(),
                         Votes = 0,
                     });
             }
