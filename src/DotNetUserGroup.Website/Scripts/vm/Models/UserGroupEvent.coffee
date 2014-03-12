@@ -6,10 +6,17 @@ class window.UserGroupEvent
         @venue   = ko.observable event.Venue
         @address = ko.observable event.Address
         @time    = ko.observable @formatTime(event)
+        @status  = ko.observable event.Status
         @url     = ko.observable "http://www.eventbrite.ca/event/#{event.Id}"
         @title   = ko.observable event.Title
         @description = ko.observable event.Description?.split('\n')[0..0].join('\n') + "..."
 
+    isLive: => @status() == 'Live'
+    
+    isDraft: => @status() == 'Draft'
+    
+    isCompleted: => @status() == 'Completed'
+      
     formatDate: (d) -> d?.toString('dddd, MMMM dd, yyyy')
 
     formatTime: (e) -> 
