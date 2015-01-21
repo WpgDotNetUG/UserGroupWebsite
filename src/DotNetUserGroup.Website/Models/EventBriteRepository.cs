@@ -66,9 +66,8 @@ namespace DotNetUserGroup.Website.Models
         {
             var config = new
             {
-                user_id = "1699161450",
-                app_key = "5Y5L66JDTZCGWRMJTQ", //GetConfig("EB_APP_KEY"),
-                user_key = "134547350638849525978" //GetConfig("EB_USER_KEY")
+                app_key = GetConfig("EB_APP_KEY"),
+                user_key = GetConfig("EB_USER_KEY")
             };
 
             return config;

@@ -15,7 +15,7 @@ namespace DotNetUserGroup.Website.Models
             IEnumerable<UserGroupEvent> result;
 
             //var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
-            var response = Request("v3/events/search", LoadConfiguration()).DynamicBody;
+            var response = Request("v3/users/me/owned_events", LoadConfiguration()).DynamicBody;
             
             try
             {
@@ -66,8 +66,7 @@ namespace DotNetUserGroup.Website.Models
         {
             var config = new
             {
-                token = "PZNTETXGHOASK47KM7NQ",
-                q = "The Real Story by D'Arcy Lussier"
+                token = GetConfig("EB_TOKEN")
             };
 
             return config;
