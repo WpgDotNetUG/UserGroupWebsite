@@ -217,6 +217,7 @@
     <Content Include="Images\logo_2013.png" />
     <Content Include="Images\manning.jpg" />
     <Content Include="Images\Msdn-Logo.png" />
+    <Content Include="Images\MSFT.png" />
     <Content Include="Images\obs-logo.png" />
     <Content Include="Images\oreilly.gif" />
     <Content Include="Images\pluralsight-logo-for-sponsorships-small.png" />
