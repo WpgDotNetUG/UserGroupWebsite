@@ -6,16 +6,16 @@ using EasyHttp.Http;
 
 namespace DotNetUserGroup.Website.Models
 {
-    public class EventBriteRepository : IRepository<UserGroupEvent>
+    public class EventBriteRepositoryV3 : IRepository<UserGroupEvent>
     {
-        private const string Url = "https://www.eventbrite.com/json/";
+        private const string Url = "https://www.eventbriteapi.com/";
 
         public IEnumerable<UserGroupEvent> All()
         {
             IEnumerable<UserGroupEvent> result;
 
             //var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
-            var response = Request("user_get", LoadConfiguration()).DynamicBody;
+            var response = Request("v3/events/search", LoadConfiguration()).DynamicBody;
             
             try
             {
@@ -66,9 +66,8 @@ namespace DotNetUserGroup.Website.Models
         {
             var config = new
             {
-                user_id = "1699161450",
-                app_key = "5Y5L66JDTZCGWRMJTQ", //GetConfig("EB_APP_KEY"),
-                user_key = "134547350638849525978" //GetConfig("EB_USER_KEY")
+                token = "PZNTETXGHOASK47KM7NQ",
+                q = "The Real Story by D'Arcy Lussier"
             };
 
             return config;

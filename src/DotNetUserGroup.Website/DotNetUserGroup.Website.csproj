@@ -165,6 +165,7 @@
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="Controllers\PageNewsController.cs" />
+    <Compile Include="Models\EventBriteRepositoryV3.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\NewsArticleRepository.cs" />
