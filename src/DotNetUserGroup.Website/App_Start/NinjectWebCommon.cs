@@ -64,7 +64,7 @@ namespace DotNetUserGroup.Website.App_Start
         private static void RegisterServices(IBindingRoot kernel)
         {
             kernel.Bind<IRepository<UserGroupEvent>>()
-                .To<EventBriteRepositoryV3>()
+                .To<EventBriteRepository>()
                 .InTransientScope();
 
             kernel.Bind<IRepository<FutureTopicInfo>>()
