@@ -15,7 +15,7 @@ namespace DotNetUserGroup.Website.Models
             IEnumerable<UserGroupEvent> result;
 
             //var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
-            var response = Request("user_get", LoadConfiguration()).DynamicBody;
+            var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
             
             try
             {
@@ -66,7 +66,7 @@ namespace DotNetUserGroup.Website.Models
         {
             var config = new
             {
-                app_key = GetConfig("EB_APP_KEY"),
+                app_key =  GetConfig("EB_APP_KEY"),
                 user_key = GetConfig("EB_USER_KEY")
             };
 

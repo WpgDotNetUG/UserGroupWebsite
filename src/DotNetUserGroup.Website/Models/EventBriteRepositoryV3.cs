@@ -8,14 +8,13 @@ namespace DotNetUserGroup.Website.Models
 {
     public class EventBriteRepositoryV3 : IRepository<UserGroupEvent>
     {
-        private const string Url = "https://www.eventbriteapi.com/";
+        private const string Url = "https://www.eventbriteapi.com";
 
         public IEnumerable<UserGroupEvent> All()
         {
             IEnumerable<UserGroupEvent> result;
 
-            //var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
-            var response = Request("v3/users/me/owned_events", LoadConfiguration()).DynamicBody;
+            var response = Request("v3/users/me/owned_events").DynamicBody;
             
             try
             {
@@ -51,25 +50,15 @@ namespace DotNetUserGroup.Website.Models
             };
         }
 
-        private static HttpResponse Request(string method, object configuration)
+        private static HttpResponse Request(string method)
         {
             var http = new HttpClient();
 
             http.Request.Accept = HttpContentTypes.ApplicationJson;
 
-            var response = http.Get(Url + "/" + method, configuration);
+            var response = http.Get(Url + "/" + method, new { token = GetConfig("EB_TOKEN") });
 
             return response;
-        }
-
-        private static object LoadConfiguration()
-        {
-            var config = new
-            {
-                token = GetConfig("EB_TOKEN")
-            };
-
-            return config;
         }
 
         private static string GetConfig(string key)
