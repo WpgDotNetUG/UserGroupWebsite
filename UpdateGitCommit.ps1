@@ -1,7 +1,8 @@
-﻿Write-Output "DEPLOYMENT_TARGET: '$env:DEPLOYMENT_TARGET'"
+﻿param($Commit)
 
-Write-Output "SVC_COMMIT_ID: '$env:SVC_COMMIT_ID'"
+Write-Output "DEPLOYMENT_TARGET: '$env:DEPLOYMENT_TARGET'"
 
+Write-Output "Commit: '$Commit'"
 
 $webConfig = "$env:DEPLOYMENT_TARGET\Web.config"
 
@@ -9,7 +10,7 @@ $doc = (Get-Content $webConfig) -as [Xml]
 
 $node = $doc.configuration.appSettings.add | where Key -EQ "appharbor.commit_id"
 
-$node.Value = $env:SVC_COMMIT_ID
+$node.Value = $Commit
 
 $doc.Save($webConfig)
 
