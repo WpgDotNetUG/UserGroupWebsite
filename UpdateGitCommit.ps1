@@ -3,7 +3,6 @@
 Write-Output "SVC_COMMIT_ID: '$env:SVC_COMMIT_ID'"
 
 
-
 $webConfig = "$env:DEPLOYMENT_TARGET\Web.config"
 
 $doc = (Get-Content $webConfig) -as [Xml]
