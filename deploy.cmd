@@ -94,7 +94,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 :: Post deployment stub
 
-call "PS %DEPLOYMENT_SOURCE%\UpdateGitCommit.ps1"
+@powershell -File "%DEPLOYMENT_SOURCE%\UpdateGitCommit.ps1"
 IF !ERRORLEVEL! NEQ 0 goto error
 
 goto end
