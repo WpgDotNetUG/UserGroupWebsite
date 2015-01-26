@@ -96,6 +96,9 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 IF DEFINED POST_DEPLOYMENT_ACTION call "%POST_DEPLOYMENT_ACTION%"
 IF !ERRORLEVEL! NEQ 0 goto error
 
+PS UpdateGitCommit.ps1
+IF !ERRORLEVEL! NEQ 0 goto error
+
 goto end
 
 :: Execute command routine that will echo out when error
