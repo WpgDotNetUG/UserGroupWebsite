@@ -27,20 +27,26 @@
 				   href="https://twitter.com/wpgnetug" data-widget-id="381816139803684864">Tweets by @@wpgnetug</a>
 				   <hr/>
 				<section class="title">
-					<div class="text">Join the discussion on Slack</div>
+					<div class="text">join the discussion on slack</div>
 					<div class="line"></div>
 					<form action="/Home/Signup" method="POST">
 						<input name="email" class="input" type="email" placeholder="you@yourdomain.com" />
-						<input type="submit" />
+						<button type="submit" class=" slack-submit"><i class="icon-chevron-sign-right"></i></button>
 					</form>
-					<p class="bg-danger">
-						@Html.ValidationSummary(true)
-						@ViewBag.Error
-					</p>
-					<p class="bg-success">
+					@if (!string.IsNullOrEmpty(@ViewBag.Error))
+					{
+						<p class="slack-signup-error">
+							<i class="fa icon-exclamation-sign"></i>
+							@ViewBag.Error  Error.
+						</p>
+					}
+					@if (!string.IsNullOrEmpty(@ViewBag.Success))
+					{
+					<p class="slack-signup-success">
+						<i class="fa icon-check-sign"></i>
 						@ViewBag.Success
 					</p>
-
+					}
 
 				</section>
 			</article>

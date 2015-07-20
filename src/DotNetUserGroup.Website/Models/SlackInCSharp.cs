@@ -13,8 +13,8 @@ namespace DotNetUserGroup.Website.Models
 
 		public SlackInCSharp()
 		{
-			var org = ConfigurationManager.AppSettings["org"] ?? "wpgdotnet";
-			var token = ConfigurationManager.AppSettings["token"];
+			var org = ConfigurationManager.AppSettings["SlackOrg"] ?? "wpgdotnet";
+			var token = ConfigurationManager.AppSettings["SlackToken"];
 			_uri = string.Format(UrlFormat, org, token);
 		}
 

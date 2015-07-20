@@ -284,6 +284,9 @@
     <Content Include="Content\home\news.less" />
     <Content Include="Content\home\next_event.less" />
     <Content Include="Content\home\past_events.less" />
+    <Content Include="Content\styles.css.map">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
