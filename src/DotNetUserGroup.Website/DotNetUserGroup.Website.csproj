@@ -168,6 +168,7 @@
     <Compile Include="Models\EventBriteRepositoryV3.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
     <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\ISlackInc.cs" />
     <Compile Include="Models\NewsArticleRepository.cs" />
     <Compile Include="Models\EventBriteRepository.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Models\LogEvent.cs" />
+    <Compile Include="Models\SlackInCSharp.cs" />
     <Compile Include="Models\UserGroupEvent.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\FutureTopicInfo.cs" />
@@ -376,6 +378,7 @@
     <Content Include="Scripts\vm\Views\Home\NextEventViewModel.coffee" />
     <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.coffee" />
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
+    <Content Include="Views\Home\slackin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
