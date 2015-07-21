@@ -5858,29 +5858,6 @@ td.visible-print {
 body {
   background: #ebf0f3;
 }
-.slack-submit {
-  font-size: 1.2em;
-}
-.slack-signup-error {
-  background-color: #f2dede;
-  border: 4px solid #eed3d7;
-  border-radius: 5px;
-  color: #b94a48;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 10px;
-  margin-top: 10px;
-}
-.slack-signup-success {
-  background-color: #dff0d8;
-  border: 4px solid #d6e9c6;
-  border-radius: 5px;
-  color: #468847;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 10px;
-  margin-top: 10px;
-}
 body .divider {
   height: 4px;
   background: #d3dddf;
@@ -5892,6 +5869,7 @@ body > header {
   margin-bottom: 40px;
 }
 body > header nav {
+  clear: both;
   border: none;
   margin-bottom: 0px !important;
 }
@@ -5945,10 +5923,50 @@ body > header nav #main-menu #menu .nav li.active a {
 body > header nav #main-menu #menu .nav li.active a:hover {
   text-decoration: none;
 }
+body > header .slack {
+  color: #999999;
+  background: #ebf0f3;
+  border-bottom: 2px solid #d5e0e4;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+body > header .slack img {
+  height: 35px;
+}
+body > header .slack form {
+  display: inline-block;
+}
+body > header .slack form input {
+  width: auto;
+}
+body > header .slack .slack-submit {
+  font-size: 1.2em;
+}
+body > header .slack .slack-signup-error {
+  background-color: #f2dede;
+  border: 4px solid #eed3d7;
+  border-radius: 5px;
+  color: #b94a48;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+}
+body > header .slack .slack-signup-success {
+  background-color: #dff0d8;
+  border: 4px solid #d6e9c6;
+  border-radius: 5px;
+  color: #468847;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+}
 body > header #social {
   text-align: right;
   height: 40px;
-  padding-top: 10px;
+  /*padding-top:10px;*/
 }
 body > header #social a {
   color: #999999;
