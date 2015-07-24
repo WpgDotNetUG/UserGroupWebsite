@@ -5858,6 +5858,9 @@ td.visible-print {
 body {
   background: #ebf0f3;
 }
+.slack-button {
+  background-color: #ebf0f3;
+}
 body .divider {
   height: 4px;
   background: #d3dddf;
