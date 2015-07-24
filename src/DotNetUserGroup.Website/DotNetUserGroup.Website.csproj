@@ -226,7 +226,7 @@
     <Content Include="Images\oreilly.gif" />
     <Content Include="Images\pluralsight-logo-for-sponsorships-small.png" />
     <Content Include="Images\Protegra-Logo.png" />
-    <Content Include="Images\Slack Monochrome.png" />
+    <Content Include="Images\slack-monochrome-small.png" />
     <Content Include="Images\Telerik-logo.jpg" />
     <Content Include="Images\wpg_bridge.jpg" />
     <Content Include="Scripts\bootstrap.js" />
