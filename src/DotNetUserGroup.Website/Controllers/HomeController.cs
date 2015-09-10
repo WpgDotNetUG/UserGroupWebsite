@@ -15,6 +15,11 @@ namespace DotNetUserGroup.Website.Controllers
             return View();
         }
 
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
 		[HttpPost]
 		public ActionResult Signup(string email)
 		{

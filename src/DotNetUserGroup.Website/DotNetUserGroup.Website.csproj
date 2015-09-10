@@ -388,6 +388,7 @@
     <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.coffee" />
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
     <Content Include="Views\Home\slackin.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
