@@ -5991,6 +5991,9 @@ body > header #social .icon-twitter {
 body > header #social .icon-github {
   color: #555555;
 }
+body > header #social .icon-facebook-sign {
+  color: #3a5795;
+}
 @media (max-width: 767px) {
   body.mobile #main-menu #menu {
     font-size: 1.5em;
