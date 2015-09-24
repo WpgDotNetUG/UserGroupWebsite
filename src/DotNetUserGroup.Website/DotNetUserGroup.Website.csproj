@@ -193,6 +193,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\contactus\amir.jpg" />
+    <Content Include="Content\contactus\david.jpg" />
+    <Content Include="Content\contactus\placeholder-profile_100px.png" />
+    <Content Include="Content\contactus\roy.png" />
+    <Content Include="Content\contactus\tyler.jpg" />
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -209,6 +214,7 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
     <Content Include="Images\Apptius-Logo.png" />
     <Content Include="Images\DiscountAspNet-Logo.png" />
     <Content Include="Images\dmt.jpg" />
@@ -292,6 +298,8 @@
     <Content Include="Content\styles.css.map">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="Content\contactus.less" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -389,6 +397,7 @@
     <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.coffee" />
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
     <Content Include="Views\Home\slackin.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

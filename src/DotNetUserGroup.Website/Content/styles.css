@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Bootstrap v3.0.0
  *
  * Copyright 2013 Twitter, Inc
@@ -2146,8 +2146,8 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('fonts/glyphicons-halflings-regular.eot');
-  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6504,4 +6504,36 @@ body #main-footer #copyright .info {
     background-image: none;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+body #contact {
+  margin: 10px auto 50px auto;
+}
+body #contact .title {
+  font-size: 2.0em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #285670;
+  line-height: 30px;
+  height: 35px;
+}
+body #contact .title .text {
+  position: relative;
+  float: left;
+  z-index: 1000;
+  background: #ebf0f3;
+  padding-right: 10px;
+}
+body #contact .title .line {
+  background: #285670;
+  height: 2px;
+  position: relative;
+  top: 15px;
+}
+body #contact .description {
+  color: #198cae;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  padding: 15px 15px;
+}
+body #contact .description a {
+  color: #0f566b;
+}
