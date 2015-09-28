@@ -17,6 +17,10 @@
                 <i class="icon-twitter"></i>
                 Follow us on Twitter
             </a>
+            <a href="https://www.facebook.com/winnipegdotnet" target="_blank">
+                <i class="icon-facebook-sign"></i>
+                Like us on Facebook
+            </a>
             <a href="https://github.com/WpgDotNetUG/UserGroupWebsite" target="_blank">
                 <i class="icon-github"></i>
                 Fork me on GitHub
@@ -44,9 +48,10 @@
 {
     var newsSelected = ViewBag.Menu == "News" ? "active" : null;
     <ul class="nav">
+        <li>@Html.ActionLink(".home", "Index", "Home")</li>
         <li><a href="http://www.eventbrite.com/org/1699161450" target="_blank">.events</a></li>
         <li><a href="http://wpgdotnet.ideascale.com/" target="_blank">.topics</a></li>
         <!-- <li class="@newsSelected"><a href="/pagenews">.news</a></li> -->
-        <li><a href="mailto: winnipegdotnet@gmail.com">.contact</a></li>
+        <li>@Html.ActionLink(".contact", "ContactUs", "Home")</li>
     </ul>
 }

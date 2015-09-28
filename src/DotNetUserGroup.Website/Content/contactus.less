@@ -1,0 +1,40 @@
+﻿body {
+    #contact {
+        margin: 10px auto 50px auto;
+   
+		.title {
+			font-size: 2.0em;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: @blue-deep;
+            line-height:30px;
+            height: 35px;
+
+            .text {
+                position:relative;
+                float:left;
+                z-index: 1000;
+                background:@blue-background;
+                padding-right: 10px;
+            }
+
+            .line {
+               background:@blue-deep;
+               height:2px;
+               position:relative;
+               top:15px;
+            }
+		}
+
+		.description {
+			color: @blue-text;
+			font-size: 1.5em;
+			line-height: 1.25em;
+            padding: 15px 15px;
+
+			a {
+				color: darken(@blue-text, 15%);
+			}
+		}
+    }
+}
