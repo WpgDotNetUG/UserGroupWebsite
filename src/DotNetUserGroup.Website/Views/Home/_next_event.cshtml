@@ -6,15 +6,7 @@
             <i class="icon-spin icon-spinner"></i>
             <!-- /ko -->
             <!-- ko if: !loading() && eventPending -->
-            We are currently planning the next event, please vote on the topics you would like to see!
-            <ul id="topic-list" class="sy-list" data-bind="foreach: topics">
-                <li>
-                    <article class="topic">
-                        <header data-bind="text: title"></header>
-                        <p data-bind="html: summary"></p>
-                    </article>
-                </li>
-            </ul>
+            We are currently planning the next event, please vote on the topics you would like to see on the <a href="http://wpgdotnet.ideascale.com/" target="_blank">future topics</a> page.
             <!-- /ko -->
             <!-- ko ifnot: eventPending -->
             <!-- ko with: event -->
