@@ -8,7 +8,7 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4C834210-2E1D-42CA-A78D-18A90AD2017F}</ProjectGuid>
-    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DotNetUserGroup.Website</RootNamespace>
@@ -23,6 +23,13 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,6 +70,10 @@
       <HintPath>..\..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -118,7 +129,9 @@
     <Reference Include="System.Web.Optimization">
       <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web" />
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -139,10 +152,6 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WebActivator, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -157,8 +166,10 @@
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="Controllers\PageNewsController.cs" />
+    <Compile Include="Models\EventBriteRepositoryV3.cs" />
     <Compile Include="Models\IdeaScaleRepository.cs" />
     <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\ISlackInc.cs" />
     <Compile Include="Models\NewsArticleRepository.cs" />
     <Compile Include="Models\EventBriteRepository.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -166,6 +177,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Models\LogEvent.cs" />
+    <Compile Include="Models\SlackInCSharp.cs" />
     <Compile Include="Models\UserGroupEvent.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\FutureTopicInfo.cs" />
@@ -181,13 +193,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\contactus\amir.jpg" />
+    <Content Include="Content\contactus\david.jpg" />
+    <Content Include="Content\contactus\placeholder-profile_100px.png" />
+    <Content Include="Content\contactus\roy.png" />
+    <Content Include="Content\contactus\tyler.jpg" />
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
-    <Content Include="Content\slippry-1.2.css" />
+    <Content Include="Content\pnotify.custom.css" />
+    <Content Include="Content\pnotify.custom.min.css" />
     <Content Include="Content\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
@@ -196,6 +214,7 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
     <Content Include="Images\Apptius-Logo.png" />
     <Content Include="Images\DiscountAspNet-Logo.png" />
     <Content Include="Images\dmt.jpg" />
@@ -204,15 +223,18 @@
     <Content Include="Images\glyphicons-halflings.png" />
     <Content Include="Images\imaginet.png" />
     <Content Include="Images\Ineta-Logo.png" />
+    <Content Include="Images\iqmetrix-logo.png" />
     <Content Include="Images\jetbrains_logo.png" />
     <Content Include="Images\legi.jpg" />
     <Content Include="Images\logo_2013.png" />
     <Content Include="Images\manning.jpg" />
     <Content Include="Images\Msdn-Logo.png" />
+    <Content Include="Images\MSFT.png" />
     <Content Include="Images\obs-logo.png" />
     <Content Include="Images\oreilly.gif" />
     <Content Include="Images\pluralsight-logo-for-sponsorships-small.png" />
     <Content Include="Images\Protegra-Logo.png" />
+    <Content Include="Images\slack-monochrome-small.png" />
     <Content Include="Images\Telerik-logo.jpg" />
     <Content Include="Images\wpg_bridge.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -273,6 +295,11 @@
     <Content Include="Content\home\news.less" />
     <Content Include="Content\home\next_event.less" />
     <Content Include="Content\home\past_events.less" />
+    <Content Include="Content\styles.css.map">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
+    <Content Include="Content\contactus.less" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -286,13 +313,8 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\less-1.4.1.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Scripts\slippry-1.2.min.js" />
-    <Content Include="Scripts\vm\Models\FutureTopic.js">
-      <DependentUpon>FutureTopic.coffee</DependentUpon>
-    </Content>
-    <Content Include="Scripts\vm\Models\FutureTopic.min.js">
-      <DependentUpon>FutureTopic.coffee</DependentUpon>
-    </Content>
+    <Content Include="Scripts\pnotify.custom.js" />
+    <Content Include="Scripts\pnotify.custom.min.js" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.js">
       <DependentUpon>UserGroupEvent.coffee</DependentUpon>
     </Content>
@@ -359,7 +381,6 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\vm\Models\UserGroupEvent.coffee" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Scripts\vm\Models\FutureTopic.coffee" />
     <None Include="Scripts\vm\News\News.coffee" />
     <Content Include="Views\PageNews\Index.cshtml" />
     <Content Include="Views\Shared\_navigation.cshtml" />
@@ -375,6 +396,8 @@
     <Content Include="Scripts\vm\Views\Home\NextEventViewModel.coffee" />
     <Content Include="Scripts\vm\Views\Home\FutureTopicsViewModel.coffee" />
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
+    <Content Include="Views\Home\slackin.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

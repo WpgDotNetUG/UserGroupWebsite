@@ -2,56 +2,56 @@
 
 <footer id="main-footer">
     <section class="footer-info">
-        <section class="row">
-        <article id="sponsors" class="col-md-4 col-sm-12">
-            <section class="title">
-                <div class="text">.sponsors</div>
-                <div class="line"></div>
-            </section>
-            <section class="description">
-                We would like to thank the following companies to their sponsorship
-                of our group! If you would like to become a sponsor please 
-                <a href="mailto:winnipegdotnet@gmail.com">drop us a line</a>.
-            </section>
-            <ul class="logos">
-                @LocalSponsors()
-                @NonLocalSponsors()
-            </ul>
-        </article>
-        <article id="twitter-feed" class="col-md-5 col-sm-12">
-            <section class="title">
-                <div class="text">@@wpgnetug</div>
-                <div class="line"></div>
-            </section>
-            <a class="twitter-timeline" data-dnt="true" data-chrome="nofooter noheader noscrollbar"
-               href="https://twitter.com/wpgnetug" data-widget-id="381816139803684864">Tweets by @@wpgnetug</a>
-        </article>
-        <article id="newsletter" class="col-md-3 col-sm-12">
-            <section class="miss-meeting">Want to make sure you don't miss a meeting?</section>
-            <section class='signup'>
-                Then take a minute and sign up for the Winnipeg .Net User Group mailing list!
-            </section>
-            <section class="follow-events">
-                You can be on top of our event schedule, and all you need to do is check you email. Sign up now and don't miss another meeting.
-            </section>
-            <a href="http://eepurl.com/clTOr" target="_blank" class="add-me">
-                Add me to the list
-                <i class="icon-chevron-sign-right"></i>
-            </a>
-        </article>
-    </section>
-    </section>
+		<section class="row">
+			<article id="sponsors" class="col-md-4 col-sm-12">
+				<section class="title">
+					<div class="text">.sponsors</div>
+					<div class="line"></div>
+				</section>
+				<section class="description">
+					We would like to thank the following companies to their sponsorship
+					of our group! If you would like to become a sponsor please
+					<a href="mailto:winnipegdotnet@gmail.com">drop us a line</a>.
+				</section>
+				<ul class="logos">
+					@LocalSponsors()
+					@NonLocalSponsors()
+				</ul>
+			</article>
+			<article id="twitter-feed" class="col-md-5 col-sm-12">
+				<section class="title">
+					<div class="text">@@wpgnetug</div>
+					<div class="line"></div>
+				</section>
+				<a class="twitter-timeline" data-dnt="true" data-chrome="nofooter noheader noscrollbar"
+				   href="https://twitter.com/wpgnetug" data-widget-id="381816139803684864">Tweets by @@wpgnetug</a>
+			</article>
+
+			<article id="newsletter" class="col-md-3 col-sm-12">
+				<section class="miss-meeting">Want to make sure you don't miss a meeting?</section>
+				<section class='signup'>
+					Then take a minute and sign up for the Winnipeg .Net User Group mailing list!
+				</section>
+				<section class="follow-events">
+					You can be on top of our event schedule, and all you need to do is check you email. Sign up now and don't miss another meeting.
+				</section>
+				<a href="http://eepurl.com/clTOr" target="_blank" class="add-me">
+					Add me to the list
+					<i class="icon-chevron-sign-right"></i>
+				</a>
+			</article>
+		</section>
 
     <section id="copyright">
         <div class="divider"></div>
         <section class="info">
-            &copy; Winnipeg Dot Net User Group 2013 
+            &copy; Winnipeg Dot Net User Group 2015 
             <br/> 
             @if (ViewBag.IsMobile == true)
             {
                 @: mobile -
             }
-            v3.0
+            v3.1
             - @WebConfigurationManager.AppSettings["appharbor.commit_id"].Substring(0, 6)
         </section>
     </section>
@@ -59,13 +59,13 @@
 
 
 @helper LocalSponsors() {
-    @Sponsor("http://apptius.com", "apptius-logo.png", "Apptius")
-    @*@Sponsor("http://www.dmt.ca", "dmt.jpg", "DMT")*@
+    @Sponsor("https://www.apptius.com/", "Apptius-Logo.png", "Apptius")
     @Sponsor("http://imaginet.com", "imaginet.png", "Imaginet")
-    @Sponsor("http://protegra.com/", "Protegra-Logo.png", "Protegra")
+    @Sponsor("http://www.iqmetrix.com/", "iqmetrix-logo.png", "iQmetrix")
 }
 
 @helper NonLocalSponsors() {
+    @Sponsor("http://blogs.msdn.com/b/cdndevs/", "MSFT.png", "Microsoft")
     @Sponsor("http://www.ineta.org", "Ineta-Logo.png", "INETA")
     @Sponsor("http://www.jetbrains.com", "jetbrains_logo.png", "Jetbrains")
     @* @Sponsor("http://manning.com", "manning.jpg", "Manning")

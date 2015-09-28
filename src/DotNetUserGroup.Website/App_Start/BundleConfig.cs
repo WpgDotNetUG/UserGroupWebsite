@@ -8,26 +8,29 @@ namespace DotNetUserGroup.Website.App_Start
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery")
                 .Include("~/Scripts/jquery-1.9.1.min.js")
+                .Include("~/Scripts/pnotify.custom.js")
             );
 
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
+            bundles
+                .Add(new ScriptBundle("~/bundles/modernizr")
+                .Include("~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
+            bundles
+                .Add(new ScriptBundle("~/bundles/bootstrap")
+                .Include("~/Scripts/bootstrap.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/knockout").Include("~/Scripts/knockout-2.1.0.js"));
+            bundles.Add(new ScriptBundle("~/bundles/knockout")
+                .Include("~/Scripts/knockout-2.1.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/vm-home")
                             .Include("~/Scripts/vm/Models/*.js")
                             .Include("~/Scripts/vm/Views/Home/*.js")
                 );
 
-            bundles.Add(new ScriptBundle("~/bundles/slippry")
-                            .Include("~/Scripts/slippry-1.2.min.js"));
-
             bundles.Add(new StyleBundle("~/Content/css")
-                            .Include("~/Content/font-awesome.css",
-                                     "~/Content/styles.css",
-                                     "~/Content/slippry-1.2.css"));
+                .Include("~/Content/font-awesome.css",
+                    "~/Content/pnotify.custom.css",
+                    "~/Content/styles.css"));
         }
     }
 }

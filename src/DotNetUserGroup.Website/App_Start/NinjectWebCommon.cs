@@ -67,9 +67,13 @@ namespace DotNetUserGroup.Website.App_Start
                 .To<EventBriteRepository>()
                 .InTransientScope();
 
-            kernel.Bind<IRepository<FutureTopicInfo>>()
-                .To<IdeaScaleRepository>()
-                .InTransientScope();
+			kernel.Bind<IRepository<FutureTopicInfo>>()
+				.To<IdeaScaleRepository>()
+				.InTransientScope();
+
+			kernel.Bind<ISlackInc>()
+				.To<SlackInCSharp>()
+				.InTransientScope();
 
             kernel.Bind<IRepository<NewsArticle>>()
                 .To<NewsArticleRepository>()

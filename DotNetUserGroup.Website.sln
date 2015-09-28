@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetUserGroup.Website", "src\DotNetUserGroup.Website\DotNetUserGroup.Website.csproj", "{4C834210-2E1D-42CA-A78D-18A90AD2017F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetUserGroup.Website.Tests", "test\DotNetUserGroup.Website.Tests\DotNetUserGroup.Website.Tests.csproj", "{3C5DC1A9-2D3E-4278-BC79-0AD814CFC103}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BD654B92-BB0C-48EE-9749-DAE065666F38}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{359F4D77-FE5C-4A9D-906F-01639177241E}"
@@ -13,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{359F4D
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetUserGroup.Website", "src\DotNetUserGroup.Website\DotNetUserGroup.Website.csproj", "{4C834210-2E1D-42CA-A78D-18A90AD2017F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetUserGroup.Website.Tests", "test\DotNetUserGroup.Website.Tests\DotNetUserGroup.Website.Tests.csproj", "{3C5DC1A9-2D3E-4278-BC79-0AD814CFC103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

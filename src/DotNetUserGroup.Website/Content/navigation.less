@@ -11,6 +11,7 @@ body
 		background: @white;
 		margin-bottom: 40px;
 		nav {
+            clear:both;
             border: none;
             margin-bottom:0px !important;
 			.navbar-brand {
@@ -71,10 +72,53 @@ body
 
 		}
 
+        .slack {
+			color: @gray-light;
+			background: @blue-background;
+            padding-left:10px;
+			border-bottom: 2px solid @blue-border;
+            display:inline-block;
+            padding-right:10px;
+            padding-left:10px;
+
+            img {
+                height:35px;
+            }
+            form {
+                display:inline-block;
+
+                input {width:auto;}
+            }
+
+            .slack-submit{
+	            font-size: 1.2em;
+            }
+            .slack-signup-error{
+              background-color: @state-danger-bg;
+              border: 4px solid @state-danger-border;
+              border-radius: 5px;
+              color: @state-danger-text;  
+              font-size: 1em;
+              font-weight: bold;
+              padding: 10px;
+              margin-top: 10px;
+            }
+            .slack-signup-success {
+              background-color: @state-success-bg;
+              border: 4px solid @state-success-border;
+              border-radius: 5px;
+              color: @state-success-text;
+              font-size: 1em;
+              font-weight: bold;
+              padding: 10px;
+              margin-top: 10px;
+            }
+        }
+
 		#social {
 			text-align:right;
 			height: 40px;
-			padding-top:10px;
+			/*padding-top:10px;*/
 			a {
 				color: @gray-light;
 				background: @blue-background;
@@ -90,12 +134,9 @@ body
 				margin-top: 10px;
 				font-size: 1.2em;
 			}
-			.icon-twitter {
-				color: #2ea7fe;
-			}
-			.icon-github {
-				color: @gray;
-			}
+			.icon-twitter { color: #2ea7fe;}
+			.icon-github  { color: @gray; }
+            .icon-facebook-sign { color: #3a5795; }
 		}
 	}
 

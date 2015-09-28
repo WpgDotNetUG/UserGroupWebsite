@@ -1,0 +1,11 @@
+{
+  "name": "UserGroupWebsite",
+  "version": "2.0.0",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1",
+    "path": "^0.12.7"
+  }
+}

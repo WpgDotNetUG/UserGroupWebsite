@@ -22,8 +22,35 @@
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/knockout")
         @RenderSection("scripts", required: false)
+        
+        <script>
+            $(window).load(function () {
+                var error = '@ViewBag.Error';
+                var success = '@ViewBag.Success';
+
+                if (error) {
+                    new PNotify({
+                        title: 'Error connecting with Slack',
+                        text: error + ' Error',
+                        type: 'error'
+                    });
+                }
+
+                if (success) {
+                    new PNotify({
+                        title: 'Success connecting to Slack',
+                        text: 'Your email has been submited',
+                        type: 'success'
+                    });
+
+                }
+            });
+        </script>
+
         <script>
             !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+
+
         </script>
 
     </body>
