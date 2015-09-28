@@ -24,7 +24,6 @@ data*.log
 settings.local.config
 .sass-cache/
 *.orig
-.vs/
-
 node_modules/
 npm-debug.log
+.vs/
