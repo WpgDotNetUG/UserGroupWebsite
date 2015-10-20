@@ -14,7 +14,6 @@ namespace DotNetUserGroup.Website.Models
         {
             IEnumerable<UserGroupEvent> result;
 
-            //var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
             var response = Request("user_list_events", LoadConfiguration()).DynamicBody;
             
             try

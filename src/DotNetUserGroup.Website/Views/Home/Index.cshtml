@@ -3,11 +3,17 @@
    @Scripts.Render("~/bundles/vm-home")
 }
 
-<section id="events"  data-bind="css:{'pending':eventPending}">
+<section id="events" data-bind="css:{'pending': nextEvent.eventPending}">
+    <!-- ko with: nextEvent -->
     @{ Html.RenderPartial("_next_event"); }
+    <!-- /ko -->
 
+    <!-- ko with: pastEvents -->
     @{ Html.RenderPartial("_past_events"); }
+    <!-- /ko -->
 
+    <!-- ko with: futureTopics -->
     @{ Html.RenderPartial("_future_topics"); }
+    <!-- /ko -->
 </section>
 

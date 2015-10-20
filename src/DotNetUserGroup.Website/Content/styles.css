@@ -6146,6 +6146,7 @@ body #main-footer #copyright .info {
   padding-left: 20px;
   padding-top: 10px;
   opacity: 0.95;
+  height: 315px;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#b0e7ff), to(#35c7ff));
   background-image: -webkit-linear-gradient(top, #b0e7ff, 0%, #35c7ff, 100%);
   background-image: -moz-linear-gradient(top, #b0e7ff 0%, #35c7ff 100%);
@@ -6155,6 +6156,7 @@ body #main-footer #copyright .info {
   width: 100%;
   border-right: none;
   margin-bottom: 5px;
+  height: auto;
 }
 #events #next-event > header {
   font-size: 1.8em;
@@ -6164,7 +6166,7 @@ body #main-footer #copyright .info {
 #events #next-event .content,
 #events #next-event ul {
   list-style: none;
-  height: 230px;
+  height: 186px;
   margin-bottom: 10px;
 }
 #events #next-event > footer {
@@ -6220,6 +6222,9 @@ body #main-footer #copyright .info {
     display: block;
   }
 }
+#events #next-event .event {
+  height: auto;
+}
 #events #next-event .event .title {
   color: #115979;
   font-size: 2em;
@@ -6233,11 +6238,12 @@ body #main-footer #copyright .info {
 #events #next-event .event .location {
   color: #206484;
   font-size: 1em;
+  margin-top: 30px;
 }
 #events #next-event .event .location .image {
   font-size: 2em;
   display: table-cell;
-  margin: 10px 10px 5px 0px;
+  margin: 10px 10px 5px 0;
   text-align: center;
   width: 40px;
 }
@@ -6274,6 +6280,7 @@ body #main-footer #copyright .info {
   padding-left: 20px;
   padding-top: 10px;
   opacity: 0.95;
+  height: 315px;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#cfecbc), to(#aee288));
   background-image: -webkit-linear-gradient(top, #cfecbc, 0%, #aee288, 100%);
   background-image: -moz-linear-gradient(top, #cfecbc 0%, #aee288 100%);
@@ -6292,7 +6299,7 @@ body #main-footer #copyright .info {
 #events #past-events .content,
 #events #past-events ul {
   list-style: none;
-  height: 230px;
+  height: 186px;
   margin-bottom: 10px;
 }
 #events #past-events > footer {
@@ -6388,6 +6395,7 @@ body #main-footer #copyright .info {
   padding-left: 20px;
   padding-top: 10px;
   opacity: 0.95;
+  height: 315px;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffd7bb), to(#ffcaa1));
   background-image: -webkit-linear-gradient(top, #ffd7bb, 0%, #ffcaa1, 100%);
   background-image: -moz-linear-gradient(top, #ffd7bb 0%, #ffcaa1 100%);
@@ -6406,7 +6414,7 @@ body #main-footer #copyright .info {
 #events #future-topics .content,
 #events #future-topics ul {
   list-style: none;
-  height: 230px;
+  height: 186px;
   margin-bottom: 10px;
 }
 #events #future-topics > footer {
