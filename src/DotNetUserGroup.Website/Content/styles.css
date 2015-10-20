@@ -5994,6 +5994,9 @@ body > header #social .icon-github {
 body > header #social .icon-facebook-sign {
   color: #3a5795;
 }
+body > header #social .icon-youtube-play {
+  color: #cd201f;
+}
 @media (max-width: 767px) {
   body.mobile #main-menu #menu {
     font-size: 1.5em;
