@@ -1,3 +1,4 @@
+
 class window.NextEventViewModel
 
     constructor: ->

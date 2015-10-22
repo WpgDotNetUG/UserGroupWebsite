@@ -1,9 +1,10 @@
 ﻿.event-box(@start-color; @end-color; @title; @footer) {
-    display: table-cell;
+    display: inline-block;
     border-right: 3px solid @blue-background;
     padding-left: 20px;
     padding-top: 10px;
     opacity: 0.95;
+    height: 315px;
     #gradient.vertical(@start-color, @end-color);
 
     > header {
@@ -14,7 +15,7 @@
 
     .content, ul {
         list-style: none;
-        height: 230px;
+        height: 186px;
         margin-bottom: 10px;
     }
 
@@ -60,17 +61,23 @@
         }
     }
     @media (max-width: 767px) {
-        pading:0;
+        padding:0;
         border:none;
         margin-bottom:20px;
         display:block;
     }
     @media (max-width: 800px) {
-        pading:0;
+        padding:0;
         border:none;
         margin-bottom:20px;
         display:block;
     }
+}
+
+.main-container {
+    background-image: url('/images/wpg_bridge.jpg');
+    background-position: 0 -400px;
+    /*background-repeat: repeat-x;*/
 }
 
 #events {
@@ -78,16 +85,20 @@
     width: 100%;
     height: 350px;
     margin-bottom: 20px;
-    background-image: url('/images/wpg_bridge.jpg');
-    background-position: 0px -400px;
-    background-repeat: repeat-x;
+    background-color:rgba(200, 200, 200, 0.7) ;
 
     @import 'next_event';
     @import 'past_events';
     @import 'future_topics';
 
+    &.pending {
+        #next-event {
+            height: 120px;
+        }
+    }
+
     @media (max-width: 767px) {
-        display: auto;
+        display:auto;
         height: auto;
         background-image: none;
     }
@@ -96,5 +107,6 @@
         height: auto;
         background-image: none;
     }
+
 }
 

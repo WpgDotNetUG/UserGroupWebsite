@@ -1,5 +1,9 @@
 #future-topics {
 	.event-box(#ffd7bb, #ffcaa1, #bc8354, #cd8d68);
+    border-right:none;
+	width: 49.5%;
+    float: right;
+
 	#topic-list {
 		margin-left: -20px;
 		font-size: 1em;
@@ -16,7 +20,7 @@
 			.topic {
 				color: #9e5114;
 				font-weight: 600;   
-                width: 200px;
+                width: auto;
                 display: inline-block;
 			}
 
@@ -35,7 +39,7 @@
 				margin-top: 5px;
 				font-size: 0.8em;
 				line-height: 20px;
-				padding: 0px 5px;
+				padding: 0 5px;
                 text-align:center;
                 width: 40px;
 
@@ -47,6 +51,15 @@
 			}
 		}
 	}
+
+    @media (max-width: 767px) {
+        width: 100%;
+        float: none;
+    }
+    @media (max-width: 800px) {
+        float: none;
+        width: 100%;
+    }
 
 }
 
