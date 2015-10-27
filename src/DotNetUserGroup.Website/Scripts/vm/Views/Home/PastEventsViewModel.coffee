@@ -7,7 +7,7 @@ class window.PastEventsViewModel
 
     loadPastEvents: (events) =>
       completed = (e for e in events when e.isCompleted())
-      @events completed[0..2]
+      @events completed[0..3]
 
  
                  

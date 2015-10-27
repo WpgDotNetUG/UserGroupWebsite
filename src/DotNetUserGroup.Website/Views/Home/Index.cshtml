@@ -3,24 +3,17 @@
    @Scripts.Render("~/bundles/vm-home")
 }
 
-<section id="events">
+<section id="events" data-bind="css:{'pending': nextEvent.eventPending}">
+    <!-- ko with: nextEvent -->
     @{ Html.RenderPartial("_next_event"); }
+    <!-- /ko -->
 
+    <!-- ko with: pastEvents -->
     @{ Html.RenderPartial("_past_events"); }
+    <!-- /ko -->
 
+    <!-- ko with: futureTopics -->
     @{ Html.RenderPartial("_future_topics"); }
+    <!-- /ko -->
 </section>
 
-<!--
-<section id="news">
-    <section class="news-item">
-        <header>.news</header>
-        <div class="news-title" >
-            <a href="/pagenews" data-bind="text: title"></a>
-        </div>
-        <a href="/pagenews" class="news-icon">
-            <i class="icon-chevron-sign-right"></i>
-        </a>
-    </section>
-</section>
--->

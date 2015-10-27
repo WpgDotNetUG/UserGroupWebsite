@@ -11,9 +11,11 @@
     <body>
         @{ Html.RenderPartial("_navigation"); }
 
-        <section class="container">
+    <section class="container">
+        <div class=" main-container">
             @RenderBody()
-        </section>
+        </div>
+    </section>
          
         @{ Html.RenderPartial("_footer"); }
 

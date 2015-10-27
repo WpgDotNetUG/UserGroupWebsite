@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "Scripts/vm/Views/Home/Home.js",
+    "inputFile": "Scripts/vm/Views/Home/Home.coffee"
+  },
+  {
+    "outputFile": "Content/home/home.css",
+    "inputFile": "Content/home/home.less"
+  },
+  {
+    "outputFile": "Scripts/vm/Views/Home/NextEventViewModel.js",
+    "inputFile": "Scripts/vm/Views/Home/NextEventViewModel.coffee"
+  },
+  {
+    "outputFile": "Scripts/vm/Views/Home/PastEventsViewModel.js",
+    "inputFile": "Scripts/vm/Views/Home/PastEventsViewModel.coffee"
+  },
+  {
+    "outputFile": "Content/styles.css",
+    "inputFile": "Content/styles.less"
+  },
+  {
+    "outputFile": "Scripts/vm/Models/UserGroupEvent.js",
+    "inputFile": "Scripts/vm/Models/UserGroupEvent.coffee"
+  }
+]
