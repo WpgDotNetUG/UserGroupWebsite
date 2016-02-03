@@ -230,6 +230,7 @@
     <Content Include="Images\Protegra-Logo.png" />
     <Content Include="Images\slack-monochrome-small.png" />
     <Content Include="Images\Telerik-logo.jpg" />
+    <Content Include="Images\vc_logo.png" />
     <Content Include="Images\wpg_bridge.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
